@@ -21,6 +21,14 @@
 /* BODY */
 
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bricolage Grotesque', cursive;
+}
+
+p, a, ul, li, span {
+    font-family: 'Manrope', cursive;
+}
+
 body {
     min-height: 100vh;
     background-color: var(--negro);
@@ -37,8 +45,8 @@ body {
 
 
 .logo {
-    height: 5%;
-    width: 5%;
+    height: 40%;
+    width: 40%;
 }
 
 nav#menu {
@@ -74,6 +82,15 @@ nav#menu ul {
 
 nav#menu ul li {
     width: 100%;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+nav#menu ul li .nav-icon {
+    width: 20px;
+    height: 20px;
 }
 
 nav#menu ul li a {
@@ -90,6 +107,28 @@ nav#menu ul li a:hover {
 }
 
 
+/* MENU TOP */
+
+nav#menu.top {
+    width: 100%;
+    height: 70px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+nav#menu.top ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    width: auto;
+}
+
+nav#menu.top ul li a {
+    padding: 0 15px;
+}
+
+
 /* HEADER */
 
 .centrar {
@@ -100,12 +139,25 @@ nav#menu ul li a:hover {
     margin-right: 18vh;
     margin-left: 25vh;
     align-content: center;
+    margin-bottom: 20vh;
 }
 
 h1 {
     color: var(--main);
     font-size: 20vh;
     margin-bottom: 3vh;
+    background: linear-gradient(to right, #E1FF2D, #d5ff2d, #edff84, #d5ff2d, #c8ff22);
+    background-clip: text;
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientmove 2.5s linear infinite;
+}
+
+@keyframes gradientmove {
+    to {
+        background-position: 200%;
+    }
 }
 
 p {
@@ -116,8 +168,18 @@ p {
 
 /* CANTANTES */
 
+h2 {
+    color: var(--blanco);
+    font-size: 4rem;
+    margin: 5vh;
+}
+
+span {
+    color: var(--main);
+}
+
 .carousel {
-    margin: 100px auto;
+    margin-bottom: 20vh;
     width: 100%;
     display: flex;
     overflow-x: auto;
@@ -132,7 +194,7 @@ p {
     align-items: center;
     justify-content: center;
     gap: 1em;
-    animation: spin 23s infinite linear;
+    animation: spin 25s infinite linear;
     padding-right: 1em;
 }
 
@@ -145,6 +207,7 @@ p {
     border-radius: .2em;
     text-align: center;
     align-content: center;
+    overflow: hidden;
 }
 
 @keyframes spin {
@@ -174,6 +237,7 @@ p {
     height: 100%;
     object-fit: cover;
     border-radius: .2em;
+    transition: transform 0.3s ease;
 }
 
 .card .name {
@@ -186,4 +250,203 @@ p {
     text-align: left;
     color: var(--blanco);
     z-index: 2;
+}
+
+.card:hover img {
+    transform: scale(1.2);
+}
+
+
+/* RANKING */
+
+
+.ranking {
+    width: 90%;
+    color: var(--blanco);
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.ranking-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    padding: 15px 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    border-bottom: 1px solid var(--blanco);
+}
+
+.ranking-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--blanco);
+    transition: background 0.3s ease;
+}
+
+.ranking-row:hover {
+    background: rgba(255, 255, 255, 0.17);
+}
+
+.artist {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.rank {
+    color: var(--main);
+    font-size: 2rem;
+    opacity: 0.5;
+    width: 40px;
+    margin-right: 15px;
+}
+
+.artist img {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.info h4 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.info p {
+    font-size: 0.8rem;
+    opacity: 0.5;
+}
+
+.plays, .album {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+
+/* INFO */
+
+
+.artist-info {
+    width: 60%;
+    color: var(--blanco);
+    margin: 20vh 45vh 0;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    position: relative;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.artist-info h2 {
+    font-size: 5.5rem;
+    position: absolute;
+    top: -17%;
+    left: 30%;
+    z-index: 1;
+}
+
+.img-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    left: -34%;
+}
+
+.img-container img {
+    width: 95%;
+    height: auto;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.artist-info p {
+    position: absolute;
+    top: 8vh;
+    left: 50%;
+    font-size: 3.2rem;
+    font-weight: bold;
+    opacity: 0.6;
+    color: var(--blanco);
+    z-index: 1;
+}
+
+.stats-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    color: var(--blanco);
+}
+
+.stat {
+    text-align: center;
+    padding: 0 15vh;
+}
+
+.number {
+    font-size: 4.2rem;
+    font-weight: bold;
+}
+
+.label {
+    text-align: left;
+    font-size: 1.5rem;
+    margin-top: 6px;
+}
+
+.linea {
+    width: 1px;
+    height: 70px;
+    background: var(--main);
+}
+
+.artist-info-right {
+    width: 60%;
+    color: var(--blanco);
+    margin: 20vh 45vh 0;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    position: relative;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.artist-info-right h2 {
+    font-size: 5.5rem;
+    position: absolute;
+    top: -17%;
+    left: 30%;
+    z-index: 1;
+}
+
+.img-container-right {
+    position: relative;
+    width: 100%;
+    display: flex;
+    left: 32.4%;
+}
+
+.img-container-right img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.artist-info-right p {
+    position: absolute;
+    top: 8vh;
+    left: 34%;
+    font-size: 3.2rem;
+    font-weight: bold;
+    opacity: 0.6;
+    color: var(--blanco);
+    z-index: 1;
 }
