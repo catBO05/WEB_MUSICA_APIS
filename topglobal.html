@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Beatly</title>
+        <link href="CSS/style.css" rel="Stylesheet" type="text/css">
+        <link rel="icon" href="MEDIA/IMG/Favicon (1).svg">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="JS/script.js" defer></script>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <nav id="menu" class="top">
+                <a href="#">
+                    <img src="MEDIA/IMG/Logo_vertical (1).svg" alt="Logo de Beatly" class="logo">
+                </a>
+                    
+                <ul class="nav-links-responsive" id="nav-links-responsive">
+                    <li>
+                        <img src="MEDIA/IMG/fav_icono (1).svg" class="nav-icon">
+                        <a href="#">Favoritos</a>
+                    </li>
+                    <li>
+                        <img src="MEDIA/IMG/topGlobal_icono (1).svg" class="nav-icon">
+                        <a href="#">Top Global</a>
+                    </li>
+                    <li>
+                        <img src="MEDIA/IMG/podcast_icono (1).svg" class="nav-icon">
+                        <a href="podcast.html">Podcasts</a>
+                    </li>
+                    <li>
+                        <img src="MEDIA/IMG/buscar_icono (1).svg" class="nav-icon"> 
+                        <a href="#">Buscar</a>
+                    </li>
+                </ul>
+                    
+                <div class="menu-toggle" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+
+        <header>
+            <div class="centrar">
+                <h1>TOP GLOBAL</h1>
+                <p>Tu actualización diaria de las canciones más escuchadas <br> ahora mismo en Global.</p>
+            </div>
+        </header>
+
+        <section class="cantantes">
+            <h2>TOP 10<span>🠷</span></h2>
+            <div class="carousel">
+                <div class="group">
+                    <div class="card">
+                        <p>#1</p>
+                        <img src="MEDIA/IMG/badbunny.webp">
+                        <h6 class="name">Bad Bunny</h6>
+                    </div>
+                    <div class="card">
+                        <p>#2</p>
+                        <img src="MEDIA/IMG/billieeilish.webp">
+                        <h6 class="name">Billie Eilish</h6>
+                    </div>
+                    <div class="card">
+                        <p>#3</p>
+                        <img src="MEDIA/IMG/eminem.webp">
+                        <h6 class="name">Eminem</h6>
+                    </div>
+                    <div class="card">
+                        <p>#4</p>
+                        <img src="MEDIA/IMG/trueno.webp">
+                        <h6 class="name">Trueno</h6>
+                    </div>
+                    <div class="card">
+                        <p>#5</p>
+                        <img src="MEDIA/IMG/theweekend.webp">
+                        <h6 class="name">The Weekend</h6>
+                    </div>
+                    <div class="card">
+                        <p>#6</p>
+                        <img src="MEDIA/IMG/camilacabello.webp">
+                        <h6 class="name">Camila Cabello</h6>
+                    </div>
+                    <div class="card">
+                        <p>#7</p>
+                        <img src="MEDIA/IMG/taylorswift.webp">
+                        <h6 class="name">Taylor Swift</h6>
+                    </div>
+                    <div class="card">
+                        <p>#8</p>
+                        <img src="MEDIA/IMG/beyonce.webp">
+                        <h6 class="name">Beyonce</h6>
+                    </div>
+                    <div class="card">
+                        <p>#9</p>
+                        <img src="MEDIA/IMG/jbalvin.webp">
+                        <h6 class="name">J Balvin</h6>
+                    </div>
+                    <div class="card">
+                        <p>#10</p>
+                        <img src="MEDIA/IMG/calvinharris.webp">
+                        <h6 class="name">Calvin Harris</h6>
+                    </div>
+                </div>
+                <div aria-hidden class="group">
+                    <div class="card">
+                        <p>#1</p>
+                        <img src="MEDIA/IMG/badbunny.webp">
+                        <h6 class="name">Bad Bunny</h6>
+                    </div>
+                    <div class="card">
+                        <p>#2</p>
+                        <img src="MEDIA/IMG/billieeilish.webp">
+                        <h6 class="name">Billie Eilish</h6>
+                    </div>
+                    <div class="card">
+                        <p>#3</p>
+                        <img src="MEDIA/IMG/eminem.webp">
+                        <h6 class="name">Eminem</h6>
+                    </div>
+                    <div class="card">
+                        <p>#4</p>
+                        <img src="MEDIA/IMG/trueno.webp">
+                        <h6 class="name">Trueno</h6>
+                    </div>
+                    <div class="card">
+                        <p>#5</p>
+                        <img src="MEDIA/IMG/theweekend.webp">
+                        <h6 class="name">The Weekend</h6>
+                    </div>
+                    <div class="card">
+                        <p>#6</p>
+                        <img src="MEDIA/IMG/camilacabello.webp">
+                        <h6 class="name">Camila Cabello</h6>
+                    </div>
+                    <div class="card">
+                        <p>#7</p>
+                        <img src="MEDIA/IMG/taylorswift.webp">
+                        <h6 class="name">Taylor Swift</h6>
+                    </div>
+                    <div class="card">
+                        <p>#8</p>
+                        <img src="MEDIA/IMG/beyonce.webp">
+                        <h6 class="name">Beyonce</h6>
+                    </div>
+                    <div class="card">
+                        <p>#9</p>
+                        <img src="MEDIA/IMG/jbalvin.webp">
+                        <h6 class="name">J Balvin</h6>
+                    </div>
+                    <div class="card">
+                        <p>#10</p>
+                        <img src="MEDIA/IMG/calvinharris.webp">
+                        <h6 class="name">Calvin Harris</h6>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ranking">
+
+            <div class="position">
+                <div class="ranking-header">
+                    <span>ARTISTAS</span>
+                    <span>REPRODUCCIONES</span>
+                    <span>NOMBRE DEL ALBUM</span>
+                </div>
+    
+                <div class="all-rows">
+                    <div class="ranking-row">
+                        <div class="artist">
+                            <span class="rank">#1</span>
+                            <img src="MEDIA/IMG/badbunny.webp" alt="">
+                                <div class="info">
+                                    <h4>Bad Bunny</h4>
+                                    <p>LA CANCIÓN</p>
+                                </div>
+                        </div>
+                        <div class="plays">11.227.818</div>
+                        <div class="album">OASIS</div>
+                    </div>
+        
+                     <div class="ranking-row">
+                         <div class="artist">
+                             <span class="rank">#2</span>
+                             <img src="MEDIA/IMG/billieeilish.webp" alt="">
+                                 <div class="info">
+                                     <h4>Billie Eilish</h4>
+                                     <p>BIRDS OF A FEATHER</p>
+                                 </div>
+                         </div>
+                         <div class="plays">11.227.818</div>
+                         <div class="album">HIT ME HARD AND SOFT</div>
+                     </div>
+    
+                    <div class="ranking-row">
+                        <div class="artist">
+                            <span class="rank">#3</span>
+                            <img src="MEDIA/IMG/eminem.webp" alt="">
+                                <div class="info">
+                                    <h4>Eminem</h4>
+                                    <p>LOSE YOURSELF</p>
+                                </div>
+                        </div>
+                        <div class="plays">11.227.818</div>
+                        <div class="album">8 MILE</div>
+                    </div>
+    
+                    <div class="ranking-row">
+                        <div class="artist">
+                            <span class="rank">#4</span>
+                            <img src="MEDIA/IMG/trueno.webp" alt="">
+                                <div class="info">
+                                    <h4>Trueno</h4>
+                                    <p>MAMICHULA</p>
+                                </div>
+                        </div>
+                        <div class="plays">11.227.818</div>
+                        <div class="album">ATREVIDO</div>
+                    </div>
+    
+                    <div class="ranking-row">
+                        <div class="artist">
+                            <span class="rank">#5</span>
+                            <img src="MEDIA/IMG/theweekend.webp" alt="">
+                                <div class="info">
+                                    <h4>The Weekend</h4>
+                                    <p>BLINDING LIGHTS</p>
+                                </div>
+                        </div>
+                        <div class="plays">11.227.818</div>
+                        <div class="album">AFTER HOURS</div>
+                    </div>
+                    
+                    <div class="ranking-row">
+                        <div class="artist">
+                            <span class="rank">#6</span>
+                            <img src="MEDIA/IMG/camilacabello.webp" alt="">
+                                <div class="info">
+                                    <h4>Camila Cabello</h4>
+                                    <p>HAVANA</p>
+                                </div>
+                        </div>
+                        <div class="plays">11.227.818</div>
+                        <div class="album">CAMILA</div>
+                    </div>
+
+                    <div class="ranking-row">
+                        <div class="artist">
+                            <span class="rank">#7</span>
+                            <img src="MEDIA/IMG/taylorswift.webp" alt="">
+                                <div class="info">
+                                    <h4>Taylor Swift</h4>
+                                    <p>SHAKE IT OFF</p>
+                                </div>
+                        </div>
+                        <div class="plays">11.227.818</div>
+                        <div class="album">1989</div>
+                    </div>
+
+                    <div class="ranking-row">
+                        <div class="artist">
+                            <span class="rank">#8</span>
+                            <img src="MEDIA/IMG/beyonce.webp" alt="">
+                                <div class="info">
+                                    <h4>Beyonce</h4>
+                                    <p>CRAZY IN LOVE</p>
+                                </div>
+                        </div>
+                        <div class="plays">11.227.818</div>
+                        <div class="album">DANGEROUSLY IN LOVE</div>
+                    </div>
+
+                    <div class="ranking-row">
+                        <div class="artist">
+                            <span class="rank">#9</span>
+                            <img src="MEDIA/IMG/jbalvin.webp" alt="">
+                                <div class="info">
+                                    <h4>J Balvin</h4>
+                                    <p>MI GENTE</p>
+                                </div>
+                        </div>
+                        <div class="plays">11.227.818</div>
+                        <div class="album">VIBRAS</div>
+                    </div>
+
+                    <div class="ranking-row">
+                        <div class="artist">
+                            <span class="rank">#10</span>
+                            <img src="MEDIA/IMG/calvinharris.webp" alt="">
+                                <div class="info">
+                                    <h4>Calvin Harris</h4>
+                                    <p>WE FOUND LOVE</p>
+                                </div>
+                        </div>
+                        <div class="plays">11.227.818</div>
+                        <div class="album">18 MONTHS</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="info">
+
+            <div class="artist-info">
+                <h2>Bad Bunny</h2>
+                <p>#1</p>
+                <div class="img-container">
+                    <img src="MEDIA/IMG/badbunny.webp" alt="Foto de Bad Bunny">
+                </div>
+                <div class="music-cont">
+                    <div class="music-player">
+                        <img src="MEDIA/IMG/vinyl-record-vector-illustration-isolated-on-white-background-free-png.png" class="vinilo">
+                        <h3>LA CANCION</h1>
+                        <audio id="song">
+                            <source src="MEDIA/AUDIO/J Balvin, Bad Bunny - LA CANCIÓN (Audio) - jbalvinVEVO.mp3" type="audio/mpeg">
+                        </audio>
+                        <input type="range" value="0" id="progress">
+
+                        <div class="controles">
+                            <div>
+                                <i class="fa-solid fa-backward-step"></i>
+                            </div>
+                            <div onclick="playPause()">
+                                <i class="fa-solid fa-play" id="ctrlIcon"></i>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-forward-step"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-info">
+                <div class="stat">
+                    <div class="number">72,7 M</div>
+                    <div class="label">Streams</div>
+                </div>
+
+                <div class="linea"></div>
+
+                <div class="stat">
+                    <div class="number">130</div>
+                    <div class="label">Ciudades</div>
+                </div>
+
+                <div class="linea"></div>
+
+                <div class="stat">
+                    <div class="number">200K</div>
+                    <div class="label">Videos</div>
+                </div>
+
+                <div class="linea"></div>
+
+                <div class="stat">
+                    <div class="number">14M</div>
+                    <div class="label">Seguidores</div>
+                </div>
+            </div>
+
+            <div class="artist-info-right">
+                <h2>Billie Eilish</h2>
+                <div class="music-cont">
+                    <div class="music-player">
+                        <img src="MEDIA/IMG/vinyl-record-vector-illustration-isolated-on-white-background-free-png.png" class="vinilo">
+                        <h3>BIRDS OF A FEATHER</h1>
+                        <audio id="song">
+                            <source src="MEDIA/AUDIO/J Balvin, Bad Bunny - LA CANCIÓN (Audio) - jbalvinVEVO.mp3" type="audio/mpeg">
+                        </audio>
+                        <input type="range" value="0" id="progress">
+
+                        <div class="controles">
+                            <div>
+                                <i class="fa-solid fa-backward-step"></i>
+                            </div>
+                            <div onclick="playPause()">
+                                <i class="fa-solid fa-play" id="ctrlIcon"></i>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-forward-step"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p>#2</p>
+                <div class="img-container-right">
+                    <img src="MEDIA/IMG/billieeilish.webp" alt="Foto de Billie Eilish">
+                </div>
+            </div>
+
+            <div class="stats-info">
+                <div class="stat">
+                    <div class="number">72,7 M</div>
+                    <div class="label">Streams</div>
+                </div>
+
+                <div class="linea"></div>
+
+                <div class="stat">
+                    <div class="number">130</div>
+                    <div class="label">Ciudades</div>
+                </div>
+
+                <div class="linea"></div>
+
+                <div class="stat">
+                    <div class="number">200K</div>
+                    <div class="label">Videos</div>
+                </div>
+
+                <div class="linea"></div>
+
+                <div class="stat">
+                    <div class="number">14M</div>
+                    <div class="label">Seguidores</div>
+                </div>
+            </div>
+
+            <div class="artist-info">
+                <h2>Eminem</h2>
+                <p>#3</p>
+                <div class="img-container">
+                    <img src="MEDIA/IMG/eminem.webp" alt="Foto de Eminem">
+                </div>
+                <div class="music-cont">
+                    <div class="music-player">
+                        <img src="MEDIA/IMG/vinyl-record-vector-illustration-isolated-on-white-background-free-png.png" class="vinilo">
+                        <h3>LOSE YOURSELF</h1>
+                        <audio id="song">
+                            <source src="MEDIA/AUDIO/J Balvin, Bad Bunny - LA CANCIÓN (Audio) - jbalvinVEVO.mp3" type="audio/mpeg">
+                        </audio>
+                        <input type="range" value="0" id="progress">
+
+                        <div class="controles">
+                            <div>
+                                <i class="fa-solid fa-backward-step"></i>
+                            </div>
+                            <div onclick="playPause()">
+                                <i class="fa-solid fa-play" id="ctrlIcon"></i>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-forward-step"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-info">
+                <div class="stat">
+                    <div class="number">72,7 M</div>
+                    <div class="label">Streams</div>
+                </div>
+
+                <div class="linea"></div>
+
+                <div class="stat">
+                    <div class="number">130</div>
+                    <div class="label">Ciudades</div>
+                </div>
+
+                <div class="linea"></div>
+
+                <div class="stat">
+                    <div class="number">200K</div>
+                    <div class="label">Videos</div>
+                </div>
+
+                <div class="linea"></div>
+
+                <div class="stat">
+                    <div class="number">14M</div>
+                    <div class="label">Seguidores</div>
+                </div>
+            </div>
+ 
+            <div class="artist-info-right">
+                <h2>Trueno</h2>
+                <div class="music-cont">
+                    <div class="music-player">
+                        <img src="MEDIA/IMG/vinyl-record-vector-illustration-isolated-on-white-background-free-png.png" class="vinilo">
+                        <h3>MAMICHULA</h1>
+                        <audio id="song">
+                            <source src="MEDIA/AUDIO/J Balvin, Bad Bunny - LA CANCIÓN (Audio) - jbalvinVEVO.mp3" type="audio/mpeg">
+                        </audio>
+                        <input type="range" value="0" id="progress">
+
+                        <div class="controles">
+                            <div>
+                                <i class="fa-solid fa-backward-step"></i>
+                            </div>
+                            <div onclick="playPause()">
+                                <i class="fa-solid fa-play" id="ctrlIcon"></i>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-forward-step"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p>#4</p>
+                <div class="img-container-right">
+                    <img src="MEDIA/IMG/trueno.webp" alt="Foto de Trueno">
+                </div>
+            </div>
+
+            <div class="stats-info">
+                <div class="stat">
+                    <div class="number">72,7 M</div>
+                    <div class="label">Streams</div>
+                </div>
+
+                <div class="linea"></div>
+                
+                <div class="stat">
+                    <div class="number">130</div>
+                    <div class="label">Ciudades</div>
+                </div>
+
+                <div class="linea"></div>
+                
+                <div class="stat">
+                    <div class="number">200K</div>
+                    <div class="label">Videos</div>
+                </div>
+                
+                <div class="linea"></div>
+                
+                <div class="stat">
+                    <div class="number">14M</div>
+                    <div class="label">Seguidores</div>
+                </div>
+            </div>
+            
+            <div class="artist-info">
+                <h2>The Weekend</h2>
+                <p>#5</p>
+                <div class="img-container">
+                    <img src="MEDIA/IMG/theweekend.webp" alt="Foto de The Weekend">
+                </div>
+                <div class="music-cont">
+                    <div class="music-player">
+                        <img src="MEDIA/IMG/vinyl-record-vector-illustration-isolated-on-white-background-free-png.png" class="vinilo">
+                        <h3>BLINDING LIGHTS</h1>
+                        <audio id="song">
+                            <source src="MEDIA/AUDIO/J Balvin, Bad Bunny - LA CANCIÓN (Audio) - jbalvinVEVO.mp3" type="audio/mpeg">
+                        </audio>
+                        <input type="range" value="0" id="progress">
+
+                        <div class="controles">
+                            <div>
+                                <i class="fa-solid fa-backward-step"></i>
+                            </div>
+                            <div onclick="playPause()">
+                                <i class="fa-solid fa-play" id="ctrlIcon"></i>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-forward-step"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-info">
+                <div class="stat">
+                    <div class="number">72,7 M</div>
+                    <div class="label">Streams</div>
+                </div>
+
+                <div class="linea"></div>
+
+                <div class="stat">
+                    <div class="number">130</div>
+                    <div class="label">Ciudades</div>
+                </div>
+
+                <div class="linea"></div>
+
+                <div class="stat">
+                    <div class="number">200K</div>
+                    <div class="label">Videos</div>
+                </div>
+
+                <div class="linea"></div>
+
+                <div class="stat">
+                    <div class="number">14M</div>
+                    <div class="label">Seguidores</div>
+                </div>
+            </div>
+
+            <div class="artist-info-right">
+                <h2>Camila</h2>
+                <div class="music-cont">
+                    <div class="music-player">
+                        <img src="MEDIA/IMG/vinyl-record-vector-illustration-isolated-on-white-background-free-png.png" class="vinilo">
+                        <h3>HAVANA</h1>
+                        <audio id="song">
+                            <source src="MEDIA/AUDIO/J Balvin, Bad Bunny - LA CANCIÓN (Audio) - jbalvinVEVO.mp3" type="audio/mpeg">
+                        </audio>
+                        <input type="range" value="0" id="progress">
+
+                        <div class="controles">
+                            <div>
+                                <i class="fa-solid fa-backward-step"></i>
+                            </div>
+                            <div onclick="playPause()">
+                                <i class="fa-solid fa-play" id="ctrlIcon"></i>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-forward-step"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p>#6</p>
+                <div class="img-container-right">
+                    <img src="MEDIA/IMG/camilacabello.webp" alt="Foto de Camila Cabello">
+                </div>
+            </div>
+
+            <div class="stats-info">
+                <div class="stat">
+                    <div class="number">72,7 M</div>
+                    <div class="label">Streams</div>
+                </div>
+
+                <div class="linea"></div>
+
+                <div class="stat">
+                    <div class="number">130</div>
+                    <div class="label">Ciudades</div>
+                </div>
+
+                <div class="linea"></div>
+
+                <div class="stat">
+                    <div class="number">200K</div>
+                    <div class="label">Videos</div>
+                </div>
+
+                <div class="linea"></div>
+
+                <div class="stat">
+                    <div class="number">14M</div>
+                    <div class="label">Seguidores</div>
+                </div>
+            </div>
+
+            <div class="artist-info">
+                <h2>Taylor Swift</h2>
+                <p>#7</p>
+                <div class="img-container">
+                    <img src="MEDIA/IMG/taylorswift.webp" alt="Foto de Taylor Swift">
+                </div>
+                <div class="music-cont">
+                    <div class="music-player">
+                        <img src="MEDIA/IMG/vinyl-record-vector-illustration-isolated-on-white-background-free-png.png" class="vinilo">
+                        <h3>SHAKE IT OFF</h1>
+                        <audio id="song">
+                            <source src="MEDIA/AUDIO/J Balvin, Bad Bunny - LA CANCIÓN (Audio) - jbalvinVEVO.mp3" type="audio/mpeg">
+                        </audio>
+                        <input type="range" value="0" id="progress">
+
+                        <div class="controles">
+                            <div>
+                                <i class="fa-solid fa-backward-step"></i>
+                            </div>
+                            <div onclick="playPause()">
+                                <i class="fa-solid fa-play" id="ctrlIcon"></i>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-forward-step"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-info">
+                <div class="stat">
+                    <div class="number">72,7 M</div>
+                    <div class="label">Streams</div>
+                </div>
+
+                <div class="linea"></div>
+
+                <div class="stat">
+                    <div class="number">130</div>
+                    <div class="label">Ciudades</div>
+                </div>
+
+                <div class="linea"></div>
+
+                <div class="stat">
+                    <div class="number">200K</div>
+                    <div class="label">Videos</div>
+                </div>
+
+                <div class="linea"></div>
+
+                <div class="stat">
+                    <div class="number">14M</div>
+                    <div class="label">Seguidores</div>
+                </div>
+            </div>
+
+            <div class="artist-info-right">
+                <h2>Beyonce</h2>
+                <div class="music-cont">
+                    <div class="music-player">
+                        <img src="MEDIA/IMG/vinyl-record-vector-illustration-isolated-on-white-background-free-png.png" class="vinilo">
+                        <h3>CRAZY IN LOVE</h1>
+                        <audio id="song">
+                            <source src="MEDIA/AUDIO/J Balvin, Bad Bunny - LA CANCIÓN (Audio) - jbalvinVEVO.mp3" type="audio/mpeg">
+                        </audio>
+                        <input type="range" value="0" id="progress">
+
+                        <div class="controles">
+                            <div>
+                                <i class="fa-solid fa-backward-step"></i>
+                            </div>
+                            <div onclick="playPause()">
+                                <i class="fa-solid fa-play" id="ctrlIcon"></i>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-forward-step"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p>#8</p>
+                <div class="img-container-right">
+                    <img src="MEDIA/IMG/beyonce.webp" alt="Foto de Beyonce">
+                </div>
+            </div>
+
+            <div class="stats-info">
+                <div class="stat">
+                    <div class="number">72,7 M</div>
+                    <div class="label">Streams</div>
+                </div>
+
+                <div class="linea"></div>
+
+                <div class="stat">
+                    <div class="number">130</div>
+                    <div class="label">Ciudades</div>
+                </div>
+
+                <div class="linea"></div>
+
+                <div class="stat">
+                    <div class="number">200K</div>
+                    <div class="label">Videos</div>
+                </div>
+
+                <div class="linea"></div>
+
+                <div class="stat">
+                    <div class="number">14M</div>
+                    <div class="label">Seguidores</div>
+                </div>
+            </div>
+
+            <div class="artist-info">
+                <h2>J Balvin</h2>
+                <p>#9</p>
+                <div class="img-container">
+                    <img src="MEDIA/IMG/jbalvin.webp" alt="Foto de J Balvin">
+                </div>
+                <div class="music-cont">
+                    <div class="music-player">
+                        <img src="MEDIA/IMG/vinyl-record-vector-illustration-isolated-on-white-background-free-png.png" class="vinilo">
+                        <h3>MI GENTE</h1>
+                        <audio id="song">
+                            <source src="MEDIA/AUDIO/J Balvin, Bad Bunny - LA CANCIÓN (Audio) - jbalvinVEVO.mp3" type="audio/mpeg">
+                        </audio>
+                        <input type="range" value="0" id="progress">
+
+                        <div class="controles">
+                            <div>
+                                <i class="fa-solid fa-backward-step"></i>
+                            </div>
+                            <div onclick="playPause()">
+                                <i class="fa-solid fa-play" id="ctrlIcon"></i>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-forward-step"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-info">
+                <div class="stat">
+                    <div class="number">72,7 M</div>
+                    <div class="label">Streams</div>
+                </div>
+
+                <div class="linea"></div>
+
+                <div class="stat">
+                    <div class="number">130</div>
+                    <div class="label">Ciudades</div>
+                </div>
+
+                <div class="linea"></div>
+
+                <div class="stat">
+                    <div class="number">200K</div>
+                    <div class="label">Videos</div>
+                </div>
+
+                <div class="linea"></div>
+
+                <div class="stat">
+                    <div class="number">14M</div>
+                    <div class="label">Seguidores</div>
+                </div>
+            </div>
+
+            <div class="artist-info-right">
+                <h2>Calvin Harris</h2>
+                <div class="music-cont">
+                    <div class="music-player">
+                        <img src="MEDIA/IMG/vinyl-record-vector-illustration-isolated-on-white-background-free-png.png" class="vinilo">
+                        <h3>WE FOUND LOVE</h1>
+                        <audio id="song">
+                            <source src="MEDIA/AUDIO/J Balvin, Bad Bunny - LA CANCIÓN (Audio) - jbalvinVEVO.mp3" type="audio/mpeg">
+                        </audio>
+                        <input type="range" value="0" id="progress">
+
+                        <div class="controles">
+                            <div>
+                                <i class="fa-solid fa-backward-step"></i>
+                            </div>
+                            <div onclick="playPause()">
+                                <i class="fa-solid fa-play" id="ctrlIcon"></i>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-forward-step"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p>#10</p>
+                <div class="img-container-right">
+                    <img src="MEDIA/IMG/calvinharris.webp" alt="Foto de Calvin Harris">
+                </div>
+            </div>
+
+            <div class="stats-info">
+                <div class="stat">
+                    <div class="number">72,7 M</div>
+                    <div class="label">Streams</div>
+                </div>
+
+                <div class="linea"></div>
+
+                <div class="stat">
+                    <div class="number">130</div>
+                    <div class="label">Ciudades</div>
+                </div>
+
+                <div class="linea"></div>
+
+                <div class="stat">
+                    <div class="number">200K</div>
+                    <div class="label">Videos</div>
+                </div>
+
+                <div class="linea"></div>
+
+                <div class="stat">
+                    <div class="number">14M</div>
+                    <div class="label">Seguidores</div>
+                </div>
+            </div>
+
+        </section>
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <a href="#inicio" class="text-logo">
+                        <img src="MEDIA/IMG/Logo_vertical.svg">
+                    </a>
+                </div>
+
+                <div class="footer-info">
+                    <h2>Apartados</h2>
+                    <ul>
+                        <li class="footer-elem">
+                            <a class="footer-icon" href="#actividades">Actividades</a>
+                        </li>
+                        <li class="footer-elem">
+                            <a href="#viajes" class="footer-icon">Viajes</a>
+                        </li>
+                        <li class="footer-elem">
+                            <a href="#hoteles" class="footer-icon">Hospedaje</a>
+                        </li>
+                        <li class="footer-elem">
+                            <a class="footer-icon" href="#contacto">Contáctanos</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-info">
+                    <h2>Contacta con nosotros</h2>
+                        <p>+51 999 999 999</p>
+                        <p>Support@Beatly.com</p>
+                </div>
+
+                <div class="footer-info">
+                    <h2>Síguenos</h2>
+                        <div class="social-icons">
+                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-instagram"></i>
+                            <i class="fab fa-tiktok"></i>
+                        </div>
+                </div>
+            </div>
+            <p class="copy"> &copy; 2026 Beatly. Todos los derechos reservados.</p>
+        </footer>
+
+    </body>
+</html>

@@ -43,12 +43,6 @@ body {
 
 /* MENU */
 
-
-.logo {
-    height: 40%;
-    width: 40%;
-}
-
 nav#menu {
     position: fixed;
     top: 0;
@@ -75,7 +69,7 @@ nav#menu .menu-toggle {
 }
 
 nav#menu ul {
-    margin-top: 11vh;
+    margin-top: 0.2vh;
     width: 100%;
     margin-left: 12vh;
 }
@@ -106,12 +100,17 @@ nav#menu ul li a:hover {
     color: var(--negro);
 }
 
+nav#menu img {
+    width: 100%;
+    height: 100%;
+}
 
 /* MENU TOP */
 
+
 nav#menu.top {
     width: 100%;
-    height: 70px;
+    height: 60px;
     flex-direction: row;
     justify-content: space-between;
     padding: 0 40px;
@@ -128,8 +127,14 @@ nav#menu.top ul li a {
     padding: 0 15px;
 }
 
+nav#menu.top img {
+    width: 40%;
+    height: 40%;
+}
+
 
 /* HEADER */
+
 
 .centrar {
     min-height: 70vh;
@@ -167,6 +172,7 @@ p {
 
 
 /* CANTANTES */
+
 
 h2 {
     color: var(--blanco);
@@ -334,7 +340,7 @@ span {
 .artist-info {
     width: 60%;
     color: var(--blanco);
-    margin: 20vh 45vh 0;
+    margin: 25vh 45vh 0;
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -347,7 +353,7 @@ span {
     font-size: 5.5rem;
     position: absolute;
     top: -17%;
-    left: 30%;
+    left: 23%;
     z-index: 1;
 }
 
@@ -355,7 +361,7 @@ span {
     position: relative;
     width: 100%;
     display: flex;
-    left: -34%;
+    left: -35%;
 }
 
 .img-container img {
@@ -450,3 +456,190 @@ span {
     color: var(--blanco);
     z-index: 1;
 }
+
+
+/* REPRODUCTOR DE MUSICA */
+
+
+.music-cont {
+    width: 1%;
+    background-color: var(--negro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.music-player {
+    width: 400px;
+    padding: 25px 35px;
+    text-align: center;
+}
+
+.vinilo {
+    width: 220px;
+    border-radius: 50%;
+}
+
+.music-player h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--blanco);
+    margin-top: 20px;
+}
+
+#progress {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 3px;
+    background-color: var(--blanco);
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 40px 0;
+}
+
+#progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: var(--negro);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 3px solid var(--blanco);
+}
+
+.controles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controles div {
+    width: 60px;
+    height: 60px;
+    margin: 20px;
+    background: var(--negro);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--blanco);
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.controles div:nth-child(2) {
+    transform: scale(1.5);
+    background: var(--main);
+    color: var(--negro);
+    box-shadow: none;
+}
+
+
+/* FOOTER */
+
+
+.footer {
+  background-color: var(--main);
+  color: var(--negro);
+  padding: 1px 10px 30px;
+  margin-top: 10vh;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.footer-container h2 {
+  font-size: 1.3em;
+  margin-bottom: 15px;
+  color: var(--negro);
+}
+
+.text-logo {
+  display: block;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.3s ease;
+}
+
+.text-logo h4 {
+  font-size: 1.5em;
+}
+
+.text-logo:hover {
+  transform: scale(1.07);
+}
+
+.footer-logo img {
+  width: 15em;
+  height: auto;
+  display: flex;
+}
+
+.footer-info {
+  text-align: center;
+}
+
+.footer-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: var(--negro);
+}
+
+.footer-info ul li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.footer-info ul li:hover {
+  transform: scale(1.2);
+  font-weight: bold;
+}
+
+.footer-info p {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: var(--negro);
+}
+
+.footer a:link,
+.footer a:visited {
+  color: var(--negro);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: var(--negro);
+  transition: 0.3s ease;
+}
+
+.social-icons i {
+  font-size: 18px;
+  margin-right: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.social-icons i:hover {
+  transform: scale(1.2);
+}
+
+.copy {
+  text-align: center;
+  display: flex;
+  margin-top: 30px;
+  font-size: 16px;
+  color: var(--negro);
+  justify-content: center;
+}
+
+
+/* ANIMACIONES */
+
