@@ -29,7 +29,6 @@ window.addEventListener("scroll", () => {
 
 // REPRODUCTOR DE MUSICA QUE SE PAUSA Y TODO
 
-
 let progress = document.getElementById("progress");
 let song = document.getElementById("song");
 let ctrlIcon = document.getElementById("ctrlIcon");
@@ -64,3 +63,62 @@ progress.onchange = function(){
     ctrlIcon.classList.add("fa-pause");
     ctrlIcon.classList.remove("fa-play");
 }
+
+
+// NUMEROS ANIMADOS
+
+const animarContadorIndividual = (contador) => {
+    const destino = parseFloat(contador.getAttribute('data-target'));
+    const sufijo = contador.getAttribute('data-suffix');
+    let valorInicial = 0;
+    
+    const duracion = 1700; 
+    const framesPorSegundo = 80;
+    const totalPasos = (duracion / 1000) * framesPorSegundo;
+    const incremento = destino / totalPasos;
+
+    const actualizarCuenta = () => {
+        valorInicial += incremento;
+
+        if (valorInicial < destino) {
+            let numeroFormateado = valorInicial.toFixed(1).replace('.', ',');
+            
+            if (numeroFormateado.endsWith(',0')) {
+                numeroFormateado = numeroFormateado.slice(0, -2);
+            }
+
+            contador.innerText = numeroFormateado + sufijo;
+            requestAnimationFrame(actualizarCuenta);
+        } else {
+            contador.innerText = destino.toString().replace('.',',') + sufijo;
+        }
+    };
+
+    actualizarCuenta();
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.classList.contains('animado')) {
+            entry.target.classList.add('animado');
+            animarContadorIndividual(entry.target);
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.3 });
+
+document.querySelectorAll('.number').forEach(contador => {
+    observer.observe(contador);
+});
+
+
+
+
+
+// PODCAST (ISABELLA)
+
+
+
+
+
+// INDEX LUCIA

@@ -13,6 +13,370 @@
     </head>
 
     <body>
+        <header class="podcast-player">
+            <div class="player-container">
+                <div class="left-controls">
+                    <span class="speed">1x</span>
+                    <button class="control-btn"><i class="fa-solid fa-backward-step"></i></button>
+                    <button id="playBtn" class="control-btn"><i class="fa-solid fa-play"></i></button>
+                    <button class="control-btn"><i class="fa-solid fa-forward-step"></i></button>
+                </div>
+
+                <div class="right-controls">
+                    <i class="fa-solid fa-volume-high volume-icon"></i>
+                    <div class="volume-container">
+                        <input type="range" id="volume" min="0" max="100" value="50">
+                    </div>
+                    <button class="icon-btn"><i class="fa-regular fa-circle-question"></i></button>
+                    <button class="icon-btn"><i class="fa-solid fa-bars"></i></button>
+                </div>
+            </div>
+        </header>
+
+        <section class="main-title">
+            <h1>Podcasts</h1>
+        </section>
+
+        <section class="podcasts-carousel">
+            <div class="top-podcasts-header">
+                <h2 class="top-podcasts-title">Podcasts Destacados</h2>
+            </div>
+            <div class="carousel-container">
+       
+                <div class="podcast-card">
+                    <div class="podcast-image">
+                        <img src="/media/tedtalks.webp" alt="TED">
+                    </div>
+                    <div class="podcast-name"><strong>Ted Talks Daily</strong>
+                    <p>TED Podcast</p></div>
+                    </div>
+            
+                    <div class="podcast-card">
+                        <div class="podcast-image">
+                            <img src="/media/unlibrounahora.webp" alt="UN">
+                        </div>
+                        <div class="podcast-name"><strong>Un Libro Una Hora</strong>
+                        <p>SER Podcast</p></div>
+                    </div>
+            
+      
+                    <div class="podcast-card">
+                        <div class="podcast-image">
+                            <img src="/media/bbcearth.webp" alt="BBC">
+                        </div>
+                        <div class="podcast-name"><strong>BBC Earth Podcast</strong>
+                        <p>BBC Earth Podcast</p>
+                        </div>
+                    </div>
+            
         
+                    <div class="podcast-card">
+                        <div class="podcast-image">
+                            <img src="/media/seregalandudas.webp" alt="DUDAS">
+                        </div>
+                        <div class="podcast-name"><strong>Se Regalan Dudas</strong>
+                        <p>Dudas Media Podcast</p>
+
+                        </div>
+                    </div>
+            
+           
+                    <div class="podcast-card">
+                        <div class="podcast-image">
+                            <img src="..." alt="...">
+                        </div>
+                        <div class="podcast-name">...</div>
+                    </div>
+            
+     
+                    <div class="podcast-card">
+                        <div class="podcast-image">
+                            <img src="..." alt="...">
+                        </div>
+                        <div class="podcast-name">...</div>
+                    </div>
+            
+       
+                    <div class="podcast-card">
+                        <div class="podcast-image">
+                            <img src="..." alt="...">
+                        </div>
+                        <div class="podcast-name">...</div>
+                    </div>
+            
+      
+                    <div class="podcast-card">
+                        <div class="podcast-image">
+                            <img src="..." alt="...">
+                        </div>
+                        <div class="podcast-name">...</div>
+                    </div>
+            </div>
+        </section>
+     
+
+  
+    <section class="top-podcasts">
+        <div class="top-podcasts-header">
+            <h2 class="top-podcasts-title">Top Podcasts</h2>
+        </div>
+        
+        <div class="top-podcasts-grid">
+      
+            <div class="top-podcast-card">
+                <div class="podcast-rank">
+                    <span class="rank-number">#1</span>
+                </div>
+                <div class="podcast-content">
+                    <div class="podcast-image-top">
+                        <img src="/media/99invisible.webp" alt="99% Invisible">
+                    </div>
+                    <div class="podcast-info">
+                        <div class="podcast-title-row">
+                            <h3 class="podcast-name-top">99% Invisible</h3>
+                            <span class="podcast-tag">ROMAN MARS</span>
+                        </div>
+                        <p class="podcast-description">Roman Mars Podcast</p>
+                    </div>
+                </div>
+            </div>
+            
+ 
+            <div class="top-podcast-card">
+                <div class="podcast-rank">
+                    <span class="rank-number">#2</span>
+                </div>
+                <div class="podcast-content">
+                    <div class="podcast-image-top">
+                        <img src="/media/DesignBetter.webp" alt="Design Better">
+                    </div>
+                    <div class="podcast-info">
+                        <div class="podcast-title-row">
+                            <h3 class="podcast-name-top">Design Better</h3>
+                            <span class="podcast-tag">THE CURIOSITY</span>
+                        </div>
+                        <p class="podcast-description">The Curiosity Department Podcast</p>
+                    </div>
+                </div>
+            </div>
+            
+           
+            <div class="top-podcast-card">
+                <div class="podcast-rank">
+                    <span class="rank-number">#3</span>
+                </div>
+                <div class="podcast-content">
+                    <div class="podcast-image-top">
+                        <img src="/media/veaterapia.webp" alt="Ve a Terapia">
+                    </div>
+                    <div class="podcast-info">
+                        <div class="podcast-title-row">
+                            <h3 class="podcast-name-top">Ve a Terapia</h3>
+                            <span class="podcast-tag">GENUINA MEDIA</span>
+                        </div>
+                        <p class="podcast-description">Genuina Media Podcast</p>
+                    </div>
+                </div>
+            </div>
+            
+        
+            <div class="top-podcast-card">
+                <div class="podcast-rank">
+                    <span class="rank-number">#4</span>
+                </div>
+                <div class="podcast-content">
+                    <div class="podcast-image-top">
+                        <img src="/media/inthemaking.webp" alt="In the Making">
+                    </div>
+                    <div class="podcast-info">
+                        <div class="podcast-title-row">
+                            <h3 class="podcast-name-top">In the Making</h3>
+                            <span class="podcast-tag">ADOBE</span>
+                        </div>
+                        <p class="podcast-description">Adobe</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+<section class="for-you-podcasts">
+    <div class="for-you-header">
+        <h2 class="for-you-title">Para ti</h2>
+    </div>
+    
+    <div class="for-you-grid">
+    
+        <div class="for-you-card">
+            <div class="for-you-image">
+                <img src="/media/callherdaddy.webp" alt="Call Her Daddy">
+            </div>
+            <div class="for-you-content">
+                <h3 class="for-you-podcast-name">Call Her Daddy</h3>
+                <p class="for-you-podcast-author">Alex Cooper</p>
+                <div class="for-you-tags">
+                    <span class="for-you-tag">The Daily</span>
+                    <span class="for-you-tag">Daily</span>
+                </div>
+            </div>
+        </div>
+        
+  
+        <div class="for-you-card">
+            <div class="for-you-image">
+                <img src="/media/newheights.webp" alt="New Heights">
+            </div>
+            <div class="for-you-content">
+                <h3 class="for-you-podcast-name">New Heights with Jason</h3>
+                <p class="for-you-podcast-author">Wondery Podcast</p>
+                <div class="for-you-tags">
+                    <span class="for-you-tag">Sports</span>
+                    <span class="for-you-tag">Entertainment</span>
+                </div>
+            </div>
+        </div>
+        
+       
+        <div class="for-you-card">
+            <div class="for-you-image">
+                <img src="/media/crime-junkie-podcast-logo.webp" alt="Crime Junkie">
+            </div>
+            <div class="for-you-content">
+                <h3 class="for-you-podcast-name">Crime Junkie</h3>
+                <p class="for-you-podcast-author">Podcast</p>
+                <div class="for-you-tags">
+                    <span class="for-you-tag">True Crime</span>
+                    <span class="for-you-tag">Weekly</span>
+                </div>
+            </div>
+        </div>
+        
+      
+        <div class="for-you-card">
+            <div class="for-you-image">
+                <img src="/media/smartless.webp" alt="SmartLess">
+            </div>
+            <div class="for-you-content">
+                <h3 class="for-you-podcast-name">SmartLess</h3>
+                <p class="for-you-podcast-author">SiriusXM</p>
+                <div class="for-you-tags">
+                    <span class="for-you-tag">Comedy</span>
+                    <span class="for-you-tag">Interview</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- SECCIÓN: NUEVOS EPISODIOS - DISEÑO MEJORADO -->
+<section class="new-episodes-carousel">
+    <div class="new-episodes-header-carousel">
+        <h2 class="new-episodes-title-carousel">New Episodes</h2>
+    </div>
+    
+    <div class="vertical-carousel-container">
+        <!-- Episodio 1 -->
+        <div class="episode-card-vertical">
+            <div class="episode-image-vertical">
+                <img src="/media/thispastweekend.webp" alt="This Past Weekend">
+            </div>
+            <div class="episode-content-vertical">
+                <div class="episode-title-top">
+                    <h3 class="episode-show-title-vertical">Free magic</h3>
+                    <span class="episode-number-vertical">Episodio 3</span>
+                </div>
+                <div class="episode-info-bottom">
+                    <p class="episode-show-name-vertical">This Past Weekend</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Episodio 2 -->
+        <div class="episode-card-vertical">
+            <div class="episode-image-vertical">
+                <img src="/media/h3podcast.webp" alt="H3 Podcast">
+            </div>
+            <div class="episode-content-vertical">
+                <div class="episode-title-top">
+                    <h3 class="episode-show-title-vertical">Soundbite tournament</h3>
+                    <span class="episode-number-vertical">Episodio 12</span>
+                </div>
+                <div class="episode-info-bottom">
+                    <p class="episode-show-name-vertical">H3 Podcast</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Episodio 3 -->
+        <div class="episode-card-vertical">
+            <div class="episode-image-vertical">
+                <img src="/media/joerogan.webp" alt="Joe Rogan">
+            </div>
+            <div class="episode-content-vertical">
+                <div class="episode-title-top">
+                    <h3 class="episode-show-title-vertical">Shane Gillis</h3>
+                    <span class="episode-number-vertical">Episodio 20</span>
+                </div>
+                <div class="episode-info-bottom">
+                    <p class="episode-show-name-vertical">Joe Rogan</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Episodio 4 -->
+        <div class="episode-card-vertical">
+            <div class="episode-image-vertical">
+                <img src="/media/smartless.webp" alt="SmartLess">
+            </div>
+            <div class="episode-content-vertical">
+                <div class="episode-title-top">
+                    <h3 class="episode-show-title-vertical">Jeremy Allen White</h3>
+                    <span class="episode-number-vertical">Episodio 50</span>
+                </div>
+                <div class="episode-info-bottom">
+                    <p class="episode-show-name-vertical">Smartless</p>
+                    <div class="episode-hosts">
+                        <span class="episode-host">JASON BATEMAN</span>
+                        <span class="episode-host">SEAN HAYES</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Episodio 5 (adicional para demostrar el scroll) -->
+        <div class="episode-card-vertical">
+            <div class="episode-image-vertical">
+                <img src="/media/crime-junkie-podcast-logo.webp" alt="Crime Junkie">
+            </div>
+            <div class="episode-content-vertical">
+                <div class="episode-title-top">
+                    <h3 class="episode-show-title-vertical">Police Explorer Program</h3>
+                    <span class="episode-number-vertical">Episodio 45</span>
+                </div>
+                <div class="episode-info-bottom">
+                    <p class="episode-show-name-vertical">Crime Junkie</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Episodio 6 (adicional para demostrar el scroll) -->
+        <div class="episode-card-vertical">
+            <div class="episode-image-vertical">
+                <img src="/media/newheights.webp" alt="New Heights">
+            </div>
+            <div class="episode-content-vertical">
+                <div class="episode-title-top">
+                    <h3 class="episode-show-title-vertical">Paul Rud</h3>
+                    <span class="episode-number-vertical">Episodio 32</span>
+                </div>
+                <div class="episode-info-bottom">
+                    <p class="episode-show-name-vertical">New Heights</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
     </body>
 </html>
