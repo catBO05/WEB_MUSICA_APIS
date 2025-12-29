@@ -1,5 +1,4 @@
 // MENU RESPONSIVE
-
 $(document).ready(function () {
     $("#menu-toggle").on("click", function () {
         $("#nav-links-responsive").toggleClass("active");
@@ -10,26 +9,58 @@ $(document).ready(function () {
     });
 });
 
+// SCROLL - Cambio de tamaños (jQuery) - EN PROCESO
+function shrinkHeader() {
+    "use strict";
+    var scroll = $(window).scrollTop();
+    var threshold = $(window).height() / 2;
+    if (scroll > threshold) {
+        $("nav").css({
+            "height": "12vh",
+            "width": "100%",
+            "flex-direction": "row",
+            "background-color": "var(--black-color)",
+            "border-bottom": "none",
+        });
+        // $("#icono > div").css("background-color", "var(--black-color)");
+        $(".icono_logo").css("fontSize", "0.9rem");
+        $(".logo").css({
+            "flex-direction": "row",
+            "width": "4.5rem",
+            "gap": "8px",
+        });
+        $(".logo > :first-child").css("height", "1.8rem");
 
-// MENU
-
-const menu = document.getElementById("menu");
-const trigger = document.querySelector(".cantantes");
-
-window.addEventListener("scroll", () => {
-    const triggerTop = trigger.offsetTop;
-
-    if (window.scrollY >= triggerTop - 100) {
-        menu.classList.add("top");
     } else {
-        menu.classList.remove("top");
+         $("nav").css({
+            "height": "100vh",
+            "width": "25%",
+            "flex-direction": "column",
+            "background-color": "transparent",
+            "border-bottom": "3px solid rgba(255, 255, 255, 0.5)",
+        });
+        // $("#icono > div").css("background-color", "white");
+        $(".icono_logo").css("fontSize", "1rem");
+        $(".logo").css({
+            "flex-direction": "column",
+            "width": "5rem",
+            "gap": "0px",
+        });
+        $(".logo > :first-child").css("height", "2.2rem");
+
     }
+}
+
+$(document).ready(function () {
+    "use strict";
+    $(window).scroll(function () {
+        shrinkHeader();
+    });
 });
 
 
+
 // REPRODUCTOR DE MUSICA QUE SE PAUSA Y TODO
-
-
 let progress = document.getElementById("progress");
 let song = document.getElementById("song");
 let ctrlIcon = document.getElementById("ctrlIcon");
