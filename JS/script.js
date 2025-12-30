@@ -27,7 +27,28 @@ window.addEventListener("scroll", () => {
 });
 
 
-// REPRODUCTOR DE MUSICA QUE SE PAUSA Y TODO
+
+
+
+//INDEX (HTML)
+
+const container = document.querySelector('.cont');
+const registerbtn = document.querySelector('.register-boton');
+const loginbtn = document.querySelector('.login-boton');
+
+registerbtn.addEventListener('click',()=>{
+    container.classList.add('active');
+})
+
+loginbtn.addEventListener('click',()=>{
+    container.classList.remove('active');
+})
+
+
+
+// TOP GLOBAL (HTML)
+
+// REPRODUCTOR DE MUSICA QUE SE PAUSA
 
 let progress = document.getElementById("progress");
 let song = document.getElementById("song");
@@ -115,10 +136,8 @@ document.querySelectorAll('.number').forEach(contador => {
 
 
 
-// PODCAST (ISABELLA)
+// PODCAST
 
 
 
 
-
-// INDEX LUCIA

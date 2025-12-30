@@ -30,8 +30,16 @@ p, a, ul, li, span {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
     min-height: 100vh;
-    background-color: var(--negro);
+    padding: 0;
+    width: 100%;
+    font-family: "Manrope", sans-serif;
+    overflow-x: hidden;
 }
 
 .wrapper {
@@ -132,3 +140,1816 @@ nav#menu.top ul li a {
 
 /* HEADER */
 
+header.podcast-player {
+    width: 100%;
+    margin: 20px 0 40px 0;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    border: 2px solid #E1FF2D;
+}
+
+.player-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 40px; 
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.left-controls {
+    display: flex;
+    align-items: center;
+    gap: 35px; 
+}
+
+
+.left-controls .speed {
+    font-size: 16px;
+    color:white;
+    font-weight: bold;
+    padding: 0;
+    background: transparent;
+    border: none;
+}
+
+
+.control-btn {
+    background: transparent;
+    border: none;
+    color: #E1FF2D;
+    font-size: 22px; 
+    cursor: pointer;
+    padding: 8px;
+    transition: all 0.2s;
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.control-btn:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+
+#playBtn {
+    background: transparent; 
+    color: rgba(219, 255, 90, 0.612);
+    font-size: 26px; 
+    cursor: pointer;
+    padding: 10px;
+    transition: all 0.2s;
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#playBtn:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+
+.right-controls {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+
+.volume-icon {
+    color:#E1FF2D;
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+
+.volume-container {
+    width: 120px;
+    display: flex;
+    align-items: center;
+}
+
+
+#volume {
+    width: 100%;
+    height: 6px;
+    background: #444;
+    border-radius: 3px; 
+    outline: none;
+    border: none;
+}
+
+#volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    background:#E1FF2D; 
+    border-radius: 50%; 
+    cursor: pointer;
+    border: 2px solid #000;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+
+.icon-btn {
+    background: transparent;
+    border: none;
+    color:#E1FF2D;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 5px;
+    transition: all 0.2s;
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-btn:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+
+.main-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    width: 100%;
+    max-width: 1200px; 
+    padding: 20px 40px 40px 40px; 
+    margin: 0 auto 30px auto; 
+    text-align: left;
+}
+
+.main-title h1 {
+    font-size: 150px;
+    font-weight: 900;
+    color:#E1FF2D;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-align: left; 
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-optical-sizing: auto;
+    
+}
+
+.subtitle {
+    font-size: 16px;
+    color:white;
+    font-weight: 300;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    opacity: 0.9;
+    text-align: left; 
+}
+
+
+.podcasts-carousel {
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.carousel-container {
+    display: flex;
+    gap: 30px; 
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 0 40px 10px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.carousel-container::-webkit-scrollbar {
+    display: none;
+}
+
+
+.podcast-card {
+    flex: 0 0 auto;
+    width: 240px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.podcast-image {
+    width: 240px; 
+    height: 240px; 
+    margin-bottom: 15px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+.podcast-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.podcast-image img:hover {
+    transform: scale(1.05);
+}
+
+
+.podcast-name {
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: 400;
+    text-align: left; 
+    line-height: 1.4;
+    width: 100%; 
+    opacity: 0.9;
+    padding: 5px 0 0 0; 
+    margin: 0;
+    align-self: flex-start; 
+}
+
+
+.podcast-card {
+    flex: 0 0 auto;
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+
+
+.podcast-image {
+    width: 240px;
+    height: 240px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    align-self: flex-start; 
+}
+
+
+.podcast-name {
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: 400;
+    text-align: left;
+    line-height: 1.4;
+    width: 100%;
+    opacity: 0.9;
+    padding: 8px 5px 0 5px; 
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.podcast-name.tight {
+    padding: 8px 0 0 0; 
+    text-align: left;
+    width: 100%;
+}
+
+
+.podcast-name.aligned {
+    padding: 8px 0 0 0;
+    text-align: left;
+    width: 240px; 
+    box-sizing: border-box;
+}
+
+
+#volume {
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(to right,  #E1FF2D 0%, #E1FF2D 50%, #444 50%, #444 100%);
+    background-size: 200% 100%;
+    background-position: right center;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    transition: background 0.3s;
+}
+
+
+#volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    background:  #E1FF2D;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #000;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+
+#volume::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    background: #E1FF2D;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #000;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+
+#volume::-moz-range-track {
+    width: 100%;
+    height: 6px;
+    background: #444;
+    border-radius: 3px;
+    border: none;
+}
+
+
+#volume::-moz-range-progress {
+    background: #E1FF2D;
+    height: 6px;
+    border-radius: 3px;
+}
+
+
+#volume::-ms-thumb {
+    width: 18px;
+    height: 18px;
+    background: #E1FF2D ;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #000;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+#volume::-ms-track {
+    width: 100%;
+    height: 6px;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+#volume::-ms-fill-lower {
+    background: #E1FF2D ;
+    border-radius: 3px;
+}
+
+#volume::-ms-fill-upper {
+    background: #444;
+    border-radius: 3px;
+}
+
+
+:root {
+    --volume-percentage: 50%;
+}
+
+
+#volume {
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(to right, #E1FF2D  0%, #E1FF2D  var(--volume-percentage, 50%), #444 var(--volume-percentage, 50%), #444 100%);
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    transition: background 0.3s;
+}
+
+
+#volume {
+    background: linear-gradient(to right, #E1FF2D  0%, #E1FF2D 50%, #444 50%, #444 100%);
+}
+
+
+
+
+@supports (-moz-appearance:none) {
+    #volume {
+        background: #444;
+    }
+    
+    #volume::-moz-range-progress {
+        background: #E1FF2D ;
+        height: 6px;
+        border-radius: 3px;
+    }
+}
+
+
+.top-podcasts {
+    width: 100%;
+    max-width: 1200px;
+    margin: 60px auto 40px auto;
+    padding: 0 40px;
+}
+
+.top-podcasts-header {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.top-podcasts-title {
+    font-family: "Manrope", sans-serif;
+    font-weight: 100;
+    font-size: 32px;
+    color: #fff;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+
+.top-podcasts-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+
+.top-podcast-card {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 15px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.top-podcast-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateX(5px);
+}
+
+
+.podcast-rank {
+    flex: 0 0 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rank-number {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    color: #E1FF2D ;
+    background: rgba(214, 255, 72, 0.1);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+
+.podcast-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+}
+
+
+.podcast-image-top {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.podcast-image-top img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.podcast-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.podcast-title-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+.podcast-name-top {
+    font-family: "Manrope", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+}
+
+
+.podcast-tag {
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: #E1FF2D ;
+    background: rgba(214, 255, 72, 0.1);
+    padding: 4px 10px;
+    border-radius: 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+
+.podcast-description {
+    font-family: "Manrope", sans-serif;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+    line-height: 1.4;
+}
+
+
+.for-you-podcasts {
+    width: 100%;
+    max-width: 1200px;
+    margin: 60px auto 80px auto;
+    padding: 0 40px;
+}
+
+.for-you-header {
+    margin-bottom: 35px;
+    text-align: left;
+}
+
+.for-you-title {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 800;
+    font-size: 48px;
+    color: #E1FF2D;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+
+.for-you-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    width: 100%;
+}
+
+
+.for-you-card {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    min-height: 140px;
+}
+
+.for-you-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+
+.for-you-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 12px;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-right: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+.for-you-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.for-you-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+.for-you-podcast-name {
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    line-height: 1.2;
+}
+
+
+.for-you-podcast-author {
+    font-family: "Manrope", sans-serif;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+}
+
+
+.for-you-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 5px;
+}
+
+
+.for-you-tag {
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: #E1FF2D;
+    background: rgba(214, 255, 72, 0.1);
+    padding: 4px 12px;
+    border-radius: 15px;
+    letter-spacing: 0.5px;
+}
+
+
+.new-episodes-corrected {
+    width: 100%;
+    max-width: 1200px;
+    margin: 60px auto 80px auto;
+    padding: 0 40px;
+}
+
+.new-episodes-header-corrected {
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.new-episodes-title-corrected {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 900;
+    font-size: 60px;
+    color: #fff;
+    letter-spacing: 0.5px;
+    margin: 0;
+    line-height: 1;
+}
+
+
+.new-episodes-grid-corrected {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 100%;
+}
+
+
+.episode-card-corrected {
+    display: flex;
+    background: transparent;
+    border-radius: 0;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.3s ease;
+}
+
+.episode-card-corrected:hover {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px);
+}
+
+
+.episode-image-corrected {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-right: 25px;
+}
+
+.episode-image-corrected img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.episode-content-corrected {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.episode-main-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 8px;
+}
+
+
+.episode-show-title-corrected {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 40px;
+    font-weight: 900;
+    color: #fff;
+    margin: 0;
+    letter-spacing: 1px;
+    line-height: 0.9;
+    text-transform: uppercase;
+}
+
+
+.episode-number-corrected {
+    font-family: "Manrope", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 5px;
+}
+
+
+.episode-show-subtitle {
+    font-family: "Manrope", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+}
+
+
+.episode-authors {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+}
+
+
+.episode-author {
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.08);
+    padding: 4px 10px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+}
+
+
+.new-episodes-carousel {
+    width: 100%;
+    max-width: 1200px;
+    margin: 60px auto 80px auto;
+    padding: 0 40px;
+}
+
+.new-episodes-header-carousel {
+    margin-bottom: 35px;
+    text-align: left;
+}
+
+.new-episodes-title-carousel {
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    color: #fff;
+    letter-spacing: 0.5px;
+    margin: 0;
+    line-height: 1;
+}
+
+
+.vertical-carousel-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-height: 600px;
+    overflow-y: auto;
+    padding-right: 10px;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #E1FF2D rgba(255, 255, 255, 0.1);
+    border-left: 2px solid #E1FF2D;
+    padding-left: 20px;
+}
+
+
+.vertical-carousel-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.vertical-carousel-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+}
+
+.vertical-carousel-container::-webkit-scrollbar-thumb {
+    background: #E1FF2D;
+    border-radius: 3px;
+}
+
+.vertical-carousel-container::-webkit-scrollbar-thumb:hover {
+    background: #c9e83d;
+}
+
+
+.episode-card-vertical {
+    display: flex;
+    background: transparent;
+    border-radius: 0;
+    padding: 25px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    min-height: 140px;
+    position: relative;
+}
+
+.episode-card-vertical:hover {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    transform: translateX(5px);
+}
+
+.episode-card-vertical:last-child {
+    border-bottom: none;
+}
+
+
+.episode-image-vertical {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-right: 25px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.episode-image-vertical img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.episode-content-vertical {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.episode-title-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+
+.episode-show-title-vertical {
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    color: #fff;
+    margin: 0;
+    letter-spacing: 1px;
+    line-height: 0.9;
+}
+
+
+.episode-number-vertical {
+    font-family: "Manrope", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #E1FF2D;
+    background: rgba(225, 255, 45, 0.1);
+    padding: 6px 12px;
+    border-radius: 15px;
+    letter-spacing: 0.5px;
+}
+
+
+.episode-info-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+.episode-show-name-vertical {
+    font-family: "Manrope", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+
+.episode-hosts {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 5px;
+}
+
+
+.episode-host {
+    font-family: "Manrope", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 6px 12px;
+    border-radius: 6px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+
+@media (max-width: 1200px) {
+    .player-container {
+        padding: 25px 30px;
+        max-width: 1000px;
+    }
+    
+    .podcasts-carousel {
+        max-width: 1000px;
+    }
+    
+    .podcast-card {
+        width: 220px;
+    }
+    
+    .podcast-image {
+        width: 220px;
+        height: 220px;
+    }
+}
+
+@media (max-width: 992px) {
+    .player-container {
+        padding: 22px 25px;
+        max-width: 800px;
+    }
+    
+    .main-title h1 {
+        font-size: 70px;
+    }
+    
+    .subtitle {
+        font-size: 14px;
+        letter-spacing: 4px;
+    }
+    
+    .podcasts-carousel {
+        max-width: 800px;
+    }
+    
+    .podcast-card {
+        width: 200px;
+    }
+    
+    .podcast-image {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .control-btn, #playBtn, .icon-btn {
+        font-size: 20px;
+    }
+    
+    #playBtn {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .player-container {
+        padding: 18px 20px;
+        max-width: 600px;
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+    .main-title h1 {
+        font-size: 50px;
+    }
+    
+    .subtitle {
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
+    
+    .podcasts-carousel {
+        max-width: 600px;
+    }
+    
+    .podcast-card {
+        width: 180px;
+    }
+    
+    .podcast-image {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .podcast-name {
+        font-size: 13px;
+    }
+    
+    .left-controls, .right-controls {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .player-container {
+        padding: 15px 15px;
+        max-width: 100%;
+    }
+    
+    .main-title h1 {
+        font-size: 40px;
+    }
+    
+    .subtitle {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+    
+    .podcasts-carousel {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+    
+    .podcast-card {
+        width: 160px;
+    }
+    
+    .podcast-image {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .podcast-name {
+        font-size: 12px;
+    }
+    
+    .control-btn, .icon-btn {
+        font-size: 18px;
+    }
+    
+    #playBtn {
+        font-size: 22px;
+    }
+    
+    .volume-container {
+        width: 100px;
+    }
+}
+
+
+
+@media (max-width: 1200px) {
+    .new-episodes-carousel {
+        max-width: 1000px;
+        padding: 0 30px;
+    }
+    
+    .episode-show-title-vertical {
+        font-size: 30px;
+    }
+    
+    .episode-image-vertical {
+        width: 90px;
+        height: 90px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .new-episodes-carousel {
+        max-width: 800px;
+        padding: 0 25px;
+    }
+    
+    .new-episodes-title-carousel {
+        font-size: 50px;
+    }
+    
+    .episode-show-title-vertical {
+        font-size: 28px;
+    }
+    
+    .episode-image-vertical {
+        width: 85px;
+        height: 85px;
+        margin-right: 18px;
+    }
+    
+    .vertical-carousel-container {
+        max-height: 500px;
+        padding-left: 15px;
+    }
+    
+    .episode-show-name-vertical {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 768px) {
+    .new-episodes-carousel {
+        max-width: 600px;
+        padding: 0 20px;
+        margin: 40px auto 50px auto;
+    }
+    
+    .new-episodes-title-carousel {
+        font-size: 42px;
+    }
+    
+    .episode-card-vertical {
+        padding: 20px 0;
+        min-height: 120px;
+    }
+    
+    .episode-show-title-vertical {
+        font-size: 26px;
+    }
+    
+    .episode-image-vertical {
+        width: 80px;
+        height: 80px;
+        margin-right: 15px;
+    }
+    
+    .vertical-carousel-container {
+        max-height: 450px;
+        padding-left: 12px;
+    }
+    
+    .episode-show-name-vertical {
+        font-size: 16px;
+    }
+    
+    .episode-number-vertical {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .new-episodes-carousel {
+        max-width: 100%;
+        padding: 0 15px;
+        margin: 30px auto 40px auto;
+    }
+    
+    .new-episodes-title-carousel {
+        font-size: 36px;
+    }
+    
+    .episode-card-vertical {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 25px 0;
+        min-height: auto;
+    }
+    
+    .episode-image-vertical {
+        width: 100%;
+        height: 180px;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .episode-content-vertical {
+        width: 100%;
+    }
+    
+    .episode-title-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        margin-bottom: 15px;
+    }
+    
+    .episode-show-title-vertical {
+        font-size: 30px;
+        line-height: 1;
+    }
+    
+    .episode-show-name-vertical {
+        font-size: 18px;
+    }
+    
+    .episode-host {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+    
+    .vertical-carousel-container {
+        max-height: 400px;
+        border-left-width: 1px;
+        padding-left: 10px;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .new-episodes-title-carousel {
+        font-size: 32px;
+    }
+    
+    .episode-show-title-vertical {
+        font-size: 26px;
+    }
+    
+    .episode-image-vertical {
+        height: 160px;
+    }
+    
+    .episode-show-name-vertical {
+        font-size: 16px;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .new-episodes-carousel {
+        max-width: 1000px;
+        padding: 0 30px;
+    }
+    
+    .episode-show-title-vertical {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 992px) {
+    .new-episodes-carousel {
+        max-width: 800px;
+        padding: 0 25px;
+    }
+    
+    .new-episodes-title-carousel {
+        font-size: 50px;
+    }
+    
+    .episode-show-title-vertical {
+        font-size: 26px;
+    }
+    
+    .episode-image-vertical {
+        width: 90px;
+        height: 90px;
+        margin-right: 20px;
+    }
+    
+    .vertical-carousel-container {
+        max-height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .new-episodes-carousel {
+        max-width: 600px;
+        padding: 0 20px;
+        margin: 40px auto 50px auto;
+    }
+    
+    .new-episodes-title-carousel {
+        font-size: 42px;
+    }
+    
+    .episode-card-vertical {
+        padding: 15px 0;
+    }
+    
+    .episode-show-title-vertical {
+        font-size: 24px;
+    }
+    
+    .episode-image-vertical {
+        width: 80px;
+        height: 80px;
+        margin-right: 15px;
+    }
+    
+    .vertical-carousel-container {
+        max-height: 450px;
+    }
+    
+    .episode-show-subtitle-vertical {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .new-episodes-carousel {
+        max-width: 100%;
+        padding: 0 15px;
+        margin: 30px auto 40px auto;
+    }
+    
+    .new-episodes-title-carousel {
+        font-size: 36px;
+    }
+    
+    .episode-card-vertical {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 0;
+    }
+    
+    .episode-image-vertical {
+        width: 100%;
+        height: 180px;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .episode-content-vertical {
+        width: 100%;
+    }
+    
+    .episode-title-row-vertical {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        margin-bottom: 10px;
+    }
+    
+    .episode-show-title-vertical {
+        font-size: 28px;
+        line-height: 1;
+    }
+    
+    .episode-show-subtitle-vertical {
+        font-size: 15px;
+    }
+    
+    .episode-author-vertical {
+        font-size: 11px;
+    }
+    
+    .vertical-carousel-container {
+        max-height: 400px;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .new-episodes-title-carousel {
+        font-size: 32px;
+    }
+    
+    .episode-show-title-vertical {
+        font-size: 24px;
+    }
+    
+    .episode-image-vertical {
+        height: 160px;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .new-episodes-corrected {
+        max-width: 1000px;
+        padding: 0 30px;
+    }
+    
+    .episode-show-title-corrected {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 992px) {
+    .new-episodes-corrected {
+        max-width: 800px;
+        padding: 0 25px;
+    }
+    
+    .new-episodes-title-corrected {
+        font-size: 50px;
+    }
+    
+    .episode-show-title-corrected {
+        font-size: 32px;
+    }
+    
+    .episode-image-corrected {
+        width: 100px;
+        height: 100px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .new-episodes-corrected {
+        max-width: 600px;
+        padding: 0 20px;
+        margin: 40px auto 50px auto;
+    }
+    
+    .new-episodes-title-corrected {
+        font-size: 42px;
+    }
+    
+    .new-episodes-grid-corrected {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .episode-card-corrected {
+        padding: 15px 0;
+    }
+    
+    .episode-show-title-corrected {
+        font-size: 34px;
+    }
+    
+    .episode-image-corrected {
+        width: 90px;
+        height: 90px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .new-episodes-corrected {
+        max-width: 100%;
+        padding: 0 15px;
+        margin: 30px auto 40px auto;
+    }
+    
+    .new-episodes-title-corrected {
+        font-size: 36px;
+    }
+    
+    .episode-card-corrected {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 0;
+    }
+    
+    .episode-image-corrected {
+        width: 100%;
+        height: 200px;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .episode-content-corrected {
+        width: 100%;
+    }
+    
+    .episode-main-title-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        margin-bottom: 10px;
+    }
+    
+    .episode-show-title-corrected {
+        font-size: 32px;
+        line-height: 1;
+    }
+    
+    .episode-show-subtitle {
+        font-size: 15px;
+    }
+    
+    .episode-author {
+        font-size: 11px;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .new-episodes-title-corrected {
+        font-size: 32px;
+    }
+    
+    .episode-show-title-corrected {
+        font-size: 28px;
+    }
+    
+    .episode-image-corrected {
+        height: 180px;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .for-you-podcasts {
+        max-width: 1000px;
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 992px) {
+    .for-you-podcasts {
+        max-width: 800px;
+        padding: 0 25px;
+    }
+    
+    .for-you-title {
+        font-size: 42px;
+    }
+    
+    .for-you-podcast-name {
+        font-size: 18px;
+    }
+    
+    .for-you-image {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+@media (max-width: 768px) {
+    .for-you-podcasts {
+        max-width: 600px;
+        padding: 0 20px;
+        margin: 40px auto 50px auto;
+    }
+    
+    .for-you-title {
+        font-size: 36px;
+    }
+    
+    .for-you-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .for-you-card {
+        padding: 15px;
+    }
+    
+    .for-you-image {
+        width: 80px;
+        height: 80px;
+        margin-right: 15px;
+    }
+    
+    .for-you-podcast-name {
+        font-size: 16px;
+    }
+    
+    .for-you-podcast-author {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 576px) {
+    .for-you-podcasts {
+        max-width: 100%;
+        padding: 0 15px;
+        margin: 30px auto 40px auto;
+    }
+    
+    .for-you-title {
+        font-size: 32px;
+    }
+    
+    .for-you-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+    
+    .for-you-image {
+        width: 100%;
+        height: 200px;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .for-you-content {
+        width: 100%;
+    }
+    
+    .for-you-podcast-name {
+        font-size: 18px;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .top-podcasts {
+        max-width: 1000px;
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 992px) {
+    .top-podcasts {
+        max-width: 800px;
+        padding: 0 25px;
+    }
+    
+    .top-podcasts-title {
+        font-size: 28px;
+    }
+    
+    .podcast-name-top {
+        font-size: 16px;
+    }
+    
+    .podcast-description {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-podcasts {
+        max-width: 600px;
+        padding: 0 20px;
+        margin: 40px auto 30px auto;
+    }
+    
+    .top-podcasts-title {
+        font-size: 24px;
+    }
+    
+    .top-podcast-card {
+        padding: 12px 15px;
+    }
+    
+    .podcast-content {
+        gap: 15px;
+    }
+    
+    .podcast-image-top {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .podcast-name-top {
+        font-size: 15px;
+    }
+    
+    .podcast-tag {
+        font-size: 11px;
+        padding: 3px 8px;
+    }
+    
+    .podcast-description {
+        font-size: 12px;
+    }
+    
+    .rank-number {
+        font-size: 20px;
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 576px) {
+    .top-podcasts {
+        max-width: 100%;
+        padding: 0 15px;
+        margin: 30px auto 20px auto;
+    }
+    
+    .top-podcasts-title {
+        font-size: 22px;
+    }
+    
+    .podcast-title-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .podcast-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    
+    .podcast-image-top {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .podcast-name-top {
+        font-size: 14px;
+    }
+    
+    .podcast-description {
+        font-size: 11px;
+    }
+    
+    .rank-number {
+        font-size: 18px;
+        width: 32px;
+        height: 32px;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .podcast-card {
+        width: 220px;
+    }
+    
+    .podcast-image {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .podcast-name.aligned {
+        width: 220px;
+    }
+}
+
+@media (max-width: 992px) {
+    .podcast-card {
+        width: 200px;
+    }
+    
+    .podcast-image {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .podcast-name {
+        font-size: 14px;
+    }
+    
+    .podcast-name.aligned {
+        width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .podcast-card {
+        width: 180px;
+    }
+    
+    .podcast-image {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .podcast-name {
+        font-size: 13px;
+    }
+    
+    .podcast-name.aligned {
+        width: 180px;
+    }
+}
+
+@media (max-width: 576px) {
+    .podcast-card {
+        width: 160px;
+    }
+    
+    .podcast-image {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .podcast-name {
+        font-size: 12px;
+    }
+    
+    .podcast-name.aligned {
+        width: 160px;
+    }
+}
