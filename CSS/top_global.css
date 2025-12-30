@@ -11,22 +11,35 @@
 
 :root {
   --main: #E1FF2D;
-
   --negro: #000005;
-
   --blanco: #F2F2F2;
+  --gris: #d2d2d2;
 }
 
 
 /* BODY */
-
-
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Bricolage Grotesque', cursive;
 }
 
 p, a, ul, li, span {
     font-family: 'Manrope', cursive;
+}
+
+h1 {
+    color: var(--main);
+    font-size: 7.5rem;
+}
+
+h2 {
+    color: var(--blanco);
+    font-size: 2.8rem;
+}
+
+p {
+    color: var(--gris);
+    font-size: 1.4rem;
+    line-height: 1.2;
 }
 
 body {
@@ -43,149 +56,141 @@ body {
 
 
 /* MENU */
-
-
-nav#menu {
+nav {
     position: fixed;
     top: 0;
     left: 0;
-    width: 180px;
-    height: 100vh;
+    width: 100%;
+    height: 12vh;
     backdrop-filter: blur(15px);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     z-index: 1000;
     text-align: left;
-}
-
-nav#menu a {
-    color: var(--blanco);
-    font-size: 18px;
-    margin: 30px 0 0 0;
-    transition: color 0.6s ease;
-}
-
-nav#menu .menu-toggle {
-    display: none;
-}
-
-nav#menu ul {
-    margin-top: 0.2vh;
-    width: 100%;
-    margin-left: 12vh;
-}
-
-nav#menu ul li {
-    width: 100%;
-    display: flex;
-    align-items: baseline;
-    gap: 10px;
-    padding: 10px 0;
-}
-
-nav#menu ul li .nav-icon {
-    width: 20px;
-    height: 20px;
-}
-
-nav#menu ul li a {
-    display: block;
-    padding: 15px;
-    width: 100%;
-    color: var(--blanco);
-    transition: background-color 0.3s ease;
-}
-
-nav#menu ul li a:hover {
-    background-color: var(--main);
-    color: var(--negro);
-}
-
-nav#menu img {
-    width: 100%;
-    height: 100%;
-}
-
-
-/* MENU TOP */
-
-
-nav#menu.top {
-    width: 100%;
-    height: 60px;
-    flex-direction: row;
     justify-content: space-between;
     padding: 0 40px;
 }
 
-nav#menu.top ul {
-    display: flex;
-    flex-direction: row;
-    margin: 0;
-    width: auto;
+nav a {
+    color: var(--blanco);
+    font-size: 18px;
+    transition: color 0.6s ease;
 }
 
-nav#menu.top ul li a {
-    padding: 0 15px;
-}
-
-nav#menu.top img {
+nav img {
     width: 40%;
     height: 40%;
 }
 
+nav #menu-toggle {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    width: auto;
+    gap: 1rem;
+}
+
+nav ul li {
+    /* width: 100%; */
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+nav ul li .nav-icon {
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s ease;
+}
+
+nav ul li a {
+    padding: 0 8px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover menu */
+.menu-links:before,
+.menu-links:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 0;
+    /* box-sizing: border-box; */
+}
+
+.menu-links:before {
+    top: 0;
+    left: 0;
+    border-top: 2px solid var(--main);
+    border-left: 2px solid var(--main);
+}
+
+.menu-links:after {
+    bottom: 0;
+    right: 0;
+    border-bottom: 2px solid var(--main);
+    border-right: 2px solid var(--main);
+}
+
+.menu-links:hover,
+.menu-links a:hover {
+    color: var(--main);
+}
+
+.menu-links:hover:before,
+.menu-links:hover:after {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
 
 /* HEADER */
-
-
 .centrar {
-    min-height: 70vh;
-    justify-content: center;
+    min-height: 80vh;
+    text-align: right;
+    margin-right: 5vh;
+    padding-top: 8rem;
+}
+
+
+/* SECCION - CANTANTES */
+.linea-titulo {
+    display: flex;
     align-items: center;
-    text-align: right;
-    margin-right: 18vh;
-    margin-left: 25vh;
-    align-content: center;
-    margin-bottom: 20vh;
+    flex-direction: row;
+    gap: 2rem;
+    margin-bottom: 1rem;
 }
 
-h1 {
-    color: var(--main);
-    font-size: 25vh;
-    margin-bottom: 3vh;
-    background: linear-gradient(to right, #E1FF2D, #d5ff2d, #edff84, #d5ff2d, #c8ff22);
-    background-clip: text;
-    background-size: 200%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: gradientmove 2.5s linear infinite;
+.linea-hrz {
+    position: relative;
+    width: 45px;
+    height: 2px;
+    background-color: var(--blanco);
 }
 
-@keyframes gradientmove {
-    to {
-        background-position: 200%;
-    }
-}
-
-p {
-    color: var(--blanco);
-    font-size: 3.5vh;
-}
-
-
-/* CANTANTES */
-
-
-h2 {
-    color: var(--blanco);
-    font-size: 4rem;
-    margin: 5vh;
-    text-align: right;
-}
-
-span {
-    color: var(--main);
+.linea-hrz::after {
+    content: '';
+    position: absolute;
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    background-color: var(--blanco);
+    border-radius: 50%;
 }
 
 .carousel {

@@ -5,40 +5,45 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <title>Beatly</title>
-        <link href="CSS/top_global.css" rel="Stylesheet" type="text/css">
+        <!-- FAVICON -->
         <link rel="icon" href="MEDIA/IMG/Favicon (1).svg">
+        <!-- CSS -->
+        <link href="CSS/top_global.css" rel="Stylesheet" type="text/css">
+        <!-- AOS -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <!-- ICONOS - FONT AWESOME -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="JS/script.js" defer></script>
     </head>
 
     <body>
         <div class="wrapper">
-            <nav id="menu" class="top">
+            <!-- MENU -->
+            <nav id="menu">
                 <a href="#">
                     <img src="MEDIA/IMG/Logo_vertical (1).svg" alt="Logo de Beatly" class="logo">
                 </a>
                     
-                <ul class="nav-links-responsive" id="nav-links-responsive">
-                    <li>
+                <ul id="nav-links">
+                    <li class="menu-links">
                         <img src="MEDIA/IMG/fav_icono (1).svg" class="nav-icon">
                         <a href="#">Favoritos</a>
                     </li>
-                    <li>
+                    <li class="menu-links">
                         <img src="MEDIA/IMG/topGlobal_icono (1).svg" class="nav-icon">
-                        <a href="#">Top Global</a>
+                        <a href="top_global.html">Top Global</a>
                     </li>
-                    <li>
+                    <li class="menu-links">
                         <img src="MEDIA/IMG/podcast_icono (1).svg" class="nav-icon">
                         <a href="podcast.html">Podcasts</a>
                     </li>
-                    <li>
+                    <li class="menu-links">
                         <img src="MEDIA/IMG/buscar_icono (1).svg" class="nav-icon"> 
                         <a href="#">Buscar</a>
                     </li>
                 </ul>
                     
-                <div class="menu-toggle" id="menu-toggle">
+                <div id="menu-toggle">
                     <i class="fas fa-bars"></i>
                 </div>
             </nav>
@@ -47,13 +52,17 @@
         <header>
             <div class="centrar">
                 <h1>TOP GLOBAL</h1>
-                <p>Tu actualización diaria de las canciones más escuchadas <br> ahora mismo en Global.</p>
+                <p>Tu actualización diaria de las canciones <br>más escuchadas ahora mismo en Global.</p>
             </div>
         </header>
 
+        <!-- SECCION - CANTANTES -->
         <section class="cantantes">
-            <h2>TOP 10<span>🠷</span></h2>
-            <div class="carousel scroll-slide-right">
+            <div class="linea-titulo">
+                <div class="linea-hrz"></div>
+                <h2>TOP 10</h2>
+            </div>
+            <div class="carousel scroll-slide-right" data-aos="fade-left">
                 <div class="group">
                     <div class="card">
                         <p>#1</p>
@@ -891,6 +900,11 @@
             </div>
             <p class="copy"> &copy; 2026 Beatly. Todos los derechos reservados.</p>
         </footer>
+
+        <!-- JS -->
+        <script src="JS/Chart.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="JS/script.js" defer></script>
 
     </body>
 </html>

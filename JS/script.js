@@ -1,12 +1,11 @@
 // MENU RESPONSIVE
-
 $(document).ready(function () {
     $("#menu-toggle").on("click", function () {
-        $("#nav-links-responsive").toggleClass("active");
+        $("#nav-links").toggleClass("active");
     });
 
-    $("#nav-links-responsive a").on("click", function () {
-        $("#nav-links-responsive").removeClass("active");
+    $("#nav-links a").on("click", function () {
+        $("#nav-links").removeClass("active");
     });
 });
 
@@ -18,34 +17,46 @@ function shrinkHeader() {
     var threshold = $(window).height() / 2;
     if (scroll > threshold) {
         $("nav").css({
-            "height": "10vh",
-            "background-color": "var(--black-color)",
-            "border-bottom": "none",
-        });
-        // $("#icono > div").css("background-color", "var(--black-color)");
-        $(".icono_logo").css("fontSize", "0.9rem");
-        $(".logo").css({
+            "height": "12vh",
+            "width": "100%",
+            "align-items": "center",
             "flex-direction": "row",
-            "width": "4.5rem",
-            "gap": "8px",
+            "justify-content": "space-between",
+            "gap": "0rem",
+            "background-color": "#6b6b6b4f",
         });
-        $(".logo > :first-child").css("height", "1.8rem");
-
+        $("nav a img").css({
+            "width": "40%",
+            "height": "40%",
+        });
+        $("nav ul").css({
+            "flex-direction": "row",
+            "gap": "1rem",
+            "align-items": "none",
+        });
+        $(".linea-titulo").css("flex-direction", "row");
+        $(".linea-hrz::after").css("right", "-8px");
     } else {
          $("nav").css({
-            "height": "12vh",
-            "background-color": "transparent",
-            "border-bottom": "3px solid rgba(255, 255, 255, 0.5)",
-        });
-        // $("#icono > div").css("background-color", "white");
-        $(".icono_logo").css("fontSize", "1rem");
-        $(".logo").css({
+            "height": "100vh",
+            "width": "20%",
+            "align-items": "flex-start",
             "flex-direction": "column",
-            "width": "5rem",
-            "gap": "0px",
+            "justify-content": "start",
+            "gap": "2.5rem",
+            "background-color": "transparent",
         });
-        $(".logo > :first-child").css("height", "2.2rem");
-
+        $("nav a img").css({
+            "width": "100%",
+            "height": "100%",
+        });
+        $("nav ul").css({
+            "flex-direction": "column",
+            "gap": "4.8rem",
+            "align-items": "center",
+        });
+        $(".linea-titulo").css("flex-direction", "row-reverse");
+        $(".linea-hrz::after").css("right", "42px");
     }
 }
 
@@ -61,7 +72,6 @@ $(document).ready(function () {
 
 
 //INDEX (HTML)
-
 const container = document.querySelector('.cont');
 const registerbtn = document.querySelector('.register-boton');
 const loginbtn = document.querySelector('.login-boton');
@@ -79,7 +89,6 @@ loginbtn.addEventListener('click',()=>{
 // TOP GLOBAL (HTML)
 
 // REPRODUCTOR DE MUSICA QUE SE PAUSA
-
 let progress = document.getElementById("progress");
 let song = document.getElementById("song");
 let ctrlIcon = document.getElementById("ctrlIcon");
@@ -117,7 +126,6 @@ progress.onchange = function(){
 
 
 // NUMEROS ANIMADOS
-
 const animarContadorIndividual = (contador) => {
     const destino = parseFloat(contador.getAttribute('data-target'));
     const sufijo = contador.getAttribute('data-suffix');
