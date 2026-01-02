@@ -46,7 +46,7 @@ body {
   position: relative;
   width: 850px;
   height: 550px;
-  background-color: var(--blanco);
+  background-color: var(--negro);
   margin: 20px;
   border-radius: 30px;
   overflow: hidden;
@@ -58,7 +58,19 @@ body {
   color: var(--negro);
 }
 
+.cont h2 {
+  font-size: 36px;
+  margin: -10px 0;
+  color: var(--blanco);
+}
+
 .cont p {
+  color: var(--blanco);
+  font-size: 14px;
+  margin: 15px 0;
+}
+
+.cont h6 {
   color: var(--negro);
   font-size: 14px;
   margin: 15px 0;
@@ -73,7 +85,7 @@ form {
   right: 0;
   width: 50%;
   height: 100%;
-  background-color: var(--blanco);
+  background-color: var(--negro);
   display: flex;
   align-items: center;
   text-align: center;
@@ -88,11 +100,11 @@ form {
   right: 50%;
 }
 
-.form-box .register {
+.form-box.register {
   visibility: hidden;
 }
 
-.cont.active .form-box .register {
+.cont.active .form-box.register {
   visibility: visible;
 }
 
@@ -115,7 +127,7 @@ form {
 
 .input-box input::placeholder {
   color: rgba(0, 0, 0, 0.505);
-  font-weight: 400;
+  font-weight: bold;
 }
 
 .input-box i {
@@ -124,6 +136,7 @@ form {
   top: 50%;
   transform: translateY(-50%);
   font-size: 20px;
+  border: var(--blanco);
 }
 
 .forgot-link {
@@ -132,7 +145,8 @@ form {
 
 .forgot-link a {
   font-size: 14px;
-  color: var(--negro);
+  color: var(--blanco);
+  font-weight: bold;
 }
 
 .boton {
@@ -155,6 +169,18 @@ form {
   color: var(--blanco);
 }
 
+.boton-1 {
+  background: transparent;
+  color: var(--main);
+  border: 2px solid var(--main);
+}
+
+.boton-1:hover {
+  transform: translateY(-5px);
+  background: var(--main);
+  color: var(--negro);
+}
+
 .social-icons {
   display: flex;
   justify-content: center;
@@ -163,9 +189,10 @@ form {
 .social-icons a{
   display: inline-flex;
   padding: 10px;
-  border: 2px solid #000005;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
   font-size: 24px;
-  color: var(--negro);
+  color: var(--blanco);
   margin: 0 8px;
 }
 
@@ -246,4 +273,66 @@ form {
   transform: translateY(-5px);
   background: var(--negro);
   color: var(--blanco);
+}
+
+
+
+/* RESPONSIVE */
+@media screen and (max-width: 650px) {
+  .cont {
+    height: calc(100vh - 40px);
+  }
+
+  .form-box {
+    bottom: 0;
+    width: 100%;
+    height: 70%;
+  }
+
+  .toggle-box::before {
+    left: 0;
+    top: -270%;
+    width: 100%;
+    height: 300%;
+    border-radius: 20vw;
+  }
+
+  .toggle-panel {
+    width: 100%;
+    height: 30%;
+  }
+
+  .toggle-panel.toggle-left {
+    top: 0;
+  }
+
+  .toggle-panel.toggle-right {
+    right: 0;
+    bottom: -30%;
+  }
+
+  .cont.active .toggle-box::before {
+    left: 0;
+    top: 70%;
+  }
+
+  .cont.active .toggle-panel.toggle-left {
+    top: -30%;
+    left: 0;
+  }
+
+   .cont.active .toggle-panel.toggle-right {
+    bottom: 0;
+  }
+
+  .cont.active .form-box {
+    right: 0;
+    bottom: 30%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .form-box {
+    padding: 20px;
+  }
 }
