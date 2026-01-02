@@ -14,6 +14,7 @@
   --negro: #000005;
   --blanco: #F2F2F2;
   --gris: #d2d2d2;
+  --gris_ocuro: #7f7f7f;
 }
 
 
@@ -34,6 +35,12 @@ h1 {
 h2 {
     color: var(--blanco);
     font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 1.7rem;
+    margin-top: 1rem;
+    color: var(--blanco);
 }
 
 p {
@@ -375,9 +382,9 @@ nav ul li a {
 }
 
 .artist-info h2 {
-    font-size: 5.5rem;
+    font-size: 5.2rem;
     position: absolute;
-    top: -17%;
+    top: -14%;
     left: 23%;
     z-index: 1;
 }
@@ -396,9 +403,9 @@ nav ul li a {
     z-index: 0;
 }
 
-.artist-info p {
+.scroll-left>p {
     position: absolute;
-    top: 8vh;
+    top: 4vh;
     left: 50%;
     font-size: 3.2rem;
     font-weight: bold;
@@ -408,11 +415,11 @@ nav ul li a {
 }
 
 .stats-info {
+    padding: 30px 0px;
+    color: var(--blanco);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px 0px;
-    color: var(--blanco);
     gap: 30px;
     margin: 40px 0;
     position: relative;
@@ -436,20 +443,22 @@ nav ul li a {
 }
 
 .number {
-    font-size: 4.2rem;
+    font-size: 3rem;
+    font-family: 'Bricolage Grotesque', cursive;
     font-weight: bold;
 }
 
 .label {
-    text-align: left;
-    font-size: 1.5rem;
-    margin-top: 6px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Manrope', cursive;
 }
 
 .linea {
-    width: 1px;
-    height: 70px;
-    background: var(--main);
+    width: 2px;
+    height: 80px;
+    background: var(--gris_ocuro);
+    border-radius: 2px;
 }
 
 .artist-info-right {
@@ -465,9 +474,9 @@ nav ul li a {
 }
 
 .artist-info-right h2 {
-    font-size: 5.5rem;
+    font-size: 5.2rem;
     position: absolute;
-    top: -17%;
+    top: -15%;
     left: 30%;
     z-index: 1;
 }
@@ -514,16 +523,22 @@ nav ul li a {
     text-align: center;
 }
 
+.song-info {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.song-info p {
+    font-size: 1rem;
+}
+
+.song-info p>span{
+    font-style: italic;
+}
+
 .vinilo {
     width: 220px;
     border-radius: 50%;
-}
-
-.music-player h3 {
-    font-size: 20px;
-    font-weight: bold;
-    color: var(--blanco);
-    margin-top: 20px;
 }
 
 #progress {
@@ -552,30 +567,22 @@ nav ul li a {
 }
 
 .controles div {
-    width: 60px;
-    height: 60px;
-    margin: 20px;
-    background: var(--negro);
+    width: 20px;
+    margin: 0 20px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    color: var(--blanco);
-    box-shadow: 0 0 10px rgb(255, 255, 255);
     cursor: pointer;
 }
 
 .controles div:nth-child(2) {
     transform: scale(1.5);
-    background: var(--main);
-    color: var(--negro);
     box-shadow: none;
 }
 
 
 /* FOOTER */
-
-
 .footer {
   background-color: var(--main);
   color: var(--negro);
@@ -705,7 +712,7 @@ nav ul li a {
     }
 }
 
-.scroll-slide-right {
+.scroll-right {
     animation: slideright 5s ease-out forwards;
     animation-timeline: view();
     animation-range: entry 0 cover 45%;
@@ -722,7 +729,7 @@ nav ul li a {
     }
 }
 
-.scroll-slide-left {
+.scroll-left {
     animation: slideleft 5s ease-out forwards;
     animation-timeline: view();
     animation-range: entry 0 cover 30%;
