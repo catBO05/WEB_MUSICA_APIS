@@ -217,32 +217,35 @@ nav ul li a {
     position: relative;
     flex: 0 0 6em;
     height: 7em;
-    padding: 1em;
-    font-size: 3rem;
-    border-radius: .2em;
-    text-align: center;
-    align-content: center;
+    font-size: 3.4rem;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 1rem;
 }
 
-@keyframes spin {
-    from {translate: 0;}
-    to {translate: -100%;}
-}
-
-.carousel:hover .group {
-    animation-play-state: paused;
+.card p,
+.card .name {
+    margin: 0;
+    align-self: flex-start;
+    color: var(--blanco);
+    text-align: left;
+    position: static;
+    z-index: 2;
 }
 
 .card p {
-    position: absolute;
-    top: 10px;
-    left: 10px;
     font-size: 2.3rem;
+    opacity: 0.7;
     font-weight: bold;
-    opacity: 0.8;
-    color: var(--blanco);
-    z-index: 2;
+}
+
+.card .name {
+    font-size: 2.5rem;
+    margin-top: auto;
 }
 
 .card img {
@@ -255,42 +258,39 @@ nav ul li a {
     transition: transform 0.3s ease;
 }
 
-.card .name {
-    position: absolute;
-    transform: translateX(-50%);
-    left: 36%;
-    bottom: 10px;
-    font-size: 3rem;
-    font-weight: bold;
-    text-align: left;
-    color: var(--blanco);
-    z-index: 2;
-}
-
 .card:hover img {
     transform: scale(1.2);
 }
 
+@keyframes spin {
+    from {translate: 0;}
+    to {translate: -100%;}
+}
+
+.carousel:hover .group {
+    animation-play-state: paused;
+}
+
 
 /* RANKING */
-
-
 .ranking {
     width: 90%;
     color: var(--blanco);
     margin: 100px auto;
     display: flex;
     flex-direction: column;
-    padding: 10px;
 }
 
 .ranking-header {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     padding: 15px 0;
-    font-size: 0.9rem;
-    opacity: 0.8;
-    border-bottom: 1px solid var(--blanco);
+    border-bottom: 1px solid var(--main);
+}
+
+.ranking-header p {
+    font-size: 1.2rem;
+    font-weight: 400;
 }
 
 .ranking-row {
@@ -298,8 +298,9 @@ nav ul li a {
     grid-template-columns: 2fr 1fr 1fr;
     align-items: center;
     padding: 15px 0;
-    border-bottom: 1px solid var(--blanco);
-    transition: background 0.3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+    position: relative;
 }
 
 .ranking-row:hover {
@@ -313,11 +314,20 @@ nav ul li a {
 }
 
 .rank {
-    color: var(--main);
+    color: var(--blanco);
     font-size: 2rem;
-    opacity: 0.5;
     width: 40px;
     margin-right: 15px;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.ranking-row:hover .rank {
+    text-shadow: 
+        0 0 10px var(--main),
+        0 0 20px var(--main),
+        0 0 30px var(--main);
 }
 
 .artist img {
@@ -328,28 +338,34 @@ nav ul li a {
 }
 
 .info h4 {
-    font-size: 1rem;
-    margin: 0;
+    font-size: 1.1rem;
+    margin-bottom: 2px;
 }
 
 .info p {
     font-size: 0.8rem;
+    font-style: italic;
     opacity: 0.5;
 }
 
-.plays, .album {
+.plays,
+.album {
+    font-family: 'Manrope', cursive;
     font-size: 0.9rem;
     opacity: 0.8;
+    text-transform: uppercase;
 }
 
 
 /* INFO */
-
+#info {
+    padding-top: 3rem;
+}
 
 .artist-info {
     width: 60%;
     color: var(--blanco);
-    margin: 25vh 45vh 0;
+    margin: 20vh 45vh 0;
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -483,8 +499,6 @@ nav ul li a {
 
 
 /* REPRODUCTOR DE MUSICA */
-
-
 .music-cont {
     width: 1%;
     background-color: var(--negro);
@@ -515,11 +529,11 @@ nav ul li a {
 #progress {
     /* -webkit-appearance: none; */
     width: 100%;
-    height: 3px;
+    height: 2px;
     background-color: var(--blanco);
     border-radius: 4px;
     cursor: pointer;
-    margin: 40px 0;
+    margin: 20px 0;
 }
 
 #progress::-webkit-slider-thumb {
