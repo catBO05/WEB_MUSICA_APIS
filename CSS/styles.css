@@ -181,6 +181,13 @@ form {
   color: var(--negro);
 }
 
+.linea {
+  border: none;
+  height: 1px;
+  background-color:var(--blanco);
+  margin: 20px 0;
+}
+
 .social-icons {
   display: flex;
   justify-content: center;
@@ -189,11 +196,9 @@ form {
 .social-icons a{
   display: inline-flex;
   padding: 10px;
-  border: 2px solid #ffffff;
-  border-radius: 8px;
   font-size: 24px;
   color: var(--blanco);
-  margin: 0 8px;
+  margin: 0 14px;
 }
 
 .toggle-box {

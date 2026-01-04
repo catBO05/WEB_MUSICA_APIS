@@ -5,14 +5,196 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <title>Beatly</title>
-        <link href="CSS/home.css" rel="Stylesheet" type="text/css">
+        <!-- FAVICON -->
         <link rel="icon" href="MEDIA/IMG/Favicon (1).svg">
+        <!-- CSS -->
+        <link href="CSS/home.css" rel="Stylesheet" type="text/css">
+        <!-- AOS -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <!-- ICONOS - FONT AWESOME -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="JS/script.js" defer></script>
     </head>
 
     <body>
+        <div class="wrapper">
+            <!-- MENU -->
+            <nav id="menu">
+                <a href="#">
+                    <img src="MEDIA/IMG/Logo_vertical (1).svg" alt="Logo de Beatly" class="logo">
+                </a>
+                    
+                <ul id="nav-links">
+                    <li class="menu-links">
+                        <img src="MEDIA/IMG/fav_icono (1).svg" class="nav-icon">
+                        <a href="#">Favoritos</a>
+                    </li>
+                    <li class="menu-links">
+                        <img src="MEDIA/IMG/topGlobal_icono (1).svg" class="nav-icon">
+                        <a href="top_global.html">Top Global</a>
+                    </li>
+                    <li class="menu-links">
+                        <img src="MEDIA/IMG/podcast_icono (1).svg" class="nav-icon">
+                        <a href="podcast.html">Podcasts</a>
+                    </li>
+                    <li class="menu-links">
+                        <img src="MEDIA/IMG/buscar_icono (1).svg" class="nav-icon"> 
+                        <a href="#">Buscar</a>
+                    </li>
+                </ul>
+                    
+                <div id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
 
+        <header>
+            <!-- CARRUSEL -->
+            <div class="carousel-container">
+                <div class="main-carousel">
+                    <!-- IMG 1 - POP -->
+                    <div class="slide active">
+                        <img src="MEDIA/IMG/Aitana1.webp" class="slide-bg">
+                        <div class="slide-content">
+                            <p>Género</p>
+                            <h1>Pop</h1>
+                            <p class="description">El <strong>pop</strong> es un género musical de melodías pegadizas y estructuras simples, centrado en la voz y el estribillo. Surgido a mediados del siglo XX como una forma accesible del rock y otros estilos, busca llegar a un público amplio con ritmos suaves, letras universales y una producción pulida. Su flexibilidad le permite mezclarse con géneros como el dance, el R&B o la electrónica, manteniéndose como una de las corrientes más influyentes de la música.</p>
+                            <a href="top_global.html" class="explore-link">Explorar más <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- IMG 2 - REGGAETON -->
+                    <div class="slide">
+                        <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')"></div>
+                        <div class="slide-content">
+                            <p>Género</p>
+                            <h1>Reggaetón</h1>
+                            <p class="description">El <strong>reggaetón</strong> es un género urbano nacido en los años 90 en Puerto Rico y Panamá, caracterizado por el ritmo dem bow, influencias del dancehall y el hip hop, y letras centradas en la vida cotidiana y el baile. Con el tiempo ha incorporado elementos del pop, la electrónica y el trap latino, logrando una gran proyección internacional y convirtiéndose en uno de los estilos más populares de la música en español.</p>
+                            <a href="top_global.html" class="explore-link">
+                                Explorar más <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- IMG 3 - HIP-HOP -->
+                    <div class="slide">
+                        <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')"></div>
+                        <div class="slide-content">
+                            <p>Género</p>
+                            <h1>Hip Hop</h1>
+                            <p class="description">El <strong>hip hop</strong> es un movimiento cultural que surgió en los años 70 en el Bronx, Nueva York. Incluye música rap, DJing, breakdance y graffiti. Musicalmente se caracteriza por beats rítmicos, samples y letras rimadas que abordan temas sociales, políticos y personales. Se ha convertido en uno de los géneros más influyentes a nivel mundial, con una fuerte presencia en la cultura popular.</p>
+                            <a href="top_global.html" class="explore-link">
+                                Explorar más <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- IMG 4 - ELECTRONICA -->
+                    <div class="slide">
+                        <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')"></div>
+                        <div class="slide-content">
+                            <p>Género</p>
+                            <h1>Electrónica</h1>
+                            <p class="description">La <strong>música electrónica</strong> se crea principalmente con sintetizadores, cajas de ritmos, samplers y ordenadores. Surgió a finales de los 60 y se popularizó en los 80 con géneros como el synth-pop, house y techno. Abarca una amplia variedad de estilos, desde la música ambiental hasta el dance más enérgico, y ha revolucionado la producción musical con la posibilidad de crear sonidos completamente nuevos.</p>
+                            <a href="top_global.html" class="explore-link">
+                                Explorar más <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- IMG 5 - ROCK -->
+                    <div class="slide">
+                        <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')"></div>
+                        <div class="slide-content">
+                            <p>Género</p>
+                            <h1>Rock</h1>
+                            <p class="description">El <strong>rock</strong> es un género musical que surgió en los años 50, caracterizado por el uso de guitarra eléctrica, batería y bajo. Con raíces en el rock and roll, el blues y el country, ha evolucionado en numerosos subgéneros como el hard rock, punk, metal y alternativo. El rock se asocia a menudo con actitudes rebeldes y ha sido una fuerza importante en la cultura juvenil y los movimientos sociales.</p>
+                            <a href="top_global.html" class="explore-link">
+                                Explorar más <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botones -->
+                <div class="carousel-controls">
+                    <button class="prev-btn">
+                        <i class="fa-solid fa-arrow-down fa-rotate-90"></i>
+                    </button>
+                    <button class="next-btn">
+                        <i class="fa-solid fa-arrow-down fa-rotate-270"></i>
+                    </button>
+                </div>
+                
+                <div class="artists-carousel">
+                    <h3>Artistas del mes</h3>
+                    <div class="artists-container" id="pop-artists">
+                        <!-- Artistas Pop -->
+                        <div class="artist-card">
+                            <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Billie Eilish" class="artist-image">
+                            <p class="artist-info artist-name">Billie Eilish</p>
+                        </div>
+                        
+                        <div class="artist-card">
+                            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Taylor Swift" class="artist-image">
+                            <div class="artist-info artist-name">Taylor Swift</div>
+                        </div>
+                        
+                        <div class="artist-card">
+                            <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="The Weeknd" class="artist-image">
+                            <div class="artist-info artist-name">The Weeknd</div>
+                        </div>
+                        
+                        <div class="artist-card">
+                            <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Dua Lipa" class="artist-image">
+                            <div class="artist-info artist-name">Dua Lipa</div>  
+                        </div>
+                        
+                        <div class="artist-card">
+                            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Harry Styles" class="artist-image">
+                            <div class="artist-info artist-name">Harry Styles</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contenedores de artistas para otros géneros (ocultos por defecto) -->
+                    <div class="artists-container" id="rock-artists" style="display: none;">
+                        <!-- Artistas Rock (se cargarán dinámicamente) -->
+                    </div>
+                    
+                    <div class="artists-container" id="hiphop-artists" style="display: none;">
+                        <!-- Artistas Hip Hop (se cargarán dinámicamente) -->
+                    </div>
+                    
+                    <div class="artists-container" id="electronic-artists" style="display: none;">
+                        <!-- Artistas Electrónica (se cargarán dinámicamente) -->
+                    </div>
+                    
+                    <div class="artists-container" id="jazz-artists" style="display: none;">
+                        <!-- Artistas Jazz (se cargarán dinámicamente) -->
+                    </div>
+                </div>
+                
+                <!-- Indicadores de slide -->
+                <div class="slide-indicators">
+                    <span class="indicator active" data-slide="0"></span>
+                    <span class="indicator" data-slide="1"></span>
+                    <span class="indicator" data-slide="2"></span>
+                    <span class="indicator" data-slide="3"></span>
+                    <span class="indicator" data-slide="4"></span>
+                </div>
+            </div>
+
+            <!-- SECCION - + -->
+            <section class="relleno">
+                <h1>relleno</h1>
+            </section>
+        </header>
+        
+
+        <!-- JS -->
+        <script src="JS/Chart.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="JS/script.js" defer></script>
     </body>
 </html>
