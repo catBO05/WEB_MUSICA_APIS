@@ -59,7 +59,7 @@ function shrinkHeader() {
             "align-items": "flex-start",
             "flex-direction": "column",
             "justify-content": "start",
-            "gap": "2.5rem",
+            "gap": "3rem",
             "background-color": "transparent",
         });
         $("nav a img").css({
@@ -179,156 +179,86 @@ document.querySelectorAll('.number').forEach(contador => {
 
 
 // HOME
-const artistsData = {
-    pop: [
-        { name: "Billie Eilish", genre: "Pop alternativo", image: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" },
-        { name: "Taylor Swift", genre: "Pop / Country", image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" },
-        { name: "The Weeknd", genre: "Pop / R&B", image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" },
-        { name: "Dua Lipa", genre: "Pop / Dance", image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" },
-        { name: "Harry Styles", genre: "Pop / Rock", image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" }
-    ],
-    rock: [
-        { name: "The Beatles", genre: "Rock clásico", image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" },
-        { name: "Led Zeppelin", genre: "Hard rock", image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" },
-        { name: "Queen", genre: "Rock", image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" },
-        { name: "Nirvana", genre: "Grunge", image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" },
-        { name: "Radiohead", genre: "Rock alternativo", image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" }
-    ],
-    hiphop: [
-        { name: "Kendrick Lamar", genre: "Hip hop", image: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" },
-        { name: "Cardi B", genre: "Hip hop / Trap", image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" },
-        { name: "Drake", genre: "Hip hop / R&B", image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" },
-        { name: "Travis Scott", genre: "Hip hop / Trap", image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" },
-        { name: "Nicki Minaj", genre: "Hip hop", image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" }
-    ],
-    electronic: [
-        { name: "Daft Punk", genre: "House / Electrónica", image: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" },
-        { name: "Calvin Harris", genre: "EDM / House", image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" },
-        { name: "Marshmello", genre: "Future bass", image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" },
-        { name: "Deadmau5", genre: "Progressive house", image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" },
-        { name: "Skrillex", genre: "Dubstep", image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" }
-    ],
-    jazz: [
-        { name: "Miles Davis", genre: "Jazz", image: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" },
-        { name: "Louis Armstrong", genre: "Jazz tradicional", image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" },
-        { name: "John Coltrane", genre: "Avant-garde jazz", image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" },
-        { name: "Ella Fitzgerald", genre: "Jazz vocal", image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" },
-        { name: "Duke Ellington", genre: "Swing", image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" }
-    ]
-};
+document.addEventListener('DOMContentLoaded', () => {
+    const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    const carousel = document.querySelector('.carousel-container');
 
-// Mapeo de géneros a IDs de contenedor
-const genreToContainerId = {
-    0: "pop-artists",
-    1: "rock-artists",
-    2: "hiphop-artists",
-    3: "electronic-artists",
-    4: "jazz-artists"
-};
+    const artistsData = {
+        pop: [
+            { name: "Taylor Swift", image: "MEDIA/IMG/taylorswift.webp" },
+            { name: "David Bisbal", image: "MEDIA/IMG/Bisbal.webp" },
+            { name: "Billie Eilish", image: "MEDIA/IMG/billieeilish.webp" },
+            { name: "Lady Gaga", image: "MEDIA/IMG/ladyGaga.webp" },
+            { name: "Justin Bieber", image: "MEDIA/IMG/justinBieber.webp" },
+            { name: "Ed Sheeran", image: "MEDIA/IMG/EdSheeran.webp" },
+            { name: "Morat", image: "MEDIA/IMG/morat.webp" },
+            { name: "Beyoncé", image: "MEDIA/IMG/beyonce.webp" }
+        ],
+        reggaeton: [
+            { name: "Daddy Yankee", image: "MEDIA/IMG/daddyyankee.webp" },
+            { name: "Bad Bunny", image: "MEDIA/IMG/badbunny.webp" }
+        ],
+        hiphop: [
+            { name: "Kendrick Lamar", image: "MEDIA/IMG/kendrick.webp" },
+            { name: "Cardi B", image: "MEDIA/IMG/cardiB.webp" }
+        ],
+        electronica: [
+            { name: "Daft Punk", image: "MEDIA/IMG/daftpunk.webp" },
+            { name: "Calvin Harris", image: "MEDIA/IMG/calvin.webp" }
+        ],
+        rock: [
+            { name: "The Beatles", image: "MEDIA/IMG/beatles.webp" },
+            { name: "Queen", image: "MEDIA/IMG/queen.webp" }
+        ]
+    };
 
-const genreNames = ["Pop", "Rock", "Hip Hop", "Electrónica", "Jazz"];
-        
-// Variables del carrusel
-let currentSlide = 0;
-const slides = document.querySelectorAll('.slide');
-const indicators = document.querySelectorAll('.indicator');
-const prevBtn = document.querySelector('.prev-btn');
-const nextBtn = document.querySelector('.next-btn');
-const currentGenreElement = document.querySelector('.current-genre');
-        
-// Inicializar artistas para todos los géneros
-function initializeArtists() {
-    const genres = ['pop', 'rock', 'hiphop', 'electronic', 'jazz'];
-            
-    genres.forEach((genre, index) => {
-        const containerId = genreToContainerId[index];
-        const container = document.getElementById(containerId);
-                
-        // Limpiar contenedor
-        container.innerHTML = '';
-                
-        // Añadir artistas
-        artistsData[genre].forEach(artist => {
-            const artistCard = document.createElement('div');
-            artistCard.className = 'artist-card';
-            artistCard.innerHTML = `
-                <img src="${artist.image}" alt="${artist.name}" class="artist-image">
-                <div class="artist-info artist-name">${artist.name}</div>
-            `;
-            container.appendChild(artistCard);
+    const genreIds = ['pop','reggaeton','hiphop','electronica','rock'];
+
+    let currentSlide = 0;
+
+    function initializeArtists() {
+        genreIds.forEach(genre => {
+            const container = document.getElementById(genre);
+            if (!container) return;
+            container.innerHTML = '';
+            container.style.display = 'none';
+
+            artistsData[genre]?.forEach(artist => {
+                const card = document.createElement('div');
+                card.className = 'card-artistas';
+                card.innerHTML = `
+                    <img src="${artist.image}" class="artist-image">
+                    <h6 class="artist-info name">${artist.name}</h6>
+                `;
+                container.appendChild(card);
+            });
         });
-    });
-}
-        
-// Cambiar slide
-function goToSlide(n) {
-    // Ocultar slide actual
-    slides[currentSlide].classList.remove('active');
-    indicators[currentSlide].classList.remove('active');
-    
-    // Ocultar carrusel de artistas actual
-    const currentContainerId = genreToContainerId[currentSlide];
-    document.getElementById(currentContainerId).style.display = 'none';
-            
-    // Actualizar slide actual
-    currentSlide = (n + slides.length) % slides.length;
-    
-    // Mostrar nuevo slide
-    slides[currentSlide].classList.add('active');
-    indicators[currentSlide].classList.add('active');
-            
-    // Actualizar título del género
-    currentGenreElement.textContent = genreNames[currentSlide];
-            
-    // Mostrar carrusel de artistas correspondiente
-    const newContainerId = genreToContainerId[currentSlide];
-    document.getElementById(newContainerId).style.display = 'flex';
-}
-        
-// Navegación
-function nextSlide() {
-    goToSlide(currentSlide + 1);
-}
-        
-function prevSlide() {
-    goToSlide(currentSlide - 1);
-}
-        
-// Event listeners
-prevBtn.addEventListener('click', prevSlide);
-nextBtn.addEventListener('click', nextSlide);
-        
-// Indicadores click
-indicators.forEach(indicator => {
-    indicator.addEventListener('click', () => {
-        const slideIndex = parseInt(indicator.getAttribute('data-slide'));
-        goToSlide(slideIndex);
-    });
-});
-        
-// Navegación con teclado
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowLeft') {
-                prevSlide();
-    } else if (e.key === 'ArrowRight') {
-                nextSlide();
+
+        // Mostrar artistas del primer slide
+        document.getElementById(genreIds[0]).style.display = 'flex';
     }
+
+    function goToSlide(n) {
+        slides[currentSlide].classList.remove('active');
+        document.getElementById(genreIds[currentSlide]).style.display = 'none';
+
+        currentSlide = (n + slides.length) % slides.length;
+
+        slides[currentSlide].classList.add('active');
+        document.getElementById(genreIds[currentSlide]).style.display = 'flex';
+    }
+
+    prevBtn?.addEventListener('click', () => goToSlide(currentSlide - 1));
+    nextBtn?.addEventListener('click', () => goToSlide(currentSlide + 1));
+
+    let slideInterval = setInterval(() => goToSlide(currentSlide + 1), 8000);
+
+    carousel?.addEventListener('mouseenter', () => clearInterval(slideInterval));
+    carousel?.addEventListener('mouseleave', () => {
+        slideInterval = setInterval(() => goToSlide(currentSlide + 1), 8000);
+    });
+
+    initializeArtists();
 });
-        
-// Auto-avance cada 8 segundos (opcional)
-let slideInterval = setInterval(nextSlide, 8000);
-        
-// Pausar auto-avance al interactuar
-document.querySelector('.carousel-container').addEventListener('mouseenter', () => {
-    clearInterval(slideInterval);
-});
-        
-document.querySelector('.carousel-container').addEventListener('mouseleave', () => {
-    slideInterval = setInterval(nextSlide, 8000);
-});
-        
-// Inicializar
-initializeArtists();
-        
-// Asegurarse de que solo se muestre el primer carrusel de artistas
-document.getElementById('pop-artists').style.display = 'flex';

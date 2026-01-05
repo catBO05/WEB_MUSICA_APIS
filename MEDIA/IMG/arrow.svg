@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 199.03 199.04">
+  <!-- Generator: Adobe Illustrator 29.4.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 152)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: none;
+        stroke: #e1ff2d;
+        stroke-miterlimit: 10;
+        stroke-width: 14px;
+      }
+
+      .st1 {
+        fill: #e1ff2d;
+      }
+    </style>
+  </defs>
+  <g>
+    <polygon class="st1" points="13.64 167.73 140.89 40.48 21.15 40.48 21.15 15.5 183.53 15.5 183.53 177.88 158.55 177.88 158.55 58.14 31.3 185.41 13.64 167.73"/>
+    <path class="st1" d="M179.03,20v153.38h-15.98V47.28L31.3,179.04l-11.3-11.31L151.75,35.98H25.65v-15.98h153.38M188.03,11H16.65v33.98h113.38L13.64,161.37l-6.36,6.36,6.36,6.36,11.3,11.31,6.36,6.37,6.37-6.37,116.39-116.4v113.37h33.98V11h0Z"/>
+  </g>
+  <line class="st0" x1="154.41" y1="62.04" x2="28.23" y2="188.23"/>
+  <line class="st0" x1="135.86" y1="43.5" x2="9.69" y2="169.68"/>
+</svg>
