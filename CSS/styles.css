@@ -65,7 +65,7 @@ body {
 }
 
 .cont p {
-  color: var(--blanco);
+  color: var(--negro);
   font-size: 14px;
   margin: 15px 0;
 }
@@ -167,6 +167,7 @@ form {
   transform: translateY(-5px);
   background: var(--negro);
   color: var(--blanco);
+  border: 2px solid var(--main);
 }
 
 .boton-1 {
