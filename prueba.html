@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width">
+            <title>Beatly</title>
+        <!-- FAVICON -->
+            <link rel="icon" href="MEDIA/IMG/Favicon (1).svg">
+        <!-- CSS -->
+            <link href="CSS/busqueda.css" rel="Stylesheet" type="text/css">
+        <!-- AOS -->
+            <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script src="JS/api.js"></script>
+            <script src="JS/script.js" defer></script>
+        <!-- ICONOS - FONT AWESOME -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <!-- MENU -->
+            <nav id="menu">
+                <a href="home.html">
+                    <img src="MEDIA/IMG/Logo_vertical (1).svg" alt="Logo de Beatly" class="logo">
+                </a>
+                    
+                <ul id="nav-links">
+                    <li class="menu-links">
+                        <img src="MEDIA/IMG/fav_icono (1).svg" class="nav-icon">
+                        <a href="#">Favoritos</a>
+                    </li>
+                    <li class="menu-links">
+                        <img src="MEDIA/IMG/topGlobal_icono (1).svg" class="nav-icon">
+                        <a href="top_global.html">Top Global</a>
+                    </li>
+                    <li class="menu-links">
+                        <img src="MEDIA/IMG/podcast_icono (1).svg" class="nav-icon">
+                        <a href="podcast.html">Podcasts</a>
+                    </li>
+                    <li class="menu-links">
+                        <img src="MEDIA/IMG/buscar_icono (1).svg" class="nav-icon"> 
+                        <a href="#">Buscar</a>
+                    </li>
+                </ul>
+                    
+                <div id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+
+        <h1>Búsqueda de música en iTunes</h1>
+
+        <input type="text" id="artista" placeholder="Nombre del artista">
+        <button onclick="buscar()">Buscar</button>
+
+        <div class="resultado" id="resultados"></div>
+
+    </body>
+</html>
