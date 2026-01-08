@@ -334,7 +334,7 @@ nav ul li a {
     text-shadow: 
         0 0 10px var(--main),
         0 0 20px var(--main),
-        0 0 30px var(--main);
+        0 0 20px var(--main);
 }
 
 .artist img {
@@ -554,10 +554,10 @@ nav ul li a {
 #progress::-webkit-slider-thumb {
     -webkit-appearance: none;
     background: var(--negro);
-    width: 25px;
-    height: 25px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
-    border: 3px solid var(--blanco);
+    border: 2px solid var(--blanco);
 }
 
 .controles {
@@ -574,6 +574,7 @@ nav ul li a {
     justify-content: center;
     border-radius: 50%;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .controles div:nth-child(2) {
@@ -581,6 +582,14 @@ nav ul li a {
     box-shadow: none;
 }
 
+.controles div:not(:nth-child(2)):hover {
+    scale: 1.2;
+}
+
+.controles div:nth-child(2):hover {
+    color: var(--main);
+    scale: 1.1;
+}
 
 /* FOOTER */
 .footer {
