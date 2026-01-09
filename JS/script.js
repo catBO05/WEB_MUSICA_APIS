@@ -84,6 +84,95 @@ $(document).ready(function () {
 });
 
 
+// HOME
+// CARROUSEL inicio
+document.addEventListener('DOMContentLoaded', () => {
+    const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    const carousel = document.querySelector('.carousel-container');
+
+    const artistsData = {
+        pop: [
+            { name: "Taylor Swift", image: "MEDIA/IMG/taylorswift.webp" },
+            { name: "David Bisbal", image: "MEDIA/IMG/Bisbal.webp" },
+            { name: "Billie Eilish", image: "MEDIA/IMG/billieeilish.webp" },
+            { name: "Lady Gaga", image: "MEDIA/IMG/ladyGaga.webp" },
+            { name: "Justin Bieber", image: "MEDIA/IMG/justinBieber.webp" },
+            { name: "Ed Sheeran", image: "MEDIA/IMG/EdSheeran.webp" },
+            { name: "Morat", image: "MEDIA/IMG/morat.webp" },
+            { name: "Beyoncé", image: "MEDIA/IMG/beyonce.webp" }
+        ],
+        reggaeton: [
+            { name: "Daddy Yankee", image: "MEDIA/IMG/daddyyankee.webp" },
+            { name: "Bad Bunny", image: "MEDIA/IMG/badbunny.webp" }
+        ],
+        hiphop: [
+            { name: "Kendrick Lamar", image: "MEDIA/IMG/kendrick.webp" },
+            { name: "Cardi B", image: "MEDIA/IMG/cardiB.webp" }
+        ],
+        electronica: [
+            { name: "Daft Punk", image: "MEDIA/IMG/daftpunk.webp" },
+            { name: "Calvin Harris", image: "MEDIA/IMG/calvin.webp" }
+        ],
+        rock: [
+            { name: "The Beatles", image: "MEDIA/IMG/beatles.webp" },
+            { name: "Queen", image: "MEDIA/IMG/queen.webp" }
+        ]
+    };
+
+    const genreIds = ['pop','reggaeton','hiphop','electronica','rock'];
+    let currentSlide = 0;
+
+    // Ocultar todos los slides y artistas
+    function hideAllSlides() {
+        slides.forEach(slide => slide.classList.remove('active'));
+        genreIds.forEach(genre => {
+            const container = document.getElementById(genre);
+            if (container) container.style.display = 'none';
+        });
+    }
+
+    // Mostrar slide y artistas actuales
+    function showSlide(n) {
+        hideAllSlides();
+        currentSlide = (n + slides.length) % slides.length;
+
+        slides[currentSlide].classList.add('active');
+
+        const container = document.getElementById(genreIds[currentSlide]);
+        if (container) container.style.display = 'flex';
+    }
+
+    // Botones
+    prevBtn.addEventListener('click', () => showSlide(currentSlide - 1));
+    nextBtn.addEventListener('click', () => showSlide(currentSlide + 1));
+
+    // Autoplay
+    let slideInterval = setInterval(() => showSlide(currentSlide + 1), 8000);
+    carousel.addEventListener('mouseenter', () => clearInterval(slideInterval));
+    carousel.addEventListener('mouseleave', () => {
+        slideInterval = setInterval(() => showSlide(currentSlide + 1), 5000);
+    });
+
+    // Inicializar mostrando primer slide
+    showSlide(0);
+});
+
+
+// CHECK/+
+document.addEventListener("DOMContentLoaded", () => {
+    const statusButtons = document.querySelectorAll(".status");
+
+    statusButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            button.classList.toggle("checked");
+            button.innerHTML = button.classList.contains("checked") ? '<i class="fa-solid fa-check"></i>' : '<i class="fa-solid fa-plus"></i>';
+        });
+    });
+});
+
+
 
 // TOP GLOBAL (HTML)
 
@@ -172,93 +261,4 @@ document.querySelectorAll('.number').forEach(contador => {
 
 
 
-
-
 // PODCAST
-
-
-
-// HOME
-document.addEventListener('DOMContentLoaded', () => {
-    const slides = document.querySelectorAll('.slide');
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
-    const carousel = document.querySelector('.carousel-container');
-
-    const artistsData = {
-        pop: [
-            { name: "Taylor Swift", image: "MEDIA/IMG/taylorswift.webp" },
-            { name: "David Bisbal", image: "MEDIA/IMG/Bisbal.webp" },
-            { name: "Billie Eilish", image: "MEDIA/IMG/billieeilish.webp" },
-            { name: "Lady Gaga", image: "MEDIA/IMG/ladyGaga.webp" },
-            { name: "Justin Bieber", image: "MEDIA/IMG/justinBieber.webp" },
-            { name: "Ed Sheeran", image: "MEDIA/IMG/EdSheeran.webp" },
-            { name: "Morat", image: "MEDIA/IMG/morat.webp" },
-            { name: "Beyoncé", image: "MEDIA/IMG/beyonce.webp" }
-        ],
-        reggaeton: [
-            { name: "Daddy Yankee", image: "MEDIA/IMG/daddyyankee.webp" },
-            { name: "Bad Bunny", image: "MEDIA/IMG/badbunny.webp" }
-        ],
-        hiphop: [
-            { name: "Kendrick Lamar", image: "MEDIA/IMG/kendrick.webp" },
-            { name: "Cardi B", image: "MEDIA/IMG/cardiB.webp" }
-        ],
-        electronica: [
-            { name: "Daft Punk", image: "MEDIA/IMG/daftpunk.webp" },
-            { name: "Calvin Harris", image: "MEDIA/IMG/calvin.webp" }
-        ],
-        rock: [
-            { name: "The Beatles", image: "MEDIA/IMG/beatles.webp" },
-            { name: "Queen", image: "MEDIA/IMG/queen.webp" }
-        ]
-    };
-
-    const genreIds = ['pop','reggaeton','hiphop','electronica','rock'];
-
-    let currentSlide = 0;
-
-    function initializeArtists() {
-        genreIds.forEach(genre => {
-            const container = document.getElementById(genre);
-            if (!container) return;
-            container.innerHTML = '';
-            container.style.display = 'none';
-
-            artistsData[genre]?.forEach(artist => {
-                const card = document.createElement('div');
-                card.className = 'card-artistas';
-                card.innerHTML = `
-                    <img src="${artist.image}" class="artist-image">
-                    <h6 class="artist-info name">${artist.name}</h6>
-                `;
-                container.appendChild(card);
-            });
-        });
-
-        // Mostrar artistas del primer slide
-        document.getElementById(genreIds[0]).style.display = 'flex';
-    }
-
-    function goToSlide(n) {
-        slides[currentSlide].classList.remove('active');
-        document.getElementById(genreIds[currentSlide]).style.display = 'none';
-
-        currentSlide = (n + slides.length) % slides.length;
-
-        slides[currentSlide].classList.add('active');
-        document.getElementById(genreIds[currentSlide]).style.display = 'flex';
-    }
-
-    prevBtn?.addEventListener('click', () => goToSlide(currentSlide - 1));
-    nextBtn?.addEventListener('click', () => goToSlide(currentSlide + 1));
-
-    let slideInterval = setInterval(() => goToSlide(currentSlide + 1), 8000);
-
-    carousel?.addEventListener('mouseenter', () => clearInterval(slideInterval));
-    carousel?.addEventListener('mouseleave', () => {
-        slideInterval = setInterval(() => goToSlide(currentSlide + 1), 8000);
-    });
-
-    initializeArtists();
-});

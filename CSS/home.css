@@ -19,11 +19,11 @@
 
 
 /* BODY */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4 {
   font-family: 'Bricolage Grotesque', cursive;
 }
 
-p, a, ul, li, span, button {
+h5, p, a, ul, li, span, button {
     font-family: 'Manrope', cursive;
 }
 
@@ -45,16 +45,16 @@ h3 {
     text-align: end;
 }
 
-h5 {
-    color: var(--blanco);
-    font-size: 1.2rem;
-    margin-top: 5px;
-}
-
-h6 {
+h4 {
     font-size: 1.5rem;
     margin-top: auto;
     font-weight: normal;
+}
+
+h5 {
+    color: var(--blanco);
+    font-size: 1.1rem;
+    margin-top: 8px;
 }
 
 p {
@@ -590,10 +590,11 @@ nav ul li a {
 
 /* OPCIONES */
  #opciones {
-    height: 65vh;
+    height: 100vh;
     width: 100%;
-    max-width: 75%;
-    padding: 60px 3.8rem;
+    max-width: 90%;
+    margin-top: 4rem;
+    padding: 60px 3rem;
 }
 
 #opciones a{
@@ -602,7 +603,7 @@ nav ul li a {
 }
 
 #opciones a h2{
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     opacity: 0.5;
     margin: 1rem;
     transition: all 0.3s ease;
@@ -641,6 +642,10 @@ section hr {
     height: 60vh;
 }
 
+.linea-titulo > .linea-hrz::after {
+    right: 0;
+}
+
 .escuchado {
     display: flex;
     gap: 30px; 
@@ -649,6 +654,7 @@ section hr {
     padding: 0.5rem 3.8rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    cursor: pointer;
 }
 
 .escuchado::-webkit-scrollbar {
@@ -660,7 +666,7 @@ section hr {
     width: 240px; 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .escuchado-card > div {
@@ -676,6 +682,7 @@ section hr {
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .escuchado-card > div img:hover {
@@ -684,8 +691,146 @@ section hr {
 
 .escuchado-card p {
     font-size: 1rem;
-    font-style: italic;
 }
+
+
+/* TENDENCIAS */
+#tendencias > div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+#tendencias > div:first-child a {
+    color: var(--gris);
+    margin-right: 3.8rem;
+    transition: transform 0.3s ease;
+}
+
+#tendencias > div:first-child a:hover {
+    color: var(--main);
+    font-weight: bold;
+}
+
+#tendencias > div:last-child {
+    margin: 0.5rem 3.8rem;
+}
+
+.trends-tags {
+    margin-bottom: 1.2rem;
+    display: flex;
+    gap: 10px;
+}
+
+.tag {
+    padding: 6px 14px;
+    border: 2px solid var(--gris_ocuro);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: var(--gris_ocuro);
+}
+
+.tag.active {
+    border-color: var(--blanco);
+    color: var(--blanco);
+}
+
+.song {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.song-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.img-cont {
+    position: relative;
+    display: inline-block;
+}
+
+.img-cont img {
+    width: 75px;
+    height: 75px;
+    border-radius: 5px;
+    position: relative;
+    object-fit: cover;
+}
+
+.play-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    cursor: pointer;
+}
+
+.play-overlay i {
+    color: var(--gris);
+    font-size: 24px;
+    opacity: 0.8;
+}
+
+.img-cont:hover .play-overlay {
+    opacity: 1;
+}
+
+.song-info p,
+.song-right p {
+    font-size: 0.9rem;
+}
+
+.song-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.status {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid var(--gris_ocuro);
+    background: var(--negro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.status i {
+    font-size: 14px;
+    color: var(--gris_ocuro);
+}
+
+.checked {
+    background: var(--main);
+    border: none;
+}
+
+.checked .fa-check {
+    color: var(--negro);
+}
+
+
+
+
+
 
 
 
