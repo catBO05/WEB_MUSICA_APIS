@@ -159,6 +159,8 @@ nav ul li a {
     opacity: 1;
 }
 
+
+
 /* APIS */
 header {
     margin-top: 20vh;
@@ -405,6 +407,7 @@ audio::-webkit-media-controls-panel {
     nav ul {
         position: fixed;
         top: 0;
+        left: 0;
         height: 100vh;
         width: 35%;
         flex-direction: column;
@@ -422,8 +425,9 @@ audio::-webkit-media-controls-panel {
     }
 
     nav ul li {
-        width: 100%;
+        width: 50%;
         justify-content: center;
+        margin-left: 35px;
     }
 
     /* Menú hamburguesa */
