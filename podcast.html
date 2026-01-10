@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width">
         <title>Beatly</title>
         <!-- FAVICON -->
-        <link rel="icon" href="MEDIA/IMG/Favicon (1).svg">
+        <link rel="icon" href="MEDIA/IMG/Favicon(1).svg">
         <!-- CSS -->
         <link href="CSS/podcast.css" rel="Stylesheet" type="text/css">
         <!-- AOS -->
@@ -17,35 +17,37 @@
     </head>
 
     <body>
-
         <div class="wrapper">
             <!-- MENU -->
             <nav id="menu">
                 <a href="home.html">
-                    <img src="MEDIA/IMG/Logo_vertical (1).svg" alt="Logo de Beatly" class="logo">
+                    <img src="MEDIA/IMG/Logo_vertical(1).svg" alt="Logo de Beatly" class="logo">
                 </a>
                     
-                <ul id="nav-links">
+                <ul id="menu-lista">
                     <li class="menu-links">
-                        <img src="MEDIA/IMG/fav_icono (1).svg" class="nav-icon">
-                        <a href="#">Favoritos</a>
+                        <img src="MEDIA/IMG/fav_icono(1).svg" alt="Favoritos" class="nav-icon">
+                        <a href="tendencias" onclick="closeMenu()">Favoritos</a>
                     </li>
                     <li class="menu-links">
-                        <img src="MEDIA/IMG/topGlobal_icono (1).svg" class="nav-icon">
-                        <a href="top_global.html">Top Global</a>
+                        <img src="MEDIA/IMG/topGlobal_icono(1).svg" alt="Top Global" class="nav-icon">
+                        <a href="top_global.html" onclick="closeMenu()">Top Global</a>
                     </li>
                     <li class="menu-links">
-                        <img src="MEDIA/IMG/podcast_icono (1).svg" class="nav-icon">
-                        <a href="podcast.html">Podcasts</a>
+                        <img src="MEDIA/IMG/podcast_icono(1).svg" alt="Podcast" class="nav-icon">
+                        <a href="podcast.html" onclick="closeMenu()">Podcasts</a>
                     </li>
                     <li class="menu-links">
-                        <img src="MEDIA/IMG/buscar_icono (1).svg" class="nav-icon"> 
-                        <a href="busqueda.html">Buscar</a>
+                        <img src="MEDIA/IMG/buscar_icono(1).svg" alt="Buscar" class="nav-icon"> 
+                        <a href="busqueda.html" onclick="closeMenu()">Buscar</a>
                     </li>
                 </ul>
-                    
-                <div id="menu-toggle">
-                    <i class="fas fa-bars"></i>
+                
+                <!-- Menu hamburguesa -->
+                <div id="icono" onclick="menu()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
                 </div>
             </nav>
         </div>

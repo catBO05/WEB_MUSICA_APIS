@@ -104,7 +104,8 @@ nav img {
     height: 40%;
 }
 
-nav #menu-toggle {
+/* M.hamburguesa y x - OCULTOS */
+#icono{
     display: none;
 }
 
@@ -559,13 +560,13 @@ nav ul li a {
     opacity: 1;
 }
 
-#opciones a #arrow {
+#opciones a .arrow {
     width: 1.4rem;
     opacity: 0;
     transition: all 0.3s ease;
 }
 
-#opciones a:hover #arrow {
+#opciones a:hover .arrow {
     opacity: 1;
     transform: translateX(15px);
 }
@@ -1022,19 +1023,27 @@ footer > div p {
         font-size: 2.4rem;
     }
 
+    p, button, nav a {
+        font-size: 1rem;
+    }
+
     nav {
         padding: 0 24px;
         height: 10vh;
     }
 
-    .slide-content {
-        max-width: 70%;
-        margin-top: 100px;
+    .slide-bg {
+        height: 100vh;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .marquee-right .track {
+        margin-top: 0.8rem;
     }
 
     .description {
-        max-width: 100%;
-        font-size: 1rem;
+        max-width: 80%;
     }
 
     .artists-container {
@@ -1043,19 +1052,29 @@ footer > div p {
     }
 
     #hits {
-        height: auto;
-        flex-direction: column;
-        padding: 2rem;
+        height: 50vh;
+        padding: 1rem;
         gap: 2rem;
+        margin: 1% 6% 2% 6%;
+    }
+
+    #hits > div {
+        height: 100%;
+        width: 80%;
+        padding: 3%;
+        /* display: inline-table; */
+    }
+
+    #hits > div button {
+        padding: 6px 1rem;
     }
 
     #hits img {
-        width: 280px;
-        height: 280px;
+        height: 230px;
     }
 
     #recientes {
-        height: auto;
+        height: 70vh;
     }
 
     footer {
@@ -1072,10 +1091,6 @@ footer > div p {
 /* tablet */
 @media (max-width: 768px) {
 
-    nav ul {
-        display: none;
-    }
-
     h1 {
         font-size: 3.2rem;
     }
@@ -1089,47 +1104,78 @@ footer > div p {
         text-align: left;
     }
 
-    /* Menú hamburguesa */
-    nav #menu-toggle {
-        display: block;
+    nav img {
+        width: 80%;
+    }
+
+    nav > a {
+        margin-top: 32px;
     }
 
     nav ul {
         position: fixed;
-        top: 12vh;
+        top: 0;
         left: 0;
-        width: 100%;
-        background: rgba(0, 0, 5, 0.95);
-        backdrop-filter: blur(20px);
+        height: 100vh;
         flex-direction: column;
-        padding: 2rem;
-        transform: translateY(-100%);
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease;
-        gap: 2rem;
+        justify-content: space-evenly;
+        transform: translateX(-100%);
+        transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+        background-color: rgb(0, 0, 0, 0.8);
+        z-index: 1;
+        margin: 0;
+        list-style: none;
     }
 
-    nav ul.active {
-        transform: translateY(0);
-        opacity: 1;
-        visibility: visible;
+    #menu-lista.activo {
+        transform: translateX(0);
     }
 
     nav ul li {
         width: 100%;
         justify-content: center;
     }
+
+    /* Menú hamburguesa */
+    #icono {
+        display: block;
+        position:relative;
+        z-index: 2;
+    }
+
+    #icono > div {
+        width: 38px;
+        height: 3px;
+        background-color: var(--blanco);
+        margin: 7px 0;
+        transition: 0.4s;
+        border-radius: 4px;
+    }
+
+    #icono:hover > div {
+        cursor: pointer;
+    }
+
+    #icono.cambiar > div:nth-child(1) {
+        transform: rotate(-45deg) translate(-6px, 6px);
+    }
+
+    #icono.cambiar > div:nth-child(2) {
+        opacity: 0;
+    }
+
+    #icono.cambiar > div:nth-child(3) {
+        transform: rotate(45deg) translate(-8px, -8px);
+    }
     
+
+    .description {
+        max-width: 100%;
+    }
 
     .carousel-controls {
         top: 20px;
         right: 20px;
-    }
-
-    .slide-content {
-        max-width: 100%;
-        margin-top: 120px;
     }
 
     .card-artistas {
@@ -1140,6 +1186,33 @@ footer > div p {
     .artist-card {
         width: 150px;
         height: 200px;
+    }
+
+    #hits {
+        flex-direction: column;
+        height: 38vh;
+        padding: 1.5rem 0;
+        align-items: baseline;
+    }
+    
+    #hits > div {
+        height: 100%;
+        display: inline-table;
+        padding: 0 6%;
+    }
+
+    #hits > div button {
+        margin-top: 16px;
+        font-size: 1rem;
+    }
+
+    #hits img {
+        opacity: 0;
+    }
+
+
+    #recientes {
+        height: 65vh;
     }
 
     .escuchado {
@@ -1156,8 +1229,26 @@ footer > div p {
         height: 200px;
     }
 
+    .tag {
+        padding: 5px 7px;
+    }
+
     .song-info h5 {
         font-size: 1rem;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    footer > div p {
+        text-align: center;
+    }
+
+    footer :first-child a figure {
+        margin-left: 0;
     }
 
 }

@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width">
         <title>Beatly</title>
         <!-- FAVICON -->
-        <link rel="icon" href="MEDIA/IMG/Favicon (1).svg">
+        <link rel="icon" href="MEDIA/IMG/Favicon(1).svg">
         <!-- CSS -->
         <link href="CSS/home.css" rel="Stylesheet" type="text/css">
         <!-- AOS -->
@@ -21,30 +21,33 @@
             <!-- MENU -->
             <nav id="menu">
                 <a href="home.html">
-                    <img src="MEDIA/IMG/Logo_vertical (1).svg" alt="Logo de Beatly" class="logo">
+                    <img src="MEDIA/IMG/Logo_vertical(1).svg" alt="Logo de Beatly" class="logo">
                 </a>
                     
-                <ul id="nav-links">
+                <ul id="menu-lista">
                     <li class="menu-links">
-                        <img src="MEDIA/IMG/fav_icono (1).svg" class="nav-icon">
-                        <a href="tendencias">Favoritos</a>
+                        <img src="MEDIA/IMG/fav_icono(1).svg" alt="Favoritos" class="nav-icon">
+                        <a href="tendencias" onclick="closeMenu()">Favoritos</a>
                     </li>
                     <li class="menu-links">
-                        <img src="MEDIA/IMG/topGlobal_icono (1).svg" class="nav-icon">
-                        <a href="top_global.html">Top Global</a>
+                        <img src="MEDIA/IMG/topGlobal_icono(1).svg" alt="Top Global" class="nav-icon">
+                        <a href="top_global.html" onclick="closeMenu()">Top Global</a>
                     </li>
                     <li class="menu-links">
-                        <img src="MEDIA/IMG/podcast_icono (1).svg" class="nav-icon">
-                        <a href="podcast.html">Podcasts</a>
+                        <img src="MEDIA/IMG/podcast_icono(1).svg" alt="Podcast" class="nav-icon">
+                        <a href="podcast.html" onclick="closeMenu()">Podcasts</a>
                     </li>
                     <li class="menu-links">
-                        <img src="MEDIA/IMG/buscar_icono (1).svg" class="nav-icon"> 
-                        <a href="busqueda.html">Buscar</a>
+                        <img src="MEDIA/IMG/buscar_icono(1).svg" alt="Buscar" class="nav-icon"> 
+                        <a href="busqueda.html" onclick="closeMenu()">Buscar</a>
                     </li>
                 </ul>
-                    
-                <div id="menu-toggle">
-                    <i class="fas fa-bars"></i>
+                
+                <!-- Menu hamburguesa -->
+                <div id="icono" onclick="menu()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
                 </div>
             </nav>
         </div>
@@ -56,7 +59,7 @@
                 <div class="main-carousel">
                     <!-- IMG 1 - POP -->
                     <div class="slide active">
-                        <img src="MEDIA/IMG/Aitana1.webp" class="slide-bg">
+                        <img src="MEDIA/IMG/Aitana1.webp" alt="Aitana" class="slide-bg">
                         <div class="slide-content">
                             <p>Género</p>
                             <h1 class="current-genre">Pop</h1>
@@ -67,7 +70,7 @@
                     
                     <!-- IMG 2 - REGGAETON -->
                     <div class="slide">
-                        <img src="MEDIA/IMG/maluma.webp" class="slide-bg">
+                        <img src="MEDIA/IMG/maluma.webp" alt="Maluma" class="slide-bg">
                         <div class="slide-content">
                             <p>Género</p>
                             <h1>Reggaetón</h1>
@@ -80,7 +83,7 @@
                     
                     <!-- IMG 3 - HIP-HOP -->
                     <div class="slide">
-                        <img src="MEDIA/IMG/kendrickLamar.webp" class="slide-bg">
+                        <img src="MEDIA/IMG/kendrickLamar.webp" alt="Kendrick Lamar" class="slide-bg">
                         <div class="slide-content">
                             <p>Género</p>
                             <h1>Hip Hop</h1>
@@ -93,7 +96,7 @@
                     
                     <!-- IMG 4 - ELECTRONICA -->
                     <div class="slide">
-                        <img src="MEDIA/IMG/greenVelvet.webp" class="slide-bg">
+                        <img src="MEDIA/IMG/greenVelvet.webp" alt="Green Velvet" class="slide-bg">
                         <div class="slide-content">
                             <p>Género</p>
                             <h1>Electrónica</h1>
@@ -106,7 +109,7 @@
                     
                     <!-- IMG 5 - ROCK -->
                     <div class="slide">
-                        <img src="MEDIA/IMG/freddieMercury.webp" class="slide-bg">
+                        <img src="MEDIA/IMG/freddieMercury.webp" alt="Freddie Mercury" class="slide-bg">
                         <div class="slide-content">
                             <p>Género</p>
                             <h1>Rock</h1>
@@ -134,36 +137,36 @@
                     <div class="artists-container" id="pop">
                         <div class="group">
                             <div class="card-artistas">
-                                <img src="MEDIA/IMG/taylorswift.webp" class="artist-image">
+                                <img src="MEDIA/IMG/taylorswift.webp" alt="Taylor Swift" class="artist-image">
                                 <h4 class="name artist-info">Taylor Swift</h4>
                             </div>
                             <div class="card-artistas">
-                                <img src="MEDIA/IMG/Bisbal.webp" class="artist-image">
+                                <img src="MEDIA/IMG/Bisbal.webp" alt="Bilbal" class="artist-image">
                                 <h4 class="name artist-info">David Bisbal</h4>
                             </div>
                             <div class="card-artistas">
-                                <img src="MEDIA/IMG/billieeilish.webp" class="artist-image">
+                                <img src="MEDIA/IMG/billieeilish.webp" alt="Billie Eilish" class="artist-image">
                                 <h4 class="name artist-info">Billie Eilish</h4>
                             </div>
                             <div class="card-artistas">
-                                <img src="MEDIA/IMG/ladyGaga.webp" class="artist-image">
+                                <img src="MEDIA/IMG/ladyGaga.webp" alt="Lady Gaga" class="artist-image">
                                 <h4 class="name artist-info">Lady Gaga</h4>
                             </div>
                             <div class="card-artistas">
-                                <img src="MEDIA/IMG/justinBieber.webp" class="artist-image">
+                                <img src="MEDIA/IMG/justinBieber.webp" alt="Justin Bieber" class="artist-image">
                                 <h4 class="name artist-info"> Justin Bieber</h4>
                             </div>
                             <div class="card-artistas">
-                                <img src="MEDIA/IMG/EdSheeran.webp" class="artist-image">
+                                <img src="MEDIA/IMG/EdSheeran.webp" alt="Ed Sheeran" class="artist-image">
                                 <h4 class="name artist-info">Ed Sheeran</h4>
                             </div>
                             <div class="card-artistas">
-                                <img src="MEDIA/IMG/morat.webp" class="artist-image">
-                                <h4 class="name artist-info">Morat</h6>
+                                <img src="MEDIA/IMG/morat.webp" alt="Morat" class="artist-image">
+                                <h4 class="name artist-info">Morat</h4>
                             </div>
                             <div class="card-artistas">
-                                <img src="MEDIA/IMG/beyonce.webp" class="artist-image">
-                                <h4 class="name artist-info">Beyoncé</h4S>
+                                <img src="MEDIA/IMG/beyonce.webp" alt="Beyonce" class="artist-image">
+                                <h4 class="name artist-info">Beyoncé</h4>
                             </div>
                         </div>
                     </div>
@@ -199,22 +202,22 @@
         <section id="opciones">
             <a href="top_global.html" data-aos="fade-up-right">
                 <h2>Artistas</h2>
-                <img src="MEDIA/IMG/arrow.svg" id="arrow">
+                <img src="MEDIA/IMG/arrow.svg" alt="Arrow" class="arrow">
             </a>
             <hr data-aos="fade-right">
-            <a href="tendencias">
+            <a href="#tendencias">
                 <h2>Tus favoritos</h2>
-                <img src="MEDIA/IMG/arrow.svg" id="arrow">
+                <img src="MEDIA/IMG/arrow.svg" alt="Arrow" class="arrow">
             </a>
             <hr data-aos="fade-right">
             <a href="busqueda.html">
                 <h2>Géneros musicales</h2>
-                <img src="MEDIA/IMG/arrow.svg" id="arrow">
+                <img src="MEDIA/IMG/arrow.svg" alt="Arrow" class="arrow">
             </a>
             <hr data-aos="fade-right">
             <a href="podcast.html">
                 <h2>Podcast</h2>
-                <img src="MEDIA/IMG/arrow.svg" id="arrow">
+                <img src="MEDIA/IMG/arrow.svg" alt="Arrow" class="arrow">
             </a>
         </section>
 
@@ -228,11 +231,9 @@
                     <span>+5M de reproducciones</span>
                     <span>#1 del momento</span>
                 </div>
-                <a>
-                    <button><i class="fa-solid fa-play"></i>Play now</button>
-                </a>
+                <button><i class="fa-solid fa-play"></i>Play now</button>
             </div>
-            <img src="MEDIA/IMG/vinilos.svg">
+            <img src="MEDIA/IMG/vinilos.svg" alt="Vinilos">
         </section>
 
         <!-- ESCUCHADO RECIENTEMENTE -->

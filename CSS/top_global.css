@@ -78,7 +78,7 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-    z-index: 5;
+    z-index: 1000;
     text-align: left;
     justify-content: space-between;
     padding: 0 40px;
@@ -95,7 +95,8 @@ nav img {
     height: 40%;
 }
 
-nav #menu-toggle {
+/* M.hamburguesa y x - OCULTOS */
+#icono{
     display: none;
 }
 
@@ -138,7 +139,6 @@ nav ul li a {
     height: 0;
     opacity: 0;
     transition: all 0.3s ease;
-    /* box-sizing: border-box; */
 }
 
 .menu-links:before {
@@ -592,106 +592,129 @@ nav ul li a {
 }
 
 /* FOOTER */
-.footer {
-  background-color: var(--main);
-  color: var(--negro);
-  padding: 1px 10px 30px;
-  margin-top: 10vh;
+footer {
+    background-color: var(--main);
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0 6rem;
+    align-items: self-end;
 }
 
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  max-width: 1300px;
-  margin: 0 auto;
+footer :first-child a figure {
+    height: 8rem;
+    margin-left: -57px;
+    transition: 0.3s ease;
 }
 
-.footer-container h2 {
-  font-size: 1.3em;
-  margin-bottom: 15px;
-  color: var(--negro);
+footer :first-child a figure:hover {
+    scale: 1.05;
 }
 
-.text-logo {
-  display: block;
-  align-items: center;
-  gap: 10px;
-  transition: transform 0.3s ease;
+footer :first-child a figure > :first-child {
+    height: 12rem;
 }
 
-.text-logo h4 {
-  font-size: 1.5em;
+
+footer > div p {
+    color: var(--negro);
+    text-align: left;
+    font-size: 0.9rem;
+    margin-top: 1.8rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+    white-space: pre-line;
 }
 
-.text-logo:hover {
-  transform: scale(1.07);
+.info p {
+    margin-top: 0.2rem;
+    text-align: center;
+    color: var(--negro);
 }
 
-.footer-logo img {
-  width: 15em;
-  height: auto;
-  display: flex;
+.info p:hover {
+    font-weight: bold;
+    scale: 1.1;
 }
 
-.footer-info {
-  text-align: center;
+.icons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 16px;
 }
 
-.footer-info ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  color: var(--negro);
+.icons > a {
+    font-size: 1.3rem;
+    color: var(--negro);
 }
 
-.footer-info ul li {
-  margin-bottom: 8px;
-  font-size: 14px;
-  display: block;
-  transition: transform 0.3s ease;
+.icons > a i {
+    transition: all 0.3s ease;
 }
 
-.footer-info ul li:hover {
-  transform: scale(1.2);
-  font-weight: bold;
+.icons a:hover i {
+    /* color: var(--main); */
+    scale: 1.1;
 }
 
-.footer-info p {
-  margin-bottom: 8px;
-  font-size: 14px;
-  color: var(--negro);
+#newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: self-end;
 }
 
-.footer a:link,
-.footer a:visited {
-  color: var(--negro);
-  text-decoration: none;
+#newsletter h2 {
+    font-size: 1.5rem;
+    color: var(--negro);
 }
 
-.footer a:hover {
-  color: var(--negro);
-  transition: 0.3s ease;
+#newsletter div {
+    margin-top: 1rem;
+    border: 2px solid;
+    border-radius: 2rem;
+    padding: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
-.social-icons i {
-  font-size: 18px;
-  margin-right: 12px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
+#newsletter div form input {
+    background-color: transparent;
+    border: none;
+    color: var(--blanco);
 }
 
-.social-icons i:hover {
-  transform: scale(1.2);
+#newsletter div form input::placeholder {
+    color: var(--negro);
 }
 
-.copy {
-  text-align: center;
-  display: flex;
-  margin-top: 30px;
-  font-size: 16px;
-  color: var(--negro);
-  justify-content: center;
+#newsletter div form input:focus {
+    border-bottom-color: var(--negro);
+    outline: none;
+}
+
+#newsletter div form input[type=email] {
+    margin: 0 10px;
+    color: var(--negro);
+}
+
+#newsletter div form input[type=submit] {
+    background-color: var(--negro);
+    color: var(--blanco);
+    border: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+#newsletter div form input[type=submit] {
+    border-radius: 18px;
+    padding: 8px;
+}
+
+#newsletter div form input[type=submit]:hover {
+    background: var(--main);
+    color: var(--negro);
+    transition: 0.3s ease;
+    cursor: pointer;
 }
 
 
@@ -774,24 +797,68 @@ nav ul li a {
         text-align: right;
     }
 
-    nav {
-        justify-content: space-between;
-        padding: 0 20px;
-    }
-
     nav img {
-        width: 80px;
+        width: 80%;
     }
 
-    nav #menu-toggle {
-        display: block;
-        color: var(--main);
-        font-size: 1.5rem;
-        cursor: pointer;
+    nav > a {
+        margin-top: 32px;
     }
 
     nav ul {
-        display: none; 
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: space-evenly;
+        transform: translateX(-100%);
+        transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+        background-color: rgb(0, 0, 0, 0.8);
+        z-index: 1;
+        margin: 0;
+        list-style: none;
+    }
+
+    #menu-lista.activo {
+        transform: translateX(0);
+    }
+
+    nav ul li {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Menú hamburguesa */
+    #icono {
+        display: block;
+        position:relative;
+        z-index: 2;
+    }
+
+    #icono > div {
+        width: 38px;
+        height: 3px;
+        background-color: var(--blanco);
+        margin: 7px 0;
+        transition: 0.4s;
+        border-radius: 4px;
+    }
+
+    #icono:hover > div {
+        cursor: pointer;
+    }
+
+    #icono.cambiar > div:nth-child(1) {
+        transform: rotate(-45deg) translate(-6px, 6px);
+    }
+
+    #icono.cambiar > div:nth-child(2) {
+        opacity: 0;
+    }
+
+    #icono.cambiar > div:nth-child(3) {
+        transform: rotate(45deg) translate(-8px, -8px);
     }
 
     .centrar {

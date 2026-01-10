@@ -20,15 +20,48 @@ function irHome() {
 
 
 // MENU RESPONSIVE
-$(document).ready(function () {
-    $("#menu-toggle").on("click", function () {
-        $("#nav-links").toggleClass("active");
-    });
+function animar() {
+    document.getElementById("icono").classList.toggle("cambiar");
+}
 
-    $("#nav-links a").on("click", function () {
-        $("#nav-links").removeClass("active");
-    });
-});
+function openMenu() {
+    const menu = document.getElementById("menu-lista");
+
+    if (menu.classList.contains("activo")) return;
+
+    animar();
+    menu.classList.add("activo");
+
+    let overlay = document.getElementById("menu-overlay");
+    if (!overlay) {
+        overlay = document.createElement("div");
+        overlay.id = "menu-overlay";
+        overlay.onclick = closeMenu;
+        document.body.appendChild(overlay);
+    }
+    overlay.classList.add("activo");
+
+    document.body.style.overflow = "hidden";
+}
+
+function closeMenu() {
+    const menu = document.getElementById("menu-lista");
+
+    if (!menu.classList.contains("activo")) return;
+
+    animar();
+    menu.classList.remove("activo");
+
+    const overlay = document.getElementById("menu-overlay");
+    if (overlay) overlay.classList.remove("activo");
+
+    document.body.style.overflow = "auto";
+}
+
+function menu() {
+    const menu = document.getElementById("menu-lista");
+    menu.classList.contains("activo") ? closeMenu() : openMenu();
+}
 
 
 // SCROLL - Cambio de tamaños (jQuery)
@@ -46,8 +79,9 @@ function shrinkHeader() {
             "gap": "0rem",
             "background-color": "#6b6b6b4f",
         });
+        $("nav a").css("margin-top", "8px");
         $("nav a img").css({
-            "width": "40%",
+            "width": "18%",
             "height": "40%",
         });
         $("nav ul").css({
@@ -64,11 +98,12 @@ function shrinkHeader() {
             "align-items": "flex-start",
             "flex-direction": "column",
             "justify-content": "start",
-            "gap": "3rem",
+            "gap": "4rem",
             "background-color": "transparent",
         });
+        $("nav a").css("margin-top", "24px");
         $("nav a img").css({
-            "width": "100%",
+            "width": "70%",
             "height": "100%",
         });
         $("nav ul").css({
@@ -78,6 +113,25 @@ function shrinkHeader() {
         });
         $(".linea-titulo").css("flex-direction", "row-reverse");
         $(".linea-hrz::after").css("right", "42px");
+    }
+
+
+    if (window.innerWidth > 768) { // SOLO DESKTOP
+        if (scroll > threshold) {
+            $("nav").css({
+                height: "12vh",
+                flexDirection: "row",
+                justifyContent: "space-between",
+                backgroundColor: "#6b6b6b4f",
+            });
+        } else {
+            $("nav").css({
+                height: "100vh",
+                flexDirection: "column",
+                justifyContent: "start",
+                backgroundColor: "transparent",
+            });
+        }
     }
 }
 
@@ -127,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
         electronica: [
             { name: "Daft Punk", image: "MEDIA/IMG/daftPunk.webp" },
             { name: "Martin Garrix", image: "MEDIA/IMG/martinGarrix.jpg" },
-            { name: "David Guetta", image: "DavidGuetta.webp" },
+            { name: "David Guetta", image: "MEDIA/IMG/DavidGuetta.webp" },
             { name: "Marshmello", image: "MEDIA/IMG/Marshmello.webp" },
             { name: "Black Coffe", image: "MEDIA/IMG/BlackCoffee.webp" },
         ],
