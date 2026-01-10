@@ -696,7 +696,6 @@ nav ul li a {
 
 
 /* ANIMACIONES */
-
 .scroll {
     animation: appear linear;
     animation-timeline: view();

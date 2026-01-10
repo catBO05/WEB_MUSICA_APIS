@@ -13,6 +13,11 @@ if (container && registerbtn && loginbtn) {
     });
 }
 
+// Ir a home
+function irHome() {
+    window.location.href = 'home.html';
+}
+
 
 // MENU RESPONSIVE
 $(document).ready(function () {
@@ -92,6 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextBtn = document.querySelector('.next-btn');
     const carousel = document.querySelector('.carousel-container');
 
+    // Imagenes "Artistas del mes"
     const artistsData = {
         pop: [
             { name: "Taylor Swift", image: "MEDIA/IMG/taylorswift.webp" },
@@ -104,58 +110,99 @@ document.addEventListener('DOMContentLoaded', () => {
             { name: "Beyoncé", image: "MEDIA/IMG/beyonce.webp" }
         ],
         reggaeton: [
-            { name: "Daddy Yankee", image: "MEDIA/IMG/daddyyankee.webp" },
+            { name: "Daddy Yankee", image: "MEDIA/IMG/daddyYankee.webp" },
+            { name: "Karol G", image: "MEDIA/IMG/karolG.webp" },
+            { name: "Don Omar", image: "MEDIA/IMG/donOmar.webp" },
+            { name: "Yandel", image: "MEDIA/IMG/Yandel.webp" },
+            { name: "J Balbin", image: "MEDIA/IMG/jbalvin.webp" },
             { name: "Bad Bunny", image: "MEDIA/IMG/badbunny.webp" }
         ],
         hiphop: [
-            { name: "Kendrick Lamar", image: "MEDIA/IMG/kendrick.webp" },
-            { name: "Cardi B", image: "MEDIA/IMG/cardiB.webp" }
+            { name: "Tupac Shakur", image: "MEDIA/IMG/tupak.webp" },
+            { name: "The Notorious B.I.G.", image: "MEDIA/IMG/TheNotorious.webp" },
+            { name: "Nas", image: "MEDIA/IMG/nas.webp" },
+            { name: "Eminem", image: "MEDIA/IMG/eminem.webp" },
+            { name: "Drake", image: "MEDIA/IMG/Drake.webp" },
         ],
         electronica: [
-            { name: "Daft Punk", image: "MEDIA/IMG/daftpunk.webp" },
-            { name: "Calvin Harris", image: "MEDIA/IMG/calvin.webp" }
+            { name: "Daft Punk", image: "MEDIA/IMG/daftPunk.webp" },
+            { name: "Martin Garrix", image: "MEDIA/IMG/martinGarrix.jpg" },
+            { name: "David Guetta", image: "DavidGuetta.webp" },
+            { name: "Marshmello", image: "MEDIA/IMG/Marshmello.webp" },
+            { name: "Black Coffe", image: "MEDIA/IMG/BlackCoffee.webp" },
         ],
         rock: [
-            { name: "The Beatles", image: "MEDIA/IMG/beatles.webp" },
-            { name: "Queen", image: "MEDIA/IMG/queen.webp" }
+            { name: "Mick Jagger", image: "MEDIA/IMG/MickJagger.webp" },
+            { name: "Robert Plant", image: "MEDIA/IMG/RobertPlant.webp" },
+            { name: "Queen", image: "MEDIA/IMG/queen.webp" },
+            { name: "Elvis", image: "MEDIA/IMG/elvis.webp" },
+            { name: "David Bowie", image: "MEDIA/IMG/DavidBowie.webp" },
         ]
     };
 
     const genreIds = ['pop','reggaeton','hiphop','electronica','rock'];
     let currentSlide = 0;
 
-    // Ocultar todos los slides y artistas
     function hideAllSlides() {
         slides.forEach(slide => slide.classList.remove('active'));
+
         genreIds.forEach(genre => {
             const container = document.getElementById(genre);
-            if (container) container.style.display = 'none';
+            if (container) {
+                container.style.display = 'none';
+                container.innerHTML = "";
+            }
         });
     }
 
-    // Mostrar slide y artistas actuales
+    function renderArtists(genre) {
+        const container = document.getElementById(genre);
+        if (!container || !artistsData[genre]) return;
+
+        const group = document.createElement("div");
+        group.classList.add("group");
+
+        artistsData[genre].forEach(artist => {
+            const card = document.createElement("div");
+            card.classList.add("card-artistas");
+
+            card.innerHTML = `
+                <img src="${artist.image}" class="artist-image" alt="${artist.name}">
+                <h4 class="name artist-info">${artist.name}</h4>
+            `;
+
+            group.appendChild(card);
+        });
+
+        container.appendChild(group);
+    }
+
     function showSlide(n) {
         hideAllSlides();
         currentSlide = (n + slides.length) % slides.length;
 
         slides[currentSlide].classList.add('active');
 
-        const container = document.getElementById(genreIds[currentSlide]);
-        if (container) container.style.display = 'flex';
+        const genre = genreIds[currentSlide];
+        const container = document.getElementById(genre);
+
+        if (container) {
+            renderArtists(genre);
+            container.style.display = 'flex';
+        }
     }
 
     // Botones
     prevBtn.addEventListener('click', () => showSlide(currentSlide - 1));
     nextBtn.addEventListener('click', () => showSlide(currentSlide + 1));
 
-    // Autoplay
+
     let slideInterval = setInterval(() => showSlide(currentSlide + 1), 8000);
     carousel.addEventListener('mouseenter', () => clearInterval(slideInterval));
     carousel.addEventListener('mouseleave', () => {
-        slideInterval = setInterval(() => showSlide(currentSlide + 1), 5000);
+        slideInterval = setInterval(() => showSlide(currentSlide + 1), 8000);
     });
 
-    // Inicializar mostrando primer slide
     showSlide(0);
 });
 
@@ -261,4 +308,12 @@ document.querySelectorAll('.number').forEach(contador => {
 
 
 
-// PODCAST
+// ANIMACION - SCROLL AOS
+/*jslint devel: true*/
+/*eslint-env browser*/
+window.onload = function () {
+    "use strict";
+    AOS.init({
+        duration: 1500,
+    });
+}
