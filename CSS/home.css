@@ -1007,81 +1007,238 @@ footer > div p {
 
 
 
-/* VERSIÓN RESPONSIVE */
-@media (max-width: 768px) {
-    section {
-        padding: 40px 20px;
-    }
-            
-    section h2 {
-        font-size: 2.5rem;
-        padding: 20px 0;
-    }
-            
-    section h2:hover {
-        transform: translateX(10px);
-    }
-}
-
-@media (max-width: 480px) {
-    section h2 {
-        font-size: 2rem;
-        padding: 15px 0;
-    }
-}
-
 /* RESPONSIVE */
 @media (max-width: 1024px) {
-    .genre-title {
-        font-size: 3.5rem;
+
+    .wrapper {
+        padding: 0 24px;
     }
-    
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 2.4rem;
+    }
+
+    nav {
+        padding: 0 24px;
+        height: 10vh;
+    }
+
     .slide-content {
-        margin-top: 120px;
+        max-width: 70%;
+        margin-top: 100px;
     }
-    
-    .artists-carousel {
-        padding: 0 5%;
+
+    .description {
+        max-width: 100%;
+        font-size: 1rem;
+    }
+
+    .artists-container {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #hits {
+        height: auto;
+        flex-direction: column;
+        padding: 2rem;
+        gap: 2rem;
+    }
+
+    #hits img {
+        width: 280px;
+        height: 280px;
+    }
+
+    #recientes {
+        height: auto;
+    }
+
+    footer {
+        flex-wrap: wrap;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    #newsletter {
+        align-items: center;
     }
 }
 
+/* tablet */
 @media (max-width: 768px) {
-    .genre-title {
-        font-size: 2.8rem;
+
+    nav ul {
+        display: none;
     }
-            
-    .genre-description {
-        font-size: 1.1rem;
+
+    h1 {
+        font-size: 3.2rem;
     }
-            
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+        text-align: left;
+    }
+
+    /* Menú hamburguesa */
+    nav #menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 12vh;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 5, 0.95);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        padding: 2rem;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        gap: 2rem;
+    }
+
+    nav ul.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    nav ul li {
+        width: 100%;
+        justify-content: center;
+    }
+    
+
     .carousel-controls {
         top: 20px;
         right: 20px;
     }
-            
+
+    .slide-content {
+        max-width: 100%;
+        margin-top: 120px;
+    }
+
+    .card-artistas {
+        flex: 0 0 3.5em;
+        height: 3em;
+    }
+
     .artist-card {
         width: 150px;
         height: 200px;
     }
 
-}
-    
+    .escuchado {
+        padding: 0.5rem 1.5rem;
+        gap: 20px;
+    }
 
+    .escuchado-card {
+        width: 200px;
+    }
+
+    .escuchado-card figure {
+        width: 200px;
+        height: 200px;
+    }
+
+    .song-info h5 {
+        font-size: 1rem;
+    }
+
+}
+
+/* movil */
 @media (max-width: 480px) {
+
+    h1 {
+        font-size: 2.6rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    nav {
+        height: 9vh;
+        padding: 0 16px;
+    }
+
+    .carousel-container {
+        height: 90vh;
+    }
+
     .slide {
-        padding: 0 5%;
+        padding: 0 16px;
     }
-    
-    .genre-title {
-        font-size: 2.2rem;
+
+    .slide-content {
+        margin-top: 110px;
     }
-            
+
+    .carousel-controls {
+        top: 16px;
+        right: 16px;
+        gap: 10px;
+    }
+
+    .prev-btn,
+    .next-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 1.2rem;
+    }
+
     .artists-carousel {
-        bottom: 40px;
+        bottom: 20px;
     }
-            
+
     .artist-card {
         width: 130px;
         height: 180px;
+    }
+
+    #hits img {
+        width: 220px;
+        height: 220px;
+    }
+
+    #hits > div {
+        padding: 0;
+        width: 100%;
+    }
+
+    .trends-tags {
+        flex-wrap: wrap;
+    }
+
+    .song {
+        gap: 10px;
+    }
+
+    .song-right p {
+        display: none;
+    }
+
+    footer {
+        padding-bottom: 4rem;
     }
 }
