@@ -617,7 +617,7 @@ section hr {
     height: 100%;
     width: 80%;
     padding: 4%;
-    /* display: inline-table; */
+    display: inline-table;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

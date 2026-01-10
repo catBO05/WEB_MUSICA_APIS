@@ -79,7 +79,7 @@ function shrinkHeader() {
             "gap": "0rem",
             "background-color": "#6b6b6b4f",
         });
-        $("nav a").css("margin-top", "8px");
+        $("nav > a").css("margin-top", "8px");
         $("nav a img").css({
             "width": "18%",
             "height": "40%",
@@ -101,7 +101,7 @@ function shrinkHeader() {
             "gap": "4rem",
             "background-color": "transparent",
         });
-        $("nav a").css("margin-top", "24px");
+        $("nav > a").css("margin-top", "24px");
         $("nav a img").css({
             "width": "70%",
             "height": "100%",
