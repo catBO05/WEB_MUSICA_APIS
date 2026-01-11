@@ -104,80 +104,81 @@ function menu() {
 }
 
 
-// SCROLL - Cambio de tamaños (jQuery)
-function shrinkHeader() {
-    "use strict";
-    var scroll = $(window).scrollTop();
-    var threshold = $(window).height() / 2;
-    if (scroll > threshold) {
-        $("nav").css({
-            "height": "12vh",
-            "width": "100%",
-            "align-items": "center",
-            "flex-direction": "row",
-            "justify-content": "space-between",
-            "gap": "0rem",
-            "background-color": "#6b6b6b4f",
-        });
-        $("nav > a").css("margin-top", "8px");
-        $("nav a img").css({"width": "18%"});
-        $("nav ul").css({
-            "flex-direction": "row",
-            "gap": "1rem",
-            "align-items": "none",
-        });
-        $(".linea-titulo").css("flex-direction", "row");
-        $(".linea-hrz::after").css("right", "-8px");
-    } else {
-         $("nav").css({
-            "height": "100vh",
-            "width": "20%",
-            "align-items": "flex-start",
-            "flex-direction": "column",
-            "justify-content": "start",
-            "gap": "4rem",
-            "background-color": "transparent",
-        });
-        $("nav > a").css("margin-top", "24px");
-        $("nav a img").css({
-            "width": "60%",
-            "height": "100%",
-        });
-        $("nav ul").css({
-            "flex-direction": "column",
-            "gap": "4.8rem",
-            "align-items": "center",
-        });
-        $(".linea-titulo").css("flex-direction", "row-reverse");
-        $(".linea-hrz::after").css("right", "42px");
-    }
+// SCROLL - Cambio de tamaños (jQuery) PROBLEMAS CON EL RESPONSIVE
+
+// function shrinkHeader() {
+//     "use strict";
+//     var scroll = $(window).scrollTop();
+//     var threshold = $(window).height() / 2;
+//     if (scroll > threshold) {
+//         $("nav").css({
+//             "height": "12vh",
+//             "width": "100%",
+//             "align-items": "center",
+//             "flex-direction": "row",
+//             "justify-content": "space-between",
+//             "gap": "0rem",
+//             "background-color": "#6b6b6b4f",
+//         });
+//         $("nav > a").css("margin-top", "8px");
+//         $("nav a img").css({"width": "18%"});
+//         $("nav ul").css({
+//             "flex-direction": "row",
+//             "gap": "1rem",
+//             "align-items": "none",
+//         });
+//         $(".linea-titulo").css("flex-direction", "row");
+//         $(".linea-hrz::after").css("right", "-8px");
+//     } else {
+//          $("nav").css({
+//             "height": "100vh",
+//             "width": "20%",
+//             "align-items": "flex-start",
+//             "flex-direction": "column",
+//             "justify-content": "start",
+//             "gap": "4rem",
+//             "background-color": "transparent",
+//         });
+//         $("nav > a").css("margin-top", "24px");
+//         $("nav a img").css({
+//             "width": "60%",
+//             "height": "100%",
+//         });
+//         $("nav ul").css({
+//             "flex-direction": "column",
+//             "gap": "4.8rem",
+//             "align-items": "center",
+//         });
+//         $(".linea-titulo").css("flex-direction", "row-reverse");
+//         $(".linea-hrz::after").css("right", "42px");
+//     }
 
 
-    if (window.innerWidth > 768) { // SOLO DESKTOP
-        if (scroll > threshold) {
-            $("nav").css({
-                height: "12vh",
-                flexDirection: "row",
-                justifyContent: "space-between",
-                backgroundColor: "#6b6b6b4f",
-            });
-        } else {
-            $("nav").css({
-                height: "100vh",
-                flexDirection: "column",
-                justifyContent: "start",
-                backgroundColor: "transparent",
-            });
-        }
-    }
-}
+//     if (window.innerWidth > 768) { // SOLO DESKTOP
+//         if (scroll > threshold) {
+//             $("nav").css({
+//                 height: "12vh",
+//                 flexDirection: "row",
+//                 justifyContent: "space-between",
+//                 backgroundColor: "#6b6b6b4f",
+//             });
+//         } else {
+//             $("nav").css({
+//                 height: "100vh",
+//                 flexDirection: "column",
+//                 justifyContent: "start",
+//                 backgroundColor: "transparent",
+//             });
+//         }
+//     }
+// }
 
-$(document).ready(function () {
-    "use strict";
-    $(window).scroll(function () {
-        shrinkHeader();
-    });
-});
+// $(document).ready(function () {
+//     "use strict";
+//     $(window).scroll(function () {
+//         shrinkHeader();
+//     });
+// });
 
 
 // HOME

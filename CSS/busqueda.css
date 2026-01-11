@@ -494,4 +494,23 @@ audio::-webkit-media-controls-timeline {
         padding: 0 16px;
     }
 
+    .search-box {
+        max-width: 90%;
+        padding: 5px 10px;
+    }
+
+    .search-box input {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    .search-box button {
+        width: 40px !important;
+        height: 40px !important;
+        min-width: 40px;
+        border-radius: 50%;
+        background: var(--main);
+        color: var(--negro);
+    }
+
 }
