@@ -732,7 +732,7 @@ section hr {
 
 /* TENDENCIAS */
 #tendencias {
-    margin-bottom: 8rem;
+    margin-bottom: 4rem;
 }
 
 #tendencias > div:first-child {
@@ -882,7 +882,7 @@ section hr {
 /* GRAFICA */
 .chart-container {
     width: 100% !important;
-    max-width: 60vw !important;
+    max-width: 60vw;
     height: 60vh !important;
     margin-bottom: 10rem !important;
     overflow: visible !important;
@@ -1152,6 +1152,17 @@ footer > div p {
 
     #newsletter {
         align-items: center;
+    }
+
+    .graf-conteiner {
+        width: 100% !important;
+        max-width: 100%;
+        height: 60vh !important;
+        margin-bottom: 10rem !important;
+        overflow: visible !important;
+        position: relative; 
+        margin: 0 auto;
+        margin-top: 3rem;
     }
 }
 

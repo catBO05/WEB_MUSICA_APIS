@@ -316,6 +316,10 @@ form {
     border-radius: 20vw;
   }
 
+  .input-box {
+    margin: 20px 0;
+  }
+
   .toggle-panel {
     width: 100%;
     height: 30%;
