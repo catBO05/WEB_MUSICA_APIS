@@ -686,10 +686,11 @@ section hr {
     gap: 30px; 
     overflow-x: auto;
     scroll-behavior: smooth;
-    padding: 0.5rem 3.8rem;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    padding: 1.2rem 3.8rem;
+    /* -ms-overflow-style: none; */
     cursor: pointer;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
 }
 
 .escuchado::-webkit-scrollbar {
@@ -731,7 +732,7 @@ section hr {
 
 /* TENDENCIAS */
 #tendencias {
-    margin-bottom: 4rem;
+    margin-bottom: 8rem;
 }
 
 #tendencias > div:first-child {
@@ -879,19 +880,15 @@ section hr {
 
 
 /* GRAFICA */
-
-
 .chart-container {
     width: 100% !important;
     max-width: 60vw !important;
     height: 60vh !important;
-    margin-bottom: 6rem !important;
+    margin-bottom: 10rem !important;
     overflow: visible !important;
     position: relative; 
-    height:40vh; 
-    width:100%; 
-    max-width:500px; 
     margin: 0 auto;
+    margin-top: 3rem;
 }
 
 
