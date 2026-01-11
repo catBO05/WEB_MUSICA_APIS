@@ -120,10 +120,7 @@ function shrinkHeader() {
             "background-color": "#6b6b6b4f",
         });
         $("nav > a").css("margin-top", "8px");
-        $("nav a img").css({
-            "width": "18%",
-            "height": "40%",
-        });
+        $("nav a img").css({"width": "18%"});
         $("nav ul").css({
             "flex-direction": "row",
             "gap": "1rem",
@@ -143,7 +140,7 @@ function shrinkHeader() {
         });
         $("nav > a").css("margin-top", "24px");
         $("nav a img").css({
-            "width": "70%",
+            "width": "60%",
             "height": "100%",
         });
         $("nav ul").css({

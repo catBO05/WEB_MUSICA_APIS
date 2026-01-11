@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Manrope:wght@200..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
 
 * {
@@ -349,9 +348,7 @@ header.podcast-player {
 
 .podcasts-carousel {
     width: 100%;
-    max-width: 1200px;
     position: relative;
-    padding: 0 20px;
     margin: 20px auto 0 auto;
 }
 
