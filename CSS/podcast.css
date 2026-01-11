@@ -348,7 +348,9 @@ header.podcast-player {
 
 .podcasts-carousel {
     width: 100%;
+    max-width: 1200px;
     position: relative;
+    padding: 0 20px;
     margin: 20px auto 0 auto;
 }
 
@@ -1180,11 +1182,13 @@ header.podcast-player {
 
 
 /* GRAFICA */
+
+
 .chart-container {
     width: 100% !important;
     max-width: 60vw !important;
     height: 60vh !important;
-    margin-bottom: 3rem !important;
+    margin-bottom: 5rem !important;
     overflow: visible !important;
     position: relative; 
     height:40vh; 
@@ -1319,6 +1323,63 @@ footer > div p {
     transition: 0.3s ease;
     cursor: pointer;
 }
+
+
+/* ANIMACIONES */
+
+
+.scroll {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 35%;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.scroll-right {
+    animation: slideright 5s ease-out forwards;
+    animation-timeline: view();
+    animation-range: entry 0 cover 45%;
+}
+
+@keyframes slideright {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.scroll-left {
+    animation: slideleft 5s ease-out forwards;
+    animation-timeline: view();
+    animation-range: entry 0 cover 30%;
+}
+
+@keyframes slideleft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 
 
 

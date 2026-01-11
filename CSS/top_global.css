@@ -368,11 +368,10 @@ nav ul li a {
 #info {
     padding-top: 3rem;
 }
-
 .artist-info {
     width: 60%;
     color: var(--blanco);
-    margin: 20vh 35vh 0;
+    margin: 20vh 45vh 0;
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -381,21 +380,12 @@ nav ul li a {
     justify-content: flex-end;
 }
 
-.artist-info h2,
-.artist-info-right h2 {
-    font-size: 4.8rem;
+.artist-info h2 {
+    font-size: 5.2rem;
     position: absolute;
     top: -14%;
-    z-index: 1;
-}
-
-.artist-info h2 {
     left: 23%;
-
-}
-
-.artist-info-right h2 {
-    left: 30%;
+    z-index: 1;
 }
 
 .img-container {
@@ -412,8 +402,7 @@ nav ul li a {
     z-index: 0;
 }
 
-.scroll-left>p,
-.scroll-right>p {
+.scroll-left>p {
     position: absolute;
     top: 4vh;
     left: 50%;
@@ -474,13 +463,21 @@ nav ul li a {
 .artist-info-right {
     width: 60%;
     color: var(--blanco);
-    margin: 20vh 35vh 0;
+    margin: 20vh 45vh 0;
     display: flex;
     flex-direction: column;
     text-align: left;
     position: relative;
     flex-direction: row;
     justify-content: flex-end;
+}
+
+.artist-info-right h2 {
+    font-size: 5.2rem;
+    position: absolute;
+    top: -15%;
+    left: 30%;
+    z-index: 1;
 }
 
 .img-container-right {
@@ -495,6 +492,17 @@ nav ul li a {
     height: 100%;
     object-fit: cover;
     z-index: 0;
+}
+
+.artist-info-right p {
+    position: absolute;
+    top: 8vh;
+    left: 34%;
+    font-size: 3.2rem;
+    font-weight: bold;
+    opacity: 0.6;
+    color: var(--blanco);
+    z-index: 1;
 }
 
 

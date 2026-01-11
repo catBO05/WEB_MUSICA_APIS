@@ -11,10 +11,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 data: [37, 27, 18, 13, 7],
                 backgroundColor: [
                     '#E1FF2D',
-                    '#45FFCA',
-                    '#FF0000',
-                    '#39B5E0',
-                    '#222831'
+                    '#93BD57',
+                    '#48B3AF',
+                    '#4635B1',
+                    '#FFFDE1'
                 ],
                 borderWidth: 0,
                 hoverOffset: 25,
@@ -61,10 +61,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 data: [17, 12, 8, 5, 2],
                 backgroundColor: [
                     '#E1FF2D',
-                    '#45FFCA',
-                    '#FF0000',
-                    '#39B5E0',
-                    '#222831'
+                    '#93BD57',
+                    '#48B3AF',
+                    '#4635B1',
+                    '#FFFDE1'
                 ],
                 borderWidth: 0,
                 hoverOffset: 25,
