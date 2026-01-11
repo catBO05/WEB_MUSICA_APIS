@@ -112,7 +112,6 @@ function shrinkHeader() {
     if (scroll > threshold) {
         $("nav").css({
             "height": "13vh",
-            "justify-content": "space-between",
             "background-color": "rgba(0, 0, 0)",
             "backdrop-filter": "blur(15px)",
         });
@@ -121,9 +120,8 @@ function shrinkHeader() {
     } else {
          $("nav").css({
             "height": "15vh",
-            "justify-content": "space-evenly",
             "background-color": "transparent",
-            "backdrop-filter": "none",
+            "backdrop-filter": "blur(15px)",
         });
         $("nav a").css({"font-size": "20px"});
     }

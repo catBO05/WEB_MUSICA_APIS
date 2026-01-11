@@ -1089,9 +1089,43 @@ footer > div p {
         font-size: 1rem;
     }
 
-    nav {
-        padding: 0 24px;
-        height: 10vh;
+    #icono {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        cursor: pointer;
+    }
+
+    #icono div {
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        transition: 0.4s;
+    }
+
+    #menu-lista {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 40%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        transition: 0.5s ease;
+        z-index: 999;
+    }
+
+    #menu-lista.activo {
+        right: 0;
+    }
+
+    nav img {
+        width: 40%;
     }
 
     .slide-bg {
@@ -1177,43 +1211,47 @@ footer > div p {
         text-align: left;
     }
 
+    nav {
+        padding: 0 20px;
+        justify-content: flex-start; 
+        padding: 0 20px;
+        height: 12vh;
+    }
+
     nav img {
-        width: 80%;
+        width: 15%;
     }
 
-    nav > a {
-        margin-top: 32px;
+    #menu-lista {
+        width: 40%;
     }
 
-    nav ul {
+    #menu-overlay {
         position: fixed;
         top: 0;
         left: 0;
-        height: 100vh;
-        flex-direction: column;
-        justify-content: space-evenly;
-        transform: translateX(-100%);
-        transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
-        background-color: rgb(0, 0, 0, 0.8);
-        z-index: 1;
-        margin: 0;
-        list-style: none;
-    }
-
-    #menu-lista.activo {
-        transform: translateX(0);
-    }
-
-    nav ul li {
         width: 100%;
-        justify-content: center;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 900;
+        display: none;  
     }
 
-    /* Menú hamburguesa */
+    #menu-overlay.activo {
+        display: block;
+    }
+
+    .menu-links a {
+        font-size: 22px;
+    }
+
     #icono {
         display: block;
-        position:relative;
-        z-index: 2;
+        position: fixed;
+        right: 20px;
+        top: 4vh;
+        z-index: 2000;
+        cursor: pointer;
     }
 
     #icono > div {
@@ -1240,7 +1278,6 @@ footer > div p {
     #icono.cambiar > div:nth-child(3) {
         transform: rotate(45deg) translate(-8px, -8px);
     }
-    
 
     .description {
         max-width: 100%;
@@ -1341,10 +1378,38 @@ footer > div p {
         font-size: 1rem;
     }
 
+    
     nav {
-        height: 9vh;
-        padding: 0 16px;
+        padding: 0 20px;
     }
+
+    nav img {
+        width: 15%;
+    }
+
+    #menu-lista {
+        width: 40%;
+    }
+
+    .menu-links a {
+        font-size: 22px;
+    }
+
+    #icono {
+        display: block;
+        position:relative;
+        z-index: 2;
+    }
+
+    #icono > div {
+        width: 38px;
+        height: 3px;
+        background-color: var(--blanco);
+        margin: 7px 0;
+        transition: 0.4s;
+        border-radius: 4px;
+    }
+
 
     .carousel-container {
         height: 90vh;

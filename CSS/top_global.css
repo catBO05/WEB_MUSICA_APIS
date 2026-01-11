@@ -82,6 +82,7 @@ nav {
     text-align: left;
     justify-content: space-between;
     padding: 0 40px;
+    transition: 0.3s ease;
 }
 
 nav a {
@@ -92,7 +93,6 @@ nav a {
 
 nav img {
     width: 18%;
-    margin-top: 18px;
 }
 
 /* M.hamburguesa y x - OCULTOS */
@@ -791,7 +791,7 @@ footer > div p {
 
 
 /* RESPONSIVE */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     h1 {
         font-size: 5rem;
         line-height: 1;
@@ -807,43 +807,60 @@ footer > div p {
         text-align: right;
     }
 
+    nav {
+        justify-content: flex-start; 
+        padding: 0 20px;
+    }
+
     nav img {
-        width: 80%;
+        width: 15%;
     }
 
-    nav > a {
-        margin-top: 32px;
-    }
-
-    nav ul {
+    #menu-lista {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         position: fixed;
         top: 0;
-        left: 0;
+        right: -100%;
+        width: 40%;
         height: 100vh;
-        flex-direction: column;
-        justify-content: space-evenly;
-        transform: translateX(-100%);
-        transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
-        background-color: rgb(0, 0, 0, 0.8);
-        z-index: 1;
-        margin: 0;
-        list-style: none;
+        background: rgba(0, 0, 0, 0.95);
+        transition: 0.5s ease;
+        z-index: 1000;
     }
 
     #menu-lista.activo {
-        transform: translateX(0);
+        right: 0;
     }
 
-    nav ul li {
+    #menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
         width: 100%;
-        justify-content: center;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 900;
+        display: none;  
     }
 
-    /* Menú hamburguesa */
+    #menu-overlay.activo {
+        display: block;
+    }
+
+    .menu-links a {
+        font-size: 22px;
+    }
+
     #icono {
         display: block;
-        position:relative;
-        z-index: 2;
+        position: fixed;
+        right: 20px;
+        top: 4vh;
+        z-index: 2000;
+        cursor: pointer;
     }
 
     #icono > div {
@@ -1020,23 +1037,65 @@ footer > div p {
     }
 
     nav {
-        justify-content: space-between;
         padding: 0 20px;
     }
 
     nav img {
-        width: 80px;
+        width: 15%;
     }
 
-    nav #menu-toggle {
+    #menu-lista {
+        width: 40%;
+    }
+
+    #menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 900;
+        display: none;  
+    }
+
+    #menu-overlay.activo {
         display: block;
-        color: var(--main);
-        font-size: 1.5rem;
+    }
+
+    .menu-links a {
+        font-size: 22px;
+    }
+
+    #icono {
+        display: block;
+        position: fixed;
+        z-index: 2000;
+    }
+
+    #icono > div {
+        width: 38px;
+        height: 3px;
+        background-color: var(--blanco);
+        margin: 7px 0;
+        transition: 0.4s;
+        border-radius: 4px;
+    }
+
+    #icono:hover > div {
         cursor: pointer;
     }
 
-    nav ul {
-        display: none; 
+    #icono.cambiar > div:nth-child(1) {
+        transform: rotate(-45deg) translate(-6px, 6px);
+    }
+
+    #icono.cambiar > div:nth-child(2) {
+        opacity: 0;
+    }
+
+    #icono.cambiar > div:nth-child(3) {
+        transform: rotate(45deg) translate(-8px, -8px);
     }
 
     .centrar {

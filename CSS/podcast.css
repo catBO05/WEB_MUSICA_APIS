@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Manrope:wght@200..800&display=swap');
 
-
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +7,6 @@
   text-decoration: none;
   scroll-behavior: smooth;
   list-style: none;
-  font-family: 'Manrope', cursive;
 }
 
 :root {
@@ -30,9 +28,8 @@ p, a, ul, li, span {
 }
 
 h1 {
-    color: var(--blanco);
-    font-size: 5.5rem;
-    margin-top: -12px;
+    color: var(--main);
+    font-size: 7.5rem;
 }
 
 h2 {
@@ -42,21 +39,19 @@ h2 {
 
 h3 {
     font-size: 1.7rem;
-    /* margin-top: 1rem; */
+    margin-top: 1rem;
     color: var(--blanco);
-    text-align: end;
 }
 
 h6 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     margin-top: auto;
-    font-weight: normal;
 }
 
 p {
     color: var(--gris);
-    font-size: 1.2rem;
-    /* line-height: 1.2; */
+    font-size: 1.4rem;
+    line-height: 1.2;
 }
 
 body {
@@ -87,6 +82,7 @@ nav {
     text-align: left;
     justify-content: space-between;
     padding: 0 40px;
+    transition: 0.3s ease;
 }
 
 nav a {
@@ -97,7 +93,6 @@ nav a {
 
 nav img {
     width: 18%;
-    margin-top: 18px;
 }
 
 /* M.hamburguesa y x - OCULTOS */
@@ -175,165 +170,27 @@ nav ul li a {
 
 /* HEADER */
 
-header.podcast-player {
-    width: 100%;
-    margin: 20px 0 40px 0;
-    border: none;
-    border-radius: 0;
-    padding: 0;
-    border: 2px solid var(--main);
-}
-
-.player-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px 40px; 
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-
-.left-controls {
-    display: flex;
-    align-items: center;
-    gap: 35px; 
-}
-
-
-.left-controls .speed {
-    font-size: 16px;
-    color: var(--blanco);
-    font-weight: bold;
-    padding: 0;
-    background: transparent;
-    border: none;
-}
-
-
-.control-btn {
-    background: transparent;
-    border: none;
-    color: var(--main);
-    font-size: 22px; 
-    cursor: pointer;
-    padding: 8px;
-    transition: all 0.2s;
-    opacity: 0.9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.control-btn:hover {
-    opacity: 1;
-    transform: scale(1.1);
-}
-
-
-#playBtn {
-    background: transparent; 
-    color: rgba(219, 255, 90, 0.612);
-    font-size: 26px; 
-    cursor: pointer;
-    padding: 10px;
-    transition: all 0.2s;
-    opacity: 0.9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#playBtn:hover {
-    opacity: 1;
-    transform: scale(1.1);
-}
-
-
-.right-controls {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-
-.volume-icon {
-    color:#E1FF2D;
-    font-size: 20px;
-    opacity: 0.9;
-}
-
-
-.volume-container {
-    width: 120px;
-    display: flex;
-    align-items: center;
-}
-
-
-#volume {
-    width: 100%;
-    height: 6px;
-    background: #444;
-    border-radius: 3px; 
-    outline: none;
-    border: none;
-}
-
-#volume::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 18px;
-    height: 18px;
-    background:#E1FF2D; 
-    border-radius: 50%; 
-    cursor: pointer;
-    border: 2px solid #000;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-}
-
-
-.icon-btn {
-    background: transparent;
-    border: none;
-    color:#E1FF2D;
-    font-size: 22px;
-    cursor: pointer;
-    padding: 5px;
-    transition: all 0.2s;
-    opacity: 0.9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.icon-btn:hover {
-    opacity: 1;
-    transform: scale(1.1);
-}
-
-
 .main-title {
     display: flex;
     flex-direction: column;
     align-items: flex-start; 
     width: 100%;
-    max-width: 1200px; 
-    padding: 20px 40px 40px 40px; 
-    margin: 0 auto 30px auto; 
-    text-align: left;
+    margin-top: 15vh; 
+    padding: 20px 40px; 
+    box-sizing: border-box;
 }
 
 .main-title h1 {
     font-size: 150px;
     font-weight: 900;
-    color:#E1FF2D;
+    color: #E1FF2D;
     margin-bottom: 10px;
     letter-spacing: 2px;
     text-align: left; 
     font-family: "Bricolage Grotesque", sans-serif;
-    /* font-optical-sizing: auto; */
-    
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .subtitle {
@@ -399,36 +256,13 @@ header.podcast-player {
     font-size: 15px;
     color: #ffffff;
     font-weight: 400;
-    text-align: left; 
+    text-align: left;
     line-height: 1.4;
-    width: 100%; 
-    opacity: 0.9;
-    padding: 5px 0 0 0; 
-    margin: 0;
-    align-self: flex-start; 
-}
-
-.podcast-card {
-    flex: 0 0 auto;
-    width: 240px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; 
-}
-
-.podcast-name.tight {
-    padding: 8px 0 0 0; 
-    text-align: left;
     width: 100%;
-}
-
-.podcast-name.aligned {
+    opacity: 0.9;
     padding: 8px 0 0 0;
-    text-align: left;
-    width: 240px; 
-    box-sizing: border-box;
+    margin: 0;
 }
-
 
 #volume {
     width: 100%;
@@ -549,7 +383,6 @@ header.podcast-player {
 
 .top-podcasts {
     width: 100%;
-    max-width: 1200px;
     margin: 60px auto 40px auto;
     padding: 0 40px;
 }
@@ -688,7 +521,6 @@ header.podcast-player {
 
 .for-you-podcasts {
     width: 100%;
-    max-width: 1200px;
     margin: 60px auto 80px auto;
     padding: 0 40px;
 }
@@ -799,7 +631,6 @@ header.podcast-player {
 
 .new-episodes-corrected {
     width: 100%;
-    max-width: 1200px;
     margin: 60px auto 80px auto;
     padding: 0 40px;
 }
@@ -927,7 +758,6 @@ header.podcast-player {
 
 .new-episodes-carousel {
     width: 100%;
-    max-width: 1200px;
     margin: 60px auto 80px auto;
     padding: 0 40px;
 }
@@ -1387,13 +1217,6 @@ footer > div p {
 /* RESPONSIVE */
 /* Tablet */
 @media (max-width: 1024px) {
-  .wrapper,
-  .top-podcasts,
-  .for-you-podcasts,
-  .new-episodes-corrected,
-  .new-episodes-carousel {
-    padding: 0 30px;
-  }
 
   .main-title h1 {
     font-size: 96px;
@@ -1425,143 +1248,223 @@ footer > div p {
 
 /* Movil */
 @media (max-width: 768px) {
-  nav {
-    height: 70px;
-    padding: 0 20px;
-  }
 
-  nav img {
-    width: 120px;
-    height: auto;
-  }
+    nav {
+        justify-content: flex-start; 
+        padding: 0 20px;
+    }
 
-  #icono {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    cursor: pointer;
-  }
+    nav img {
+        width: 15%;
+    }
 
-  #icono div {
-    width: 26px;
-    height: 3px;
-    background: var(--blanco);
-  }
+    #menu-lista {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 40%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.95);
+        transition: 0.5s ease;
+        z-index: 1000;
+    }
 
-  nav ul {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.95);
-    flex-direction: column;
-    justify-content: center;
-    gap: 3rem;
-    transform: translateX(-100%);
-    transition: transform 0.4s ease;
-  }
+    #menu-lista.activo {
+        right: 0;
+    }
 
-  nav ul.activo {
-    transform: translateX(0);
-  }
+    #menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 900;
+        display: none;  
+    }
 
+    #menu-overlay.activo {
+        display: block;
+    }
+
+    .menu-links a {
+        font-size: 22px;
+    }
+
+    #icono {
+        display: block;
+        position: fixed;
+        right: 20px;
+        top: 4vh;
+        z-index: 2000;
+        cursor: pointer;
+    }
+
+    #icono > div {
+        width: 38px;
+        height: 3px;
+        background-color: var(--blanco);
+        margin: 7px 0;
+        transition: 0.4s;
+        border-radius: 4px;
+    }
+
+    #icono:hover > div {
+        cursor: pointer;
+    }
+
+    #icono.cambiar > div:nth-child(1) {
+        transform: rotate(-45deg) translate(-6px, 6px);
+    }
+
+    #icono.cambiar > div:nth-child(2) {
+        opacity: 0;
+    }
+
+    #icono.cambiar > div:nth-child(3) {
+        transform: rotate(45deg) translate(-8px, -8px);
+    }
+
+    .podcasts-carousel {
+        padding: 0 10px;
+    }
+    
+    .carousel-container {
+        gap: 12px;
+        padding: 10px 0 20px 0;
+    }
+    
+    .podcast-card {
+        width: 180px;
+    }
+    
+    .podcast-name {
+        font-size: 13px;
+        padding: 5px 0 0 0;
+    }
+
+    .podcast-card, .podcast-image, .podcast-name.aligned {
+        width: 180px;
+    }
+    
+    .podcast-image {
+        height: 180px;
+    }
  
-  .main-title {
-    padding: 30px 20px;
-  }
+    .main-title {
+        padding: 30px 20px;
+    }
 
-  .main-title h1 {
-    font-size: 64px;
-    letter-spacing: 1px;
-  }
+    .main-title h1 {
+        font-size: 64px;
+        letter-spacing: 1px;
+    }
 
-  .subtitle {
-    font-size: 14px;
-    letter-spacing: 4px;
-  }
+    .subtitle {
+        font-size: 14px;
+        letter-spacing: 4px;
+    }
 
-  .player-container {
-    padding: 20px;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 20px;
-  }
+    .player-container {
+        padding: 20px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+    }
 
-  .left-controls,
-  .right-controls {
-    justify-content: space-between;
-    width: 100%;
-  }
+    .left-controls,
+    .right-controls {
+        justify-content: space-between;
+        width: 100%;
+    }
 
-  .volume-container {
-    width: 100%;
-  }
+    .volume-container {
+        width: 100%;
+    }
 
-  .podcast-card,
-  .podcast-image {
-    width: 180px;
-  }
+    .podcast-card,
+    .podcast-image {
+        width: 180px;
+    }
 
-  .podcast-image {
-    height: 180px;
-  }
+    .podcast-image {
+        height: 180px;
+    }
 
-  .top-podcast-card {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-  }
+    .top-podcast-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
 
-  .podcast-content {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+    .podcast-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-  .for-you-grid {
-    grid-template-columns: 1fr;
-  }
+    .for-you-grid {
+        grid-template-columns: 1fr;
+    }
 
-  .for-you-card {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+    .for-you-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-  .for-you-image {
-    margin-bottom: 15px;
-  }
+    .for-you-image {
+        margin-bottom: 15px;
+    }
 
-  .episode-card-corrected,
-  .episode-card-vertical {
-    flex-direction: column;
-  }
+    .episode-card-corrected,
+    .episode-card-vertical {
+        flex-direction: column;
+    }
 
-  .episode-image-corrected,
-  .episode-image-vertical {
-    margin-bottom: 15px;
-  }
+    .episode-image-corrected,
+    .episode-image-vertical {
+        margin-bottom: 15px;
+    }
 
-  .episode-main-title-row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
-  }
+    .episode-main-title-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
 
-  .episode-show-title-corrected {
-    font-size: 28px;
-  }
+    .episode-show-title-corrected {
+        font-size: 28px;
+    }
 
-  .vertical-carousel-container {
-    max-height: none;
-    border-left: none;
-    padding-left: 0;
-  }
+    .vertical-carousel-container {
+        max-height: none;
+        border-left: none;
+        padding-left: 0;
+    }
 
-  .carousel {
-    margin-bottom: 10vh;
-  }
+    .carousel {
+        margin-bottom: 10vh;
+    }
 
-  .card {
-    flex: 0 0 4.5em;
-    height: 5.5em;
-  }
+    .card {
+        flex: 0 0 4.5em;
+        height: 5.5em;
+    }
+
+    .graf-conteiner {
+        width: 100% !important;
+        max-width: 100%;
+        height: 45vh !important;
+        margin-bottom: 10rem !important;
+        overflow: visible !important;
+        position: relative; 
+        margin: 0 auto;
+        margin-top: 3rem;
+    }
 
       footer {
         flex-direction: column;
