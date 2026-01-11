@@ -14,9 +14,49 @@ if (container && registerbtn && loginbtn) {
 }
 
 // Ir a home
-function irHome() {
-    window.location.href = 'home.html';
-}
+document.addEventListener("DOMContentLoaded", () => {
+
+  // LOGIN
+  document.getElementById("loginForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const inputs = this.querySelectorAll("input");
+    let valido = true;
+
+    inputs.forEach(input => {
+      if (input.value.trim() === "") {
+        valido = false;
+      }
+    });
+
+    if (valido) {
+      window.location.href = "home.html";
+    } else {
+      alert("Completa todos los campos correctamente");
+    }
+  });
+
+  // REGISTER
+  document.getElementById("registerForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const inputs = this.querySelectorAll("input");
+    let valido = true;
+
+    inputs.forEach(input => {
+      if (input.value.trim() === "") {
+        valido = false;
+      }
+    });
+
+    if (valido) {
+      window.location.href = "home.html";
+    } else {
+      alert("Completa todos los campos correctamente");
+    }
+  });
+
+});
 
 
 // MENU RESPONSIVE
@@ -300,11 +340,9 @@ function playPause() {
     }
 }
 
-if(song.play()){
-    setInterval(()=>{
-        progress.value = song.currentTime;
-    },500);
-}
+song.addEventListener("timeupdate", () => {
+    progress.value = song.currentTime;
+});
 
 progress.onchange = function(){
     song.play();
@@ -362,6 +400,99 @@ document.querySelectorAll('.number').forEach(contador => {
 
 
 
+// GRAFICA
+document.addEventListener('DOMContentLoaded', function() {
+    const ctx = document.getElementById('generosChart').getContext('2d');
+    
+    const generosChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Pop', 'Reggaetón', 'Hip Hop', 'Electrónica', 'Otros'],
+            datasets: [{
+                label: 'Preferencias de Género',
+                data: [37, 27, 18, 13, 7],
+                backgroundColor: [
+                    '#E1FF2D',
+                    '#45FFCA',
+                    '#FF0000',
+                    '#39B5E0',
+                    '#222831'
+                ],
+                borderWidth: 0,
+                hoverOffset: 25,
+            }]
+        },
+        options: {
+            responsive: true,
+            layout: {
+                padding: 14
+            },
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'left',
+                    labels: {
+                        color: '#ffffff',
+                        font: {
+                            family: 'Manrope',
+                            size: 16
+                        },
+                        padding: 20
+                    }
+                },
+            },
+            cutout: '50%'
+        }
+    });
+});
+
+
+// PODCAST GRAFICO
+document.addEventListener('DOMContentLoaded', function() {
+    const ctx = document.getElementById('podcastChart').getContext('2d');
+    
+    const generosChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Misterio', 'Entretenimiento', 'Entrevistas', 'Documentales', 'Otros'],
+            datasets: [{
+                label: 'Preferencias de podcast',
+                data: [17, 12, 8, 5, 2],
+                backgroundColor: [
+                    '#E1FF2D',
+                    '#45FFCA',
+                    '#FF0000',
+                    '#39B5E0',
+                    '#222831'
+                ],
+                borderWidth: 0,
+                hoverOffset: 25,
+            }]
+        },
+        options: {
+            responsive: true,
+            layout: {
+                padding: 14
+            },
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'left',
+                    labels: {
+                        color: '#ffffff',
+                        font: {
+                            family: 'Manrope',
+                            size: 16
+                        },
+                        padding: 20
+                    }
+                },
+            },
+            cutout: '50%'
+        }
+    });
+});
+
 // ANIMACION - SCROLL AOS
 /*jslint devel: true*/
 /*eslint-env browser*/
@@ -370,4 +501,4 @@ window.onload = function () {
     AOS.init({
         duration: 1500,
     });
-}
+};

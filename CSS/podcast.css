@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
 
 * {
   margin: 0;
@@ -7,6 +9,7 @@
   text-decoration: none;
   scroll-behavior: smooth;
   list-style: none;
+  font-family: 'Manrope', cursive;
 }
 
 :root {
@@ -348,8 +351,8 @@ header.podcast-player {
     width: 100%;
     max-width: 1200px;
     position: relative;
-    margin-top: 20px;
     padding: 0 20px;
+    margin: 20px auto 0 auto;
 }
 
 .carousel-container {
@@ -564,6 +567,7 @@ header.podcast-player {
     color: #fff;
     letter-spacing: 1px;
     margin: 0;
+    margin-left: 40px;
 }
 
 
@@ -1175,6 +1179,21 @@ header.podcast-player {
 
 .card:hover img {
     transform: scale(1.2);
+}
+
+
+/* GRAFICA */
+.chart-container {
+    width: 100% !important;
+    max-width: 60vw !important;
+    height: 60vh !important;
+    margin-bottom: 3rem !important;
+    overflow: visible !important;
+    position: relative; 
+    height:40vh; 
+    width:100%; 
+    max-width:500px; 
+    margin: 0 auto;
 }
 
 

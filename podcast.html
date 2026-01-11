@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-
-<html lang="es">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <title>Beatly</title>
-        <!-- FAVICON -->
         <link rel="icon" href="MEDIA/IMG/Favicon(1).svg">
         <!-- CSS -->
         <link href="CSS/podcast.css" rel="Stylesheet" type="text/css">
-        <!-- AOS -->
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <!-- ICONOS - FONT AWESOME -->
+        <!-- FONT AWESOME -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        
+        <!-- JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js" defer></script>
+        
+        <script src="JS/script.js" defer></script>
     </head>
 
     <body>
@@ -289,6 +291,17 @@
             </div>
         </section>
 
+        <!-- GRAFICA -->
+        <div class="graf-conteiner">
+            <div class="linea-titulo">
+                <div class="linea-hrz"></div>
+                <h2>Tus podcast más escuchados</h2>
+            </div>
+            <div class="chart-container">
+                <canvas id="podcastChart"></canvas>
+            </div>
+        </div>
+
         <!-- SECCION - NUEVOS EPISODIOS -->
         <section>
             <div class="top-podcasts-header">
@@ -298,66 +311,66 @@
             <div class="carousel scroll-slide-right">
                 <div class="group">
                     <div class="card">
-                        <img src="MEDIA/IMG/tedtalks.webp">
+                        <img src="MEDIA/IMG/tedtalks.webp" alt="TED Talks">
                     </div>
                     <div class="card">
-                        <img src="MEDIA/IMG/unlibrounahora.webp">
+                        <img src="MEDIA/IMG/unlibrounahora.webp" alt="Un libro una hora">
                     </div>
                     <div class="card">
-                        <img src="MEDIA/IMG/bbcearth.webp">
+                        <img src="MEDIA/IMG/bbcearth.webp" alt="BBC Earth">
                     </div>
                     <div class="card">
-                        <img src="MEDIA/IMG/seregalandudas.webp">
+                        <img src="MEDIA/IMG/seregalandudas.webp" alt="Se regalan Dudas">
                     </div>
                     <div class="card">
-                        <img src="MEDIA/IMG/crime-junkie-podcast-logo.webp">
+                        <img src="MEDIA/IMG/crime-junkie-podcast-logo.webp" alt="crime-junkie-podcast-logo">
                     </div>
                     <div class="card">
-                        <img src="MEDIA/IMG/smartless.webp">
+                        <img src="MEDIA/IMG/smartless.webp" alt="SmartLess">
                     </div>
                     <div class="card">
-                        <img src="MEDIA/IMG/newheights.webp">
+                        <img src="MEDIA/IMG/newheights.webp" alt="New Heights">
                     </div>
                     <div class="card">
-                        <img src="MEDIA/IMG/99invisible.webp">
+                        <img src="MEDIA/IMG/99invisible.webp" alt=" 99 Percent Invisible">
                     </div>
                     <div class="card">
-                        <img src="MEDIA/IMG/callherdaddy.webp">
+                        <img src="MEDIA/IMG/callherdaddy.webp" alt="Call her Daddy">
                     </div>
                     <div class="card">
-                        <img src="MEDIA/IMG/veaterapia.webp">
+                        <img src="MEDIA/IMG/veaterapia.webp" alt="Ve a Terapia">
                     </div>
                 </div>
                 <div aria-hidden class="group">
                     <div class="card">
-                        <img src="MEDIA/IMG/tedtalks.webp">
+                        <img src="MEDIA/IMG/tedtalks.webp" alt="TED Talks">
                     </div>
                     <div class="card">
-                        <img src="MEDIA/IMG/unlibrounahora.webp">
+                        <img src="MEDIA/IMG/unlibrounahora.webp" alt="Un libro una hora">
                     </div>
                     <div class="card">
-                        <img src="MEDIA/IMG/bbcearth.webp">
+                        <img src="MEDIA/IMG/bbcearth.webp" alt="BBC Earth">
                     </div>
                     <div class="card">
-                        <img src="MEDIA/IMG/seregalandudas.webp">
+                        <img src="MEDIA/IMG/seregalandudas.webp" alt="Se regalan Dudas">
                     </div>
                     <div class="card">
-                        <img src="MEDIA/IMG/crime-junkie-podcast-logo.webp">
+                        <img src="MEDIA/IMG/crime-junkie-podcast-logo.webp" alt="crime-junkie-podcast-logo">
                     </div>
                     <div class="card">
-                        <img src="MEDIA/IMG/smartless.webp">
+                        <img src="MEDIA/IMG/smartless.webp" alt="Smartless">
                     </div>
                     <div class="card">
-                        <img src="MEDIA/IMG/newheights.webp">
+                        <img src="MEDIA/IMG/newheights.webp" alt="New Heights">
                     </div>
                     <div class="card">
-                        <img src="MEDIA/IMG/99invisible.webp">
+                        <img src="MEDIA/IMG/99invisible.webp" alt="99 Percent Invisible ">
                     </div>
                     <div class="card">
-                        <img src="MEDIA/IMG/callherdaddy.webp">
+                        <img src="MEDIA/IMG/callherdaddy.webp" alt="Call Her Daddy">
                     </div>
                     <div class="card">
-                        <img src="MEDIA/IMG/veaterapia.webp">
+                        <img src="MEDIA/IMG/veaterapia.webp" alt="Ve a Terapia">
                     </div>
                 </div>
             </div>
@@ -408,11 +421,5 @@
             </div>
         </footer>
         
-
-        <!-- JS -->
-        <script src="JS/Chart.min.js"></script>
-        <script src="JS/jQuery.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="JS/script.js" defer></script>
     </body>
 </html>

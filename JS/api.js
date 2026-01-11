@@ -1,99 +1,124 @@
-// API 1
-function buscar() {
+// // API 1
+// function buscar() {
+//     const artista = document.getElementById("artista").value.trim();
+//     const resultadosDiv = document.getElementById("resultados");
+//     const url = `https://itunes.apple.com/search?term=${encodeURIComponent(artista)}&entity=song&limit=10`;
+
+//     fetch(url)
+//     .then(response => response.json())
+//     .then(data => {
+//         resultadosDiv.innerHTML = "";
+
+//         if (data.results.length === 0) {
+//             resultadosDiv.innerHTML = "<p>No se encontraron resultados.</p>";
+//             return;
+//         }
+
+//         data.results.forEach(cancion => {
+//             const div = document.createElement("div");
+//             div.className = "item";
+
+//             div.innerHTML = `
+//                 <img src="${cancion.artworkUrl100}" alt="Portada">
+//                 <div>
+//                     <strong>${cancion.trackName}</strong><br>
+//                     Artista: ${cancion.artistName}<br>
+//                     Álbum: ${cancion.collectionName}<br>
+//                     <audio controls src="${cancion.previewUrl}"></audio>
+//                 </div>
+//             `;
+
+//             resultadosDiv.appendChild(div);
+//         });
+//     })
+// }
+
+async function buscar() {
     const artista = document.getElementById("artista").value.trim();
     const resultadosDiv = document.getElementById("resultados");
-    const url = `https://itunes.apple.com/search?term=${encodeURIComponent(artista)}&entity=song&limit=10`;
+    const loading = document.getElementById("loading");
 
-    fetch(url)
-    .then(response => response.json())
-    .then(data => {
-        resultadosDiv.innerHTML = "";
+    if (!artista) return;
 
-        if (data.results.length === 0) {
+    loading.style.display = "block";
+    resultadosDiv.innerHTML = "";
+
+    const urlCanciones = `https://itunes.apple.com/search?term=${encodeURIComponent(artista)}&entity=song&limit=6`;
+    const urlAlbumes = `https://itunes.apple.com/search?term=${encodeURIComponent(artista)}&entity=album&limit=4`;
+
+    try {
+        // LLAMADOS
+        const [respCanciones, respAlbumes] = await Promise.all([
+            fetch(urlCanciones),
+            fetch(urlAlbumes)
+        ]);
+
+        const dataCanciones = await respCanciones.json();
+        const dataAlbumes = await respAlbumes.json();
+
+        loading.style.display = "none";
+
+        if (dataCanciones.results.length === 0 && dataAlbumes.results.length === 0) {
             resultadosDiv.innerHTML = "<p>No se encontraron resultados.</p>";
             return;
         }
 
-        data.results.forEach(cancion => {
+        // CANCIONES
+        const seccionCanciones = document.createElement("div");
+        seccionCanciones.innerHTML = "<h2>Canciones</h2>";
+        
+        dataCanciones.results.forEach(cancion => {
             const div = document.createElement("div");
-            div.className = "item";
-
+            div.className = "item song-item";
             div.innerHTML = `
                 <img src="${cancion.artworkUrl100}" alt="Portada">
                 <div>
                     <strong>${cancion.trackName}</strong><br>
-                    Artista: ${cancion.artistName}<br>
-                    Álbum: ${cancion.collectionName}<br>
-                    <audio controls src="${cancion.previewUrl}"></audio>
+                    <span>${cancion.artistName}</span><br>
+                    <audio controls src="${cancion.previewUrl}" class="audio-player"></audio>
                 </div>
             `;
-
-            resultadosDiv.appendChild(div);
+            seccionCanciones.appendChild(div);
         });
-    })
-}
 
-// API 2
-function buscar() {
-    const artista = document.getElementById("artista").value.trim();
-    const resultadosDiv = document.getElementById("resultados");
-    const detalleDiv = document.getElementById("detalle");
+        // ALBUMES
+        const seccionAlbumes = document.createElement("div");
+        seccionAlbumes.innerHTML = "<h2>Álbumes Relacionados</h2>";
+        seccionAlbumes.className = "seccion-albumes";
 
-    resultadosDiv.innerHTML = "";
-    detalleDiv.innerHTML = "";
-
-    const url = `https://itunes.apple.com/search?term=${encodeURIComponent(artista)}&entity=song&limit=10`;
-
-    fetch(url)
-    .then(response => response.json())
-    .then(data => {
-        if (data.results.length === 0) {
-            resultadosDiv.innerHTML = "<p>No se encontraron resultados.</p>";
-            return;
-        }
-
-        data.results.forEach(cancion => {
+        dataAlbumes.results.forEach(album => {
             const div = document.createElement("div");
-            div.style.border = "1px solid #ccc";
-            div.style.margin = "10px";
-            div.style.padding = "10px";
-
+            div.className = "item album-item";
             div.innerHTML = `
-                <img src="${cancion.artworkUrl100}" alt="Portada"><br>
-                <strong>${cancion.trackName}</strong><br>
-                Artista: ${cancion.artistName}<br>
-                Álbum: ${cancion.collectionName}<br>
-                <button onclick="verAlbum(${cancion.collectionId}, '${cancion.collectionName}')">
-                    Ver álbum
-                </button>
+                <img src="${album.artworkUrl100}" alt="Portada Álbum">
+                <div>
+                    <strong>${album.collectionName}</strong><br>
+                    <span>Género: ${album.primaryGenreName}</span><br>
+                    <span>Fecha: ${new Date(album.releaseDate).getFullYear()}</span>
+                </div>
             `;
-
-            resultadosDiv.appendChild(div);
+            seccionAlbumes.appendChild(div);
         });
-    });
+
+        resultadosDiv.appendChild(seccionCanciones);
+        resultadosDiv.appendChild(seccionAlbumes);
+
+    } catch (error) {
+        console.error("Error al obtener datos:", error);
+        loading.style.display = "none";
+        resultadosDiv.innerHTML = "<p>Hubo un error en la búsqueda.</p>";
+    }
 }
 
-function verAlbum(albumId, albumName) {
-    const detalleDiv = document.getElementById("detalle");
-    detalleDiv.innerHTML = `<h2>${albumName}</h2>`;
-
-    const url = `https://itunes.apple.com/lookup?id=${albumId}&entity=song`;
-
-    fetch(url)
-    .then(response => response.json())
-    .then(data => {
-        data.results
-            .filter(item => item.wrapperType === "track")
-            .forEach(track => {
-                const p = document.createElement("p");
-                p.innerHTML = `
-                    🎵 ${track.trackName}<br>
-                    <audio controls src="${track.previewUrl}"></audio>
-                `;
-                detalleDiv.appendChild(p);
-            });
-    });
-}
+document.addEventListener('play', function(e) {
+    const todosLosAudios = document.getElementsByTagName('audio');
+    
+    for (let i = 0; i < todosLosAudios.length; i++) {
+        if (todosLosAudios[i] !== e.target) {
+            todosLosAudios[i].pause();
+        }
+    }
+}, true);
 
 
 

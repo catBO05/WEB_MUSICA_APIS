@@ -731,7 +731,7 @@ section hr {
 
 /* TENDENCIAS */
 #tendencias {
-    margin-bottom: 12rem;
+    margin-bottom: 4rem;
 }
 
 #tendencias > div:first-child {
@@ -877,6 +877,24 @@ section hr {
     color: var(--negro);
 }
 
+
+/* GRAFICA */
+
+
+.chart-container {
+    width: 100% !important;
+    max-width: 60vw !important;
+    height: 60vh !important;
+    margin-bottom: 6rem !important;
+    overflow: visible !important;
+    position: relative; 
+    height:40vh; 
+    width:100%; 
+    max-width:500px; 
+    margin: 0 auto;
+}
+
+
 /* FOOTER */
 footer {
     background-color: var(--main);
@@ -1004,6 +1022,58 @@ footer > div p {
 }
 
 
+/* ANIMACIONES */
+.scroll {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 35%;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.scroll-right {
+    animation: slideright 5s ease-out forwards;
+    animation-timeline: view();
+    animation-range: entry 0 cover 45%;
+}
+
+@keyframes slideright {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.scroll-left {
+    animation: slideleft 5s ease-out forwards;
+    animation-timeline: view();
+    animation-range: entry 0 cover 30%;
+}
+
+@keyframes slideleft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 
 
 
