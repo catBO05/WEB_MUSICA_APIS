@@ -91,6 +91,7 @@ nav {
     text-align: left;
     justify-content: space-between;
     padding: 0 40px;
+    transition: 0.3s ease;
 }
 
 nav a {
@@ -101,7 +102,6 @@ nav a {
 
 nav img {
     width: 18%;
-    margin-top: 18px;
 }
 
 /* M.hamburguesa y x - OCULTOS */
@@ -193,17 +193,13 @@ nav ul li a {
 
 .slide {
     position: absolute;
-    /* top: 0;
-    left: 0; */
     width: 100%;
     height: 100%;
+    padding-top: 96px;
+    padding-left: 2%;
     opacity: 0;
     transition: opacity 1s ease-in-out;
-    display: flex;
-    /* flex-direction: column; */
-    justify-content: center;
-    /* align-items: center;
-    padding: 0 10%; */
+  
 }
 
 .slide.active {
@@ -220,12 +216,6 @@ nav ul li a {
     background-position: center;
     filter: brightness(0.8);
     z-index: -1;
-}
-
-.slide-content {
-    max-width:58%;
-    z-index: 2;
-    margin-top: 40px;
 }
 
 .description {
@@ -264,7 +254,7 @@ nav ul li a {
 /* BOTONES */
 .carousel-controls {
     position: absolute;
-    top: 40px;
+    top: 96px;
     right: 40px;
     display: flex;
     gap: 15px;
@@ -403,6 +393,10 @@ nav ul li a {
     margin-bottom: 1.2rem;
 }
 
+.linea-titulo {
+    flex-direction: row;
+}
+
 .linea-hrz {
     position: relative;
     width: 45px;
@@ -425,7 +419,7 @@ nav ul li a {
     display: flex;
     margin-left: auto;
     overflow-x: auto;
-    width: calc(100% - 21%);
+    width: 98%;
     padding-bottom: 10px;
     scrollbar-width: thin;
     scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
@@ -617,10 +611,9 @@ section hr {
     height: 100%;
     width: 80%;
     padding: 4%;
-    display: inline-table;
-    display: flex;
+    /*display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-between; */
 }
 
 #hits > div * {
@@ -648,12 +641,14 @@ section hr {
 
 #hits > div button {
     padding: 11px 1rem;
+    margin-top: 21%;
     font-size: 1.1rem;
     border: 2px solid var(--negro);
     border-radius: 3rem;
-    display: flex;
     gap: 12px;
+    display: flex;
     align-items: center;
+    justify-content: center;
     text-transform: uppercase;
     font-weight: bold;
     cursor: pointer;
