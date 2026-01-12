@@ -170,7 +170,7 @@ nav ul li a {
 
 /* HEADER */
 .centrar {
-    min-height: 80vh;
+    min-height: 65vh;
     text-align: right;
     margin-right: 5vh;
     padding-top: 8rem;
@@ -383,7 +383,7 @@ nav ul li a {
 .artist-info h2 {
     font-size: 5.2rem;
     position: absolute;
-    top: -14%;
+    top: -12%;
     left: 23%;
     z-index: 1;
 }

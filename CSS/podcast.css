@@ -205,9 +205,9 @@ nav ul li a {
 
 .podcasts-carousel {
     width: 100%;
-    max-width: 1200px;
+    /* max-width: 1200px; */
     position: relative;
-    padding: 0 20px;
+    /* padding: 0 20px; */
     margin: 20px auto 0 auto;
 }
 
@@ -216,7 +216,7 @@ nav ul li a {
     gap: 30px; 
     overflow-x: auto;
     scroll-behavior: smooth;
-    padding: 10px 0 40px 10px;
+    padding: 10px 0 40px 40px;
     scrollbar-width: none;
     -ms-overflow-style: none;
 }

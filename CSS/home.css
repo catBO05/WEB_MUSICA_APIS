@@ -195,7 +195,7 @@ nav ul li a {
     position: absolute;
     width: 100%;
     height: 100%;
-    padding-top: 96px;
+    padding-top: 110px;
     padding-left: 2%;
     opacity: 0;
     transition: opacity 1s ease-in-out;
@@ -254,7 +254,7 @@ nav ul li a {
 /* BOTONES */
 .carousel-controls {
     position: absolute;
-    top: 96px;
+    top: 110px;
     right: 40px;
     display: flex;
     gap: 15px;
@@ -1283,11 +1283,6 @@ footer > div p {
         max-width: 100%;
     }
 
-    .carousel-controls {
-        top: 20px;
-        right: 20px;
-    }
-
     .card-artistas {
         flex: 0 0 3.5em;
         height: 3em;
@@ -1422,13 +1417,7 @@ footer > div p {
     .slide-content {
         margin-top: 110px;
     }
-
-    .carousel-controls {
-        top: 16px;
-        right: 16px;
-        gap: 10px;
-    }
-
+    
     .prev-btn,
     .next-btn {
         width: 36px;

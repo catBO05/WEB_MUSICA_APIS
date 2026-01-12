@@ -111,7 +111,7 @@ function shrinkHeader() {
     var threshold = $(window).height() / 2;
     if (scroll > threshold) {
         $("nav").css({
-            "height": "13vh",
+            "height": "11vh",
             "background-color": "rgba(0, 0, 0)",
             "backdrop-filter": "blur(15px)",
         });
@@ -119,7 +119,8 @@ function shrinkHeader() {
 
     } else {
          $("nav").css({
-            "height": "15vh",
+            "height": "13vh",
+            "justify-content": "space-evenly",
             "background-color": "transparent",
             "backdrop-filter": "blur(15px)",
         });
