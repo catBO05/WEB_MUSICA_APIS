@@ -111,8 +111,7 @@ function shrinkHeader() {
     var threshold = $(window).height() / 2;
     if (scroll > threshold) {
         $("nav").css({
-            "height": "12vh",
-            "justify-content": "space-between",
+            "height": "11vh",
             "background-color": "rgba(0, 0, 0)",
             "backdrop-filter": "blur(15px)",
         });
@@ -120,10 +119,10 @@ function shrinkHeader() {
 
     } else {
          $("nav").css({
-            "height": "14vh",
+            "height": "13vh",
             "justify-content": "space-evenly",
             "background-color": "transparent",
-            "backdrop-filter": "none",
+            "backdrop-filter": "blur(15px)",
         });
         $("nav a").css({"font-size": "20px"});
     }
